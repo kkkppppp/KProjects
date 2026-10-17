@@ -5,6 +5,62 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="assets/ad60e1a8-a068-4486-af0b-8d125bc61a1e.js"></script>
+<style>
+/* Responsive layout and touch behavior. */
+html,body{width:100%;max-width:100%;overflow-x:hidden;overflow-x:clip;-webkit-text-size-adjust:100%;}
+x-dc{display:block;width:100%;min-width:0;}
+main,section,header,footer{min-width:0;max-width:100%;}
+main>section{width:100%;}
+main div,footer div{min-width:0;}
+a,button{-webkit-tap-highlight-color:transparent;touch-action:manipulation;}
+.project-card{opacity:1!important;filter:none!important;min-width:0;}
+.project-art{transform-origin:center;}
+.amstel-member-heading{display:flex;align-items:center;gap:20px;}
+.amstel-member-number{font-family:'Newsreader',serif;font-size:48px;line-height:1;}
+.amstel-face{width:88px;height:88px;border-radius:50%;object-fit:cover;}
+@media(min-width:760px){
+  .vita-hero{display:block!important;}
+  .vita-hero-photo{width:56%;margin-left:auto;padding-top:32px!important;}
+  .vita-hero-photo img{height:clamp(380px,50vw,580px)!important;margin-bottom:0!important;}
+  .vita-hero-copy{position:relative;margin-top:-112px;padding:0 0 64px!important;gap:36px!important;}
+  .vita-hero-copy h1{width:max-content;max-width:100%;}
+}
+@media(max-width:759px){
+  .kate-portrait{flex:0 0 144px!important;width:144px!important;max-width:144px!important;}
+  [data-reveal]{opacity:1!important;transform:none!important;transition:none!important;}
+  .catalogue{padding-top:32px!important;padding-bottom:64px!important;}
+  .catalogue>div:first-child{display:none!important;}
+  .catalogue>div:last-child{grid-template-columns:minmax(0,1fr)!important;gap:48px!important;}
+  .project-card{gap:8px!important;}
+  .project-art{width:100%;max-width:340px;margin:0 auto;transform:scale(.52);}
+  .project-card>span:last-child{max-width:340px;width:100%;margin:0 auto;}
+  .project-art img{transform:none!important;opacity:1!important;filter:none!important;}
+  .vita-hero{flex-direction:column!important;}
+  .vita-hero-photo{order:-1;flex:none!important;padding-top:24px!important;align-self:flex-end;width:88%;}
+  .vita-hero-photo img{height:auto!important;max-height:52svh;width:100%!important;object-fit:contain;margin-bottom:0!important;}
+  .vita-hero-copy{flex:none!important;padding:28px 0 48px!important;gap:28px!important;}
+  .vita-hero-copy h1{font-size:clamp(72px,20vw,112px)!important;}
+  .vita-members{display:flex!important;flex-direction:column;gap:56px!important;}
+  .vita-member{width:88%;padding-top:0!important;gap:18px!important;}
+  .vita-member:nth-child(odd){align-self:flex-end;}
+  .vita-member:nth-child(even){align-self:flex-start;}
+  .vita-member>div:first-child{width:86%;max-height:none!important;}
+  .vita-member:nth-child(odd)>div:first-child{align-self:flex-end;}
+  .vita-member>div:last-child>span:nth-child(2){font-size:30px!important;}
+  .amstel-hero{display:flex!important;flex-direction:column;min-height:0!important;align-items:stretch!important;}
+  .amstel-hero-photo{order:-1;height:auto!important;width:100%;padding-top:24px;}
+  .amstel-hero-photo img{position:relative!important;inset:auto!important;width:100%!important;height:auto!important;max-width:100%!important;transform:none!important;}
+  .amstel-hero>div:first-child{padding:32px 0 48px!important;gap:24px!important;}
+  .amstel-hero h1{font-size:clamp(64px,18vw,100px)!important;}
+  .amstel-members{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:24px 12px!important;}
+  .amstel-members>div{padding:0!important;gap:8px!important;}
+  .amstel-member-heading{gap:12px;}
+  .amstel-member-number{font-size:32px;}
+  .amstel-face{width:64px;height:64px;}
+  .amstel-members>div>span{font-size:16px!important;}
+}
+@media(prefers-reduced-motion:reduce){.project-art{transform:none!important;}}
+</style>
 </head>
 <body>
 <x-dc>
@@ -166,14 +222,14 @@ a:hover{color:#5E5A52;}
 
 
 
-  <section ref="{{ catalogueRef }}" style="max-width:1200px;margin:0 auto;padding:clamp(64px,8vw,112px) 24px clamp(80px,10vw,140px);scroll-margin-top:68px;">
+  <section class="catalogue" ref="{{ catalogueRef }}" style="max-width:1200px;margin:0 auto;padding:clamp(64px,8vw,112px) 24px clamp(80px,10vw,140px);scroll-margin-top:68px;">
     <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:clamp(36px,5vw,64px);">
       
     </div>
     <div style="display:grid;grid-template-columns:repeat({{ catCols }},minmax(0,1fr));gap:clamp(20px,2.4vw,32px);">
       <sc-for list="{{ projects }}" as="p" hint-placeholder-count="4">
-            <a data-reveal="" data-reveal-delay="{{ p.revealDelay }}" href="#{{ p.id }}" sc-camel-on-click="{{ p.open }}" style="display:flex;flex-direction:column;gap:16px;color:#141413;" style-hover="color:#141413;">
-              <span style="display:block;aspect-ratio:786/987;overflow:hidden;border-radius:10px;background:#EAE4D8;">
+            <a class="project-card" href="#{{ p.id }}" sc-camel-on-click="{{ p.open }}" style="display:flex;flex-direction:column;gap:16px;color:#141413;" style-hover="color:#141413;">
+              <span class="project-art" style="display:block;aspect-ratio:786/987;overflow:hidden;border-radius:10px;background:#EAE4D8;">
                 <img src="{{ p.image }}" alt="{{ p.name }}" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform 1.2s cubic-bezier(.2,.7,.2,1);" style-hover="transform:scale(1.04);">
               </span>
               <span style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:12px;align-items:baseline;">
@@ -191,7 +247,7 @@ a:hover{color:#5E5A52;}
 
   <section ref="{{ aboutRef }}" style="background:#FAF7F1;border-top:1px solid rgba(20,20,19,0.12);scroll-margin-top:68px;">
     <div style="max-width:1200px;margin:0 auto;padding:clamp(56px,7vw,96px) 24px;display:flex;flex-wrap:wrap;gap:clamp(32px,5vw,72px);align-items:center;">
-      <div data-speed="-0.06" style="position:relative;aspect-ratio:1/1;flex:0 0 280px;max-width:280px;width:100%;overflow:hidden;border-radius:50%;background:#EAE4D8;">
+      <div class="kate-portrait" style="position:relative;aspect-ratio:1/1;flex:0 0 180px;max-width:180px;width:100%;overflow:hidden;border-radius:50%;background:#EAE4D8;">
         <img src="assets/6c268133-3fc4-4c35-8188-200daa83dd0e.webp" alt="Kate Podakin" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:52% 18%;display:block;">
       </div>
       <div style="display:flex;flex-direction:column;gap:20px;flex:1 1 320px;max-width:600px;">
@@ -411,8 +467,8 @@ a:hover{color:#5E5A52;}
 <main style="flex:1;">
   <section style="position:relative;overflow:hidden;">
     <div style="max-width:1200px;margin:0 auto;padding:24px 24px 0;"><nav style="display:flex;gap:8px;font-size:13px;color:#5E5A52;"><a href="#" sc-camel-on-click="{{ goCatalogue }}" style="color:#5E5A52;" style-hover="color:#141413;">Catalogue</a><span>/</span><span style="color:#141413;">VitaDuo</span></nav></div>
-    <div style="max-width:1200px;margin:0 auto;padding:0 24px;display:flex;flex-wrap:wrap;align-items:stretch;gap:0 clamp(24px,4vw,64px);">
-      <div style="flex:1 1 380px;display:flex;flex-direction:column;justify-content:space-between;gap:40px;padding:clamp(72px,12vh,160px) 0 clamp(32px,5vw,64px);">
+    <div class="vita-hero" style="max-width:1200px;margin:0 auto;padding:0 24px;display:flex;flex-wrap:wrap;align-items:stretch;gap:0 clamp(24px,4vw,64px);">
+      <div class="vita-hero-copy" style="flex:1 1 380px;display:flex;flex-direction:column;justify-content:space-between;gap:40px;padding:clamp(72px,12vh,160px) 0 clamp(32px,5vw,64px);">
         <h1 style="font-family:'Newsreader',serif;font-weight:400;margin:0;letter-spacing:-0.05em;line-height:0.84;font-size:clamp(80px,min(11vw,22vh),176px);display:flex;flex-direction:column;">
           <span data-reveal="">Vita</span><span data-reveal="" data-reveal-delay="150" style="font-style:italic;padding-left:1.4em;margin-top:0.1em;">Duo</span>
           
@@ -425,7 +481,7 @@ a:hover{color:#5E5A52;}
           </div>
         </div>
       </div>
-      <div style="flex:1 1 380px;display:flex;justify-content:center;align-items:flex-end;padding-top:clamp(24px,4vw,48px);">
+      <div class="vita-hero-photo" style="flex:1 1 380px;display:flex;justify-content:center;align-items:flex-end;padding-top:clamp(24px,4vw,48px);">
         <img src="assets/65f60e64-dc53-4fd2-b3bd-22cf05e68056.webp" alt="Vitaly Vatulya and Maria Nemtsova" style="height:clamp(340px,min(70vh,100vw),680px);max-width:100%;width:auto;object-fit:contain;object-position:bottom;display:block;margin-bottom:clamp(24px,4vw,48px);">
       </div>
     </div>
@@ -456,9 +512,9 @@ a:hover{color:#5E5A52;}
 
   <section style="max-width:1200px;margin:0 auto;padding:clamp(72px,9vw,128px) 24px;">
     
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:clamp(40px,6vw,96px);align-items:start;">
+    <div class="vita-members" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:clamp(40px,6vw,96px);align-items:start;">
       <sc-for list="{{ vitaMembers }}" as="m" hint-placeholder-count="2">
-        <div style="display:flex;flex-direction:column;gap:24px;padding-top:{{ m.offset }};">
+        <div class="vita-member" style="display:flex;flex-direction:column;gap:24px;padding-top:{{ m.offset }};">
           <div style="overflow:hidden;border-radius:10px;aspect-ratio:2/3;max-height:max(380px,100vw - 300px);background:#EAE4D8;">
             <img data-speed="{{ m.speed }}" src="{{ m.photo }}" alt="{{ m.name }}" style="width:100%;height:116%;margin-top:-8%;object-fit:cover;object-position:center top;display:block;">
           </div>
@@ -652,7 +708,7 @@ a:hover{color:#5E5A52;}
       </a>
     </div>
   </div>
-<div ref="{{ curtainRef }}" style="position: fixed; inset: 0; z-index: 50; background: #060607; opacity: 0; pointer-events: none; left: -1px; top: 945px"></div></main>
+</main>
 </sc-if>
 
 <sc-if value="{{ isAmstel }}" hint-placeholder-val="{{ false }}">
@@ -664,7 +720,7 @@ a:hover{color:#5E5A52;}
   </div>
   <section style="position:relative;overflow:hidden;">
     <div style="max-width:1200px;margin:0 auto;padding:24px 24px 0;"><nav style="display:flex;gap:8px;font-size:13px;color:#5E5A52;"><a href="#" sc-camel-on-click="{{ goCatalogue }}" style="color:#5E5A52;" style-hover="color:#141413;">Catalogue</a><span>/</span><span style="color:#141413;">Amstel Quartet</span></nav></div>
-    <div style="position:relative;max-width:1200px;margin:0 auto;padding:0 24px;min-height:clamp(560px,84vh,840px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,400px),1fr));align-items:end;">
+    <div class="amstel-hero" style="position:relative;max-width:1200px;margin:0 auto;padding:0 24px;min-height:clamp(560px,84vh,840px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,400px),1fr));align-items:end;">
       <div style="display:flex;flex-direction:column;gap:28px;padding:clamp(40px,6vw,80px) 0 clamp(40px,6vw,80px);position:relative;z-index:2;">
         <h1 style="font-family:'Newsreader',serif;font-weight:400;font-size:clamp(76px,12vw,188px);line-height:0.84;letter-spacing:-0.05em;margin:0;display:flex;flex-direction:column;">
           <span data-reveal="">Amstel</span>
@@ -676,7 +732,7 @@ a:hover{color:#5E5A52;}
           <div style="display:flex;flex-wrap:wrap;gap:10px;"><a href="mailto:kate@projects.art?subject=Amstel%20Quartet" style="font-size:14px;font-weight:500;padding:13px 22px;border-radius:999px;background:#141413;color:#F4F0E8;" style-hover="background:#2E2D2A;color:#F4F0E8;">Booking enquiry</a></div>
         </div>
       </div>
-      <div style="position:relative;height:clamp(320px,min(74vh,105vw),740px);">
+      <div class="amstel-hero-photo" style="position:relative;height:clamp(320px,min(74vh,105vw),740px);">
         <img data-speed="-0.1" src="assets/1a96ff23-b1d7-4896-8c0a-823d236c4d99.webp" alt="Amstel Quartet" style="position:absolute;right:0;bottom:0;height:100%;width:auto;max-width:none;display:block;">
       </div>
     </div>
@@ -692,10 +748,10 @@ a:hover{color:#5E5A52;}
 
   <section style="position:relative;max-width:1200px;margin:0 auto;padding:clamp(72px,9vw,128px) 24px;">
     <div data-reveal="" style="margin-bottom:clamp(32px,4vw,56px);"></div>
-    <div style="display:grid;grid-template-columns:repeat({{ catCols }},minmax(0,1fr));row-gap:32px;">
+    <div class="amstel-members" style="display:grid;grid-template-columns:repeat({{ catCols }},minmax(0,1fr));row-gap:32px;">
       <sc-for list="{{ amsMembers }}" as="m" hint-placeholder-count="4">
         <div data-reveal="" data-reveal-delay="{{ m.delay }}" style="display:flex;flex-direction:column;gap:12px;padding:0 0 32px 16px;">
-          <span style="font-family:'Newsreader',serif;font-weight:400;font-size:clamp(72px,8vw,120px);line-height:0.9;letter-spacing:-0.04em;">{{ m.n }}</span>
+          <div class="amstel-member-heading"><span class="amstel-member-number">{{ m.n }}</span><img class="amstel-face" src="{{ m.photo }}" alt="{{ m.name }}" width="96" height="96" loading="lazy"></div>
           <span style="font-family:'Newsreader',serif;font-weight:400;font-style:italic;font-size:24px;">{{ m.voice }}</span>
           <span style="font-size:15px;color:#5E5A52;">{{ m.name }}</span>
         </div>
@@ -783,12 +839,7 @@ a:hover{color:#5E5A52;}
         <div style="font-size:15px;font-weight:500;letter-spacing:0.01em;color:{{ ft.mute }};">Contact</div>
         <a href="mailto:kate@projects.art" style="font-size:18px;color:{{ ft.ink }};text-decoration:underline;text-underline-offset:4px;word-break:break-all;" style-hover="color:{{ ft.mute }};">kate@projects.art</a>
       </div>
-      <div style="display:flex;flex-direction:column;gap:8px;">
-        <div style="font-size:15px;font-weight:500;letter-spacing:0.01em;color:{{ ft.mute }};">Projects</div>
-        <sc-for list="{{ projects }}" as="p" hint-placeholder-count="4">
-          <a href="#{{ p.id }}" sc-camel-on-click="{{ p.open }}" style="font-size:15px;color:{{ ft.soft }};" style-hover="color:{{ ft.ink }};">{{ p.name }}</a>
-        </sc-for>
-      </div>
+
     </div>
     <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;padding-top:24px;font-size:13px;color:{{ ft.mute }};">
       <span>© KProjects</span>
@@ -931,7 +982,7 @@ function NeuroVisual() {
   React.useEffect(() => {
     const root = ref.current; if (!root) return;
     const els = Array.from(root.children);
-    const reduce = REDUCED();
+    const reduce = REDUCED() || matchMedia('(max-width: 759px), (hover: none)').matches;
     let mx = 0, my = 0, tx = 0, ty = 0, raf;
     const t0 = performance.now();
     const onMove = e => { mx = e.clientX / innerWidth - 0.5; my = e.clientY / innerHeight - 0.5; };
@@ -999,7 +1050,7 @@ class Component extends DCLogic {
     const reduce = REDUCED();
     document.querySelectorAll('[data-reveal]:not([data-rv])').forEach(el => {
       el.setAttribute('data-rv', '');
-      if (reduce) return;
+      if (reduce) { el.style.opacity = '1'; el.style.transform = 'none'; return; }
       const d = el.getAttribute('data-reveal-delay') || 0;
       el.style.opacity = '0'; el.style.transform = 'translateY(36px)';
       el.style.transition = 'opacity 1.1s cubic-bezier(.2,.7,.2,1) ' + d + 'ms, transform 1.3s cubic-bezier(.2,.7,.2,1) ' + d + 'ms';
@@ -1010,6 +1061,15 @@ class Component extends DCLogic {
   onScroll = () => {
     if (REDUCED()) return;
     const vh = innerHeight;
+    document.querySelectorAll('.project-card').forEach(card => {
+      const art = card.querySelector('.project-art');
+      if (!art) return;
+      if (innerWidth >= 760) { art.style.removeProperty('transform'); return; }
+      const r = card.getBoundingClientRect();
+      const distance = Math.abs(r.top + r.height / 2 - vh * 0.53);
+      const focus = Math.max(0, 1 - distance / (vh * 0.56));
+      art.style.transform = 'scale(' + (0.52 + 0.48 * focus * focus).toFixed(3) + ')';
+    });
     document.querySelectorAll('[data-speed]').forEach(el => {
       const s = parseFloat(el.getAttribute('data-speed')) || 0; const r = el.parentElement.getBoundingClientRect();
       const c = Math.max(-vh * 1.5, Math.min(vh * 1.5, r.top + r.height / 2 - vh / 2));
@@ -1062,11 +1122,7 @@ class Component extends DCLogic {
       if (id) location.hash = id; else history.pushState(null, '', location.pathname + location.search);
       this.setState({ route: id }, () => window.scrollTo(0, 0));
     };
-    const c = this.curtainRef.current;
-    if (id === 'neuromusic' && c && !REDUCED()) {
-      c.style.transition = 'opacity .5s ease'; c.style.opacity = '1';
-      setTimeout(() => { nav(); requestAnimationFrame(() => { c.style.transition = 'opacity 1.4s ease'; c.style.opacity = '0'; }); }, 520);
-    } else nav();
+    nav();
   }
   scrollToRef(ref, home, e) {
     e.preventDefault();
@@ -1135,7 +1191,7 @@ class Component extends DCLogic {
             revVids: RV.map((id, j) => ({ thumb: 'https://img.youtube.com/vi/' + id + '/hqdefault.jpg', label: 'Video ' + pad(j + 1), border: j === k ? '#F4F0E8' : 'rgba(244,240,232,0.14)', opacity: j === k ? 1 : 0.55, pick: () => this.setState({ revVid: j }) })) }; })(),
           revProfile: rev.profile.map((t, j) => ({ text: t, num: pad(j + 1), delay: j * 100 })),
           ams: { ...ams, programmes: ams.programmes.map((pr, j) => ({ ...pr, num: pad(j + 1), delay: j * 120 })) },
-          amsMembers: ams.people.map((m, j) => ({ n: String(j + 1), voice: m.label.replace(' saxophone', ''), name: m.text, delay: j * 110 })),
+          amsMembers: ams.people.map((m, j) => ({ n: String(j + 1), photo: 'assets/amstel-' + ['soprano', 'alto', 'tenor', 'baritone'][j] + '.png', voice: m.label.replace(' saxophone', ''), name: m.text, delay: j * 110 })),
           amsVenues: doubled(['Concertgebouw Amsterdam', 'Carnegie Hall', 'Philharmonie Luxembourg', 'Concert Artists Guild', 'Kersjes Prize', 'Gaudeamus Prize']),
           amsProfile: ams.profile.slice(1)
         };
