@@ -7,13 +7,18 @@
 <script src="assets/ad60e1a8-a068-4486-af0b-8d125bc61a1e.js"></script>
 <style>
 /* Responsive layout and touch behavior. */
-.neuro-explore{display:inline-flex;align-items:center;gap:16px;padding:12px 4px;color:#ECE8DF;font-size:14px;min-height:44px;}
-.neuro-explore:hover{color:white;}
-.neuro-explore:focus-visible{outline:2px solid #ECE8DF;outline-offset:4px;border-radius:4px;}
-.neuro-explore span{animation:neuro-cue 2.6s ease-in-out infinite;}
-@keyframes neuro-cue{0%,100%{transform:translateY(-3px);}50%{transform:translateY(4px);}}
+
+.neuro-wave{position:relative;height:clamp(160px,21vw,300px);width:100%;overflow:hidden;background:#000;border-block:1px solid rgba(236,232,223,.1);}
+.neuro-wave-track{position:absolute;inset:0 auto 0 -25%;width:150%;background-image:url('assets/neuro-sound-wave.jpg');background-repeat:repeat-x;background-size:auto 220%;background-position:center 45%;will-change:transform;}
+.neuro-wave::after{content:'';position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,#060607,transparent 12%,transparent 88%,#060607);}
+.neuro-artwork{max-width:1200px;margin:clamp(48px,7vw,96px) auto 0;padding:0 24px;}
+.neuro-artwork-frame{overflow:hidden;border-radius:8px;background:#3e5750;}
+.neuro-artwork img{display:block;width:100%;height:auto;}
+@media(max-width:759px){.neuro-artwork{padding:0 16px;}.neuro-wave{height:180px;}}
+@media(prefers-reduced-motion:reduce){.neuro-wave-track{transform:none!important;will-change:auto;}}
+
 @media(max-width:759px){.neuro-hero{height:100svh!important;min-height:620px!important;}}
-@media(prefers-reduced-motion:reduce){.neuro-explore span{animation:none;}}
+
 
 @media(min-width:900px){.about-copy{margin-left:48px;}}
 html,body{width:100%;max-width:100%;overflow-x:hidden;overflow-x:clip;-webkit-text-size-adjust:100%;}
@@ -292,7 +297,6 @@ a:hover{color:#5E5A52;}
         <p data-reveal="" data-reveal-delay="2050" style="font-size:clamp(18px,1.8vw,22px);color:#D6D1C6;margin:0;">Live Music &amp; Neuroscience</p>
         <div data-reveal="" data-reveal-delay="2250" style="display:flex;flex-wrap:wrap;gap:12px;margin-top:8px;pointer-events:auto;">
           <a href="mailto:kate@projects.art?subject=NeuroMusic" style="font-size:14px;font-weight:500;padding:12px 20px;border-radius:6px;background:#ECE8DF;color:#060607;" style-hover="background:#FFFFFF;color:#060607;">Booking enquiry</a>
-          <a class="neuro-explore" href="#neuro-concept" sc-camel-on-click="{{ goNeuroConcept }}">Explore the concept <span aria-hidden="true">↓</span></a>
         </div>
       </div>
     </div>
@@ -320,6 +324,10 @@ a:hover{color:#5E5A52;}
       </div>
     </div>
   </section>
+  <div class="neuro-wave" aria-hidden="true">
+    <div class="neuro-wave-track" data-wave-pan=""></div>
+  </div>
+
   <section style="position:relative;overflow:hidden;border-top:1px solid rgba(236,232,223,0.12);">
     <div style="max-width:1200px;margin:0 auto;padding:clamp(80px,10vw,144px) 24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:clamp(48px,7vw,112px);align-items:center;">
       <div style="display:flex;flex-direction:column;gap:24px;max-width:540px;">
@@ -401,6 +409,12 @@ a:hover{color:#5E5A52;}
       <p data-reveal="" data-reveal-delay="120" style="font-size:17px;line-height:1.65;color:#D6D1C6;margin:0;text-wrap:pretty;">Her visuals accompany the live performance and follow the programme from state to state, giving each listening state and the research behind it its own visual language.</p>
     </div>
   </section>
+  <figure class="neuro-artwork">
+    <div class="neuro-artwork-frame">
+      <img src="assets/neuro-krasatisha.jpg" alt="Abstract gold and teal filaments forming an intricate fan-shaped pattern" width="2000" height="1245" loading="lazy" decoding="async">
+    </div>
+  </figure>
+
 
   <section style="max-width:1200px;margin:0 auto;padding:clamp(72px,9vw,128px) 24px clamp(56px,7vw,96px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:clamp(40px,6vw,96px);">
     <div style="display:flex;flex-direction:column;gap:24px;">
@@ -1108,6 +1122,12 @@ class Component extends DCLogic {
   onScroll = () => {
     if (REDUCED()) return;
     const vh = innerHeight;
+    document.querySelectorAll('[data-wave-pan]').forEach(el => {
+      const r = el.parentElement.getBoundingClientRect();
+      if (r.bottom < 0 || r.top > vh) return;
+      const progress = Math.min(1, Math.max(0, (vh - r.top) / (vh + r.height)));
+      el.style.transform = 'translate3d(' + ((0.5 - progress) * 24).toFixed(3) + '%,0,0)';
+    });
     document.querySelectorAll('[data-speed]').forEach(el => {
       const s = parseFloat(el.getAttribute('data-speed')) || 0; const r = el.parentElement.getBoundingClientRect();
       const c = Math.max(-vh * 1.5, Math.min(vh * 1.5, r.top + r.height / 2 - vh / 2));
