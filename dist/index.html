@@ -39,10 +39,13 @@ a,button{-webkit-tap-highlight-color:transparent;touch-action:manipulation;}
   [data-reveal]{opacity:1!important;transform:none!important;transition:none!important;}
   .catalogue{padding-top:32px!important;padding-bottom:64px!important;}
   .catalogue>div:first-child{display:none!important;}
-  .catalogue>div:last-child{grid-template-columns:minmax(0,1fr)!important;gap:48px!important;}
+  .catalogue>div:last-child{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:28px 16px!important;}
   .project-card{gap:8px!important;}
-  .project-art{width:100%;max-width:340px;margin:0 auto;transform:scale(.52);}
-  .project-card>span:last-child{max-width:340px;width:100%;margin:0 auto;}
+  .project-art{width:100%;margin:0;transform:none;aspect-ratio:4/5!important;border-radius:8px!important;}
+  .project-card>span:last-child{width:100%;margin:0;display:block!important;}
+  .project-card>span:last-child>span>span:first-child{font-size:clamp(19px,4.8vw,25px)!important;line-height:1.14!important;overflow-wrap:break-word;}
+  .project-card>span:last-child>span>span:last-child{font-size:12px!important;line-height:1.4!important;color:#5E5A52;}
+  .project-card:focus-visible{outline:2px solid #5E5A52;outline-offset:5px;border-radius:8px;}
   .project-art img{transform:none!important;opacity:1!important;filter:none!important;}
   .vita-hero{flex-direction:column!important;}
   .vita-hero-photo{order:-1;flex:none!important;padding-top:24px!important;align-self:flex-end;width:88%;}
@@ -1105,15 +1108,6 @@ class Component extends DCLogic {
   onScroll = () => {
     if (REDUCED()) return;
     const vh = innerHeight;
-    document.querySelectorAll('.project-card').forEach(card => {
-      const art = card.querySelector('.project-art');
-      if (!art) return;
-      if (innerWidth >= 760) { art.style.removeProperty('transform'); return; }
-      const r = card.getBoundingClientRect();
-      const distance = Math.abs(r.top + r.height / 2 - vh * 0.53);
-      const focus = Math.max(0, 1 - distance / (vh * 0.56));
-      art.style.transform = 'scale(' + (0.52 + 0.48 * focus * focus).toFixed(3) + ')';
-    });
     document.querySelectorAll('[data-speed]').forEach(el => {
       const s = parseFloat(el.getAttribute('data-speed')) || 0; const r = el.parentElement.getBoundingClientRect();
       const c = Math.max(-vh * 1.5, Math.min(vh * 1.5, r.top + r.height / 2 - vh / 2));
