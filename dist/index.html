@@ -100,7 +100,6 @@ a,button{-webkit-tap-highlight-color:transparent;touch-action:manipulation;}
 .film-frame{width:clamp(78px,9vw,116px);aspect-ratio:3/4;background:#d7d1c0;display:grid;place-items:center;color:#292925;position:relative;}
 .film-frame::before{content:'';position:absolute;inset:17% 5%;border:1px solid #29292588;border-radius:50%;}
 .film-frame span{font:400 60px/1 'Newsreader',serif;}
-.cinema-caption{position:absolute;bottom:0;left:0;right:0;text-align:center;font-size:10px;letter-spacing:.25em;color:#bcb6a8;}
 .flowers-art{height:440px;display:flex;align-items:center;justify-content:center;}
 .programme-album{width:65%;height:auto;max-height:390px;object-fit:contain;transform:translateY(calc(var(--scene-shift) * -.3)) rotate(4deg);box-shadow:0 20px 50px #0005;position:relative;z-index:2;}
 .album-parrot{position:absolute;left:-2%;top:1%;width:38%;height:65%;z-index:3;transform:translateY(calc(var(--scene-shift) * -.7)) rotate(-9deg);filter:drop-shadow(0 8px 10px #0004);}
@@ -141,6 +140,43 @@ a,button{-webkit-tap-highlight-color:transparent;touch-action:manipulation;}
  .vita-hero-copy h1 span:last-child{padding-left:1em!important;}
 }
 @media(prefers-reduced-motion:reduce){.scene-art{opacity:1!important;transform:none!important;transition:none!important;}.programme-scene{--scene-shift:0px!important;}}
+</style>
+<style>
+/* Simplified Amstel composer credits and compact NeuroMusic biographies. */
+.amstel-programme-card .amstel-composers{margin-top:auto;padding-top:10px;font-size:14px;line-height:1.8;color:#5e5a52;}
+.amstel-composers>small{display:block;font-size:11px;line-height:1.6;text-transform:uppercase;letter-spacing:.08em;margin-bottom:5px;color:#777166;}
+.neuro-page>section{border-top:0!important;border-bottom:0!important;}
+.neuro-bio{max-width:1200px;margin:0 auto;padding:56px 24px;}
+.neuro-bio-layout{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;}
+.neuro-bio-photo{margin:0;max-width:280px;width:100%;aspect-ratio:4/5;border-radius:10px;overflow:hidden;justify-self:center;}
+.neuro-bio-photo img{display:block;width:100%;height:100%;object-fit:cover;object-position:center top;}
+.neuro-bio-yury .neuro-bio-photo{grid-column:2;grid-row:1;}
+.neuro-bio-yury .neuro-bio-copy{grid-column:1;grid-row:1;}
+.neuro-bio-role{font-size:13px;line-height:1.6;color:#c9c4b9;}
+.neuro-bio h2{font:400 clamp(32px,4.4vw,54px)/1.2 'Newsreader',serif;margin:14px 0 20px;}
+.neuro-bio p{font-size:17px;line-height:1.7;color:#bdb8ad;margin:0 0 18px;}
+.neuro-bio .neuro-bio-lead{font:400 24px/1.5 'Newsreader',serif;color:#ece8df;}
+.neuro-synthesis>div{padding-top:28px!important;}
+.neuro-videos{padding-top:32px!important;}
+@media(max-width:759px){
+ .neuro-founders>div{padding-top:32px!important;padding-bottom:40px!important;gap:24px!important;}
+ .neuro-founders>div>div:first-child{flex:0 0 160px!important;width:160px!important;max-width:160px!important;}
+ .neuro-founders>div>div:first-child img{width:180.4%!important;height:207.3%!important;left:-41.5%!important;top:-30.4%!important;}
+ .neuro-bio{padding:28px 24px;}
+ .neuro-bio-layout{display:flow-root;}
+ .neuro-bio-copy{display:contents;}
+ .neuro-bio-photo{width:clamp(104px,30vw,136px);max-width:36%;margin:3px 18px 12px 0;float:left;border-radius:7px;}
+ .neuro-bio-elena .neuro-bio-photo{float:right;margin:3px 0 12px 18px;}
+ .neuro-bio h2{font-size:28px;margin:8px 0 14px;}
+ .neuro-bio p{font-size:16px;margin:0 0 16px;text-wrap:wrap;}
+ .neuro-bio .neuro-bio-lead{font-size:19px;}
+ .neuro-bio-role{font-size:11px;line-height:1.5;}
+ .neuro-synthesis>div{padding-top:0!important;}
+ .neuro-synthesis>div>div{display:flex!important;flex-direction:column;gap:16px!important;}
+ .neuro-synthesis-orb{order:-1;max-width:320px!important;}
+ .neuro-synthesis>div>div>div:first-child{gap:0!important;width:100%;}
+ .neuro-videos{padding-top:28px!important;}
+}
 </style>
 </head>
 <body>
@@ -346,7 +382,7 @@ a:hover{color:#5E5A52;}
 </sc-if>
 
 <sc-if value="{{ isNeuro }}" hint-placeholder-val="{{ false }}">
-<main style="flex:1;background:#060607;color:#ECE8DF;margin-top:-69px;">
+<main class="neuro-page" style="flex:1;background:#060607;color:#ECE8DF;margin-top:-69px;">
   <section class="neuro-hero" style="position:relative;height:100vh;min-height:600px;overflow:hidden;background:#060607;">
     {{ neuroVisual }}
     <div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(6,6,7,0.85) 0%,rgba(6,6,7,0.35) 45%,rgba(6,6,7,0) 70%),linear-gradient(0deg,rgba(6,6,7,0.9) 0%,rgba(6,6,7,0) 40%);pointer-events:none;"></div>
@@ -375,7 +411,7 @@ a:hover{color:#5E5A52;}
     </div>
   </section>
 
-  <section style="position:relative;overflow:hidden;border-top:1px solid rgba(236,232,223,0.12);">
+  <section class="neuro-founders" style="position:relative;overflow:hidden;border-top:1px solid rgba(236,232,223,0.12);">
     <div style="max-width:1200px;margin:0 auto;padding:clamp(80px,10vw,144px) 24px;display:flex;flex-wrap:wrap;gap:clamp(40px,6vw,88px);align-items:center;">
       <div data-reveal="" style="position:relative;aspect-ratio:1/1;flex:0 0 260px;max-width:260px;width:100%;border-radius:50%;overflow:hidden;background:#111112;">
         <img src="assets/6cc11256-4037-4c7f-ae4b-9d5888dbdb5b.webp" alt="Yury and Elena Revich" style="position: absolute; inset: 0; width: 469px; height: 539px; object-fit: cover; object-position: 50% 50%; display: block; left: -108px; top: -79px">
@@ -392,41 +428,27 @@ a:hover{color:#5E5A52;}
     <div class="neuro-wave-track" data-wave-pan=""></div>
   </div>
 
-  <section style="position:relative;overflow:hidden;border-top:1px solid rgba(236,232,223,0.12);">
-    <div style="max-width:1200px;margin:0 auto;padding:clamp(80px,10vw,144px) 24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:clamp(48px,7vw,112px);align-items:center;">
-      <div style="display:flex;flex-direction:column;gap:24px;max-width:540px;">
-        <div data-reveal="" style="display:flex;align-items:center;gap:14px;font-family:'Instrument Sans',sans-serif;font-style:normal;font-weight:500;font-size:15px;line-height:1;letter-spacing:0.01em;color:#C9C4B9;"><span>Co-founder &amp; Artistic Director</span></div>
-        <h2 data-reveal="" data-reveal-delay="100" style="font-family:'Newsreader',serif;font-weight:400;font-size:clamp(36px,4.4vw,60px);line-height:1.04;letter-spacing:-0.025em;margin:0;">Yury Revich</h2>
-        <p data-reveal="" data-reveal-delay="200" style="font-family:'Newsreader',serif;font-weight:400;font-size:clamp(20px,2vw,26px);line-height:1.4;margin:0;color:#ECE8DF;text-wrap:pretty;">Stradivari violinist, composer, <br>ECHO Klassik and ICMA winner</p>
-        <p data-reveal="" data-reveal-delay="300" style="font-size:17px;line-height:1.7;color:#BDB8AD;margin:0;text-wrap:pretty;">Yury has performed at Carnegie Hall, the Vienna Musikverein and <br>La Scala, with recordings featured in Netflix’s Bridgerton<br>Founder of Festival Nights and Honorary Representative of <br>UNICEF Austria, he brings together music, <br>visual art and social initiatives</p>
-      </div>
-      <div data-reveal="" style="position:relative;aspect-ratio:4/5;max-width:320px;width:100%;justify-self:center;border-radius:10px;overflow:hidden;background:#111112;">
-        <img data-speed="-0.04" src="assets/624b5525-f606-45fe-b9c9-8cd287038797.webp" alt="Yury Revich with violin" style="position:absolute;inset:0;width:100%;height:108%;object-fit:cover;object-position:50% 0%;display:block;">
-      </div>
+  <section class="neuro-bio neuro-bio-yury">
+    <div class="neuro-bio-layout">
+      <figure class="neuro-bio-photo"><img src="assets/624b5525-f606-45fe-b9c9-8cd287038797.webp" alt="Yury Revich with violin" width="320" height="400" loading="lazy"></figure>
+      <div class="neuro-bio-copy"><span class="neuro-bio-role">Co-founder &amp; Artistic Director</span><h2>Yury Revich</h2><p class="neuro-bio-lead">Stradivari violinist, composer, ECHO Klassik and ICMA winner</p><p>Yury has performed at Carnegie Hall, the Vienna Musikverein and La Scala, with recordings featured in Netflix’s Bridgerton. Founder of Festival Nights and Honorary Representative of UNICEF Austria, he brings together music, visual art and social initiatives.</p></div>
     </div>
   </section>
-  <section style="position:relative;overflow:hidden;border-top:1px solid rgba(236,232,223,0.12);">
-    <div style="max-width:1200px;margin:0 auto;padding:clamp(80px,10vw,144px) 24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:clamp(48px,7vw,112px);align-items:center;">
-      <div data-reveal="" style="position:relative;aspect-ratio:4/5;max-width:320px;width:100%;justify-self:center;border-radius:10px;overflow:hidden;background:#111112;">
-        <img data-speed="-0.04" src="assets/d51f61a4-ab75-464d-a2e3-479f8cc6c2cd.webp" alt="Elena Revich with violin" style="position:absolute;inset:0;width:100%;height:108%;object-fit:cover;object-position:50% 0%;display:block;">
-      </div>
-      <div style="display:flex;flex-direction:column;gap:24px;max-width:540px;">
-        <div data-reveal="" style="display:flex;align-items:center;gap:14px;font-family:'Instrument Sans',sans-serif;font-style:normal;font-weight:500;font-size:15px;line-height:1;letter-spacing:0.01em;color:#C9C4B9;"><span>Co-founder</span></div>
-        <h2 data-reveal="" data-reveal-delay="100" style="font-family:'Newsreader',serif;font-weight:400;font-size:clamp(36px,4.4vw,60px);line-height:1.04;letter-spacing:-0.025em;margin:0;">Elena Revich</h2>
-        <p data-reveal="" data-reveal-delay="200" style="font-family:'Newsreader',serif;font-weight:400;font-size:clamp(20px,2vw,26px);line-height:1.4;margin:0;color:#ECE8DF;text-wrap:pretty;">Violinist, diploma winner of<br>the International Tchaikovsky Competition</p>
-        <p data-reveal="" data-reveal-delay="300" style="font-size:17px;line-height:1.7;color:#BDB8AD;margin:0;text-wrap:pretty;"><span style="text-wrap-mode: initial;">Elena is an internationally acclaimed violinist and</span>&nbsp;the author of interdisciplinary projects that have received prestigious awards, including the Golden Mask<br>Elena developed the NeuroMusic approach in dialogue with neuroscientists, exploring how music shapes perception, emotion and attention</p>
-      </div>
+  <section class="neuro-bio neuro-bio-elena">
+    <div class="neuro-bio-layout">
+      <figure class="neuro-bio-photo"><img src="assets/d51f61a4-ab75-464d-a2e3-479f8cc6c2cd.webp" alt="Elena Revich with violin" width="320" height="400" loading="lazy"></figure>
+      <div class="neuro-bio-copy"><span class="neuro-bio-role">Co-founder</span><h2>Elena Revich</h2><p class="neuro-bio-lead">Violinist, diploma winner of the International Tchaikovsky Competition</p><p>Elena is an internationally acclaimed violinist and the author of interdisciplinary projects that have received prestigious awards, including the Golden Mask. Elena developed the NeuroMusic approach in dialogue with neuroscientists, exploring how music shapes perception, emotion and attention.</p></div>
     </div>
   </section>
 
-  <section style="position:relative;background:#060607;border-top:1px solid rgba(236,232,223,0.12);">
+  <section class="neuro-synthesis" style="position:relative;background:#060607;border-top:1px solid rgba(236,232,223,0.12);">
     <div style="position:relative;max-width:1200px;margin:0 auto;padding:clamp(72px,9vw,128px) 24px 0;display:flex;flex-direction:column;gap:28px;">
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:32px clamp(40px,6vw,96px);align-items:center;">
         <div style="display:flex;flex-direction:column;gap:28px;">
           <div data-reveal="" style="display:flex;align-items:center;gap:14px;font-family:'Instrument Sans',sans-serif;font-style:normal;font-weight:500;font-size:15px;line-height:1;letter-spacing:0.01em;color:#D6D1C6;"></div>
           <h2 data-reveal="" data-reveal-delay="100" style="font-family:'Newsreader',serif;font-weight:400;font-size:clamp(32px,3.6vw,52px);line-height:1.05;letter-spacing:-0.03em;margin:0;max-width:880px;text-wrap:balance;">Live music, visual art<br>and neuroscience<br><em style="font-style:italic;white-space:nowrap;">in one performance</em></h2>
         </div>
-        <div style="position:relative;aspect-ratio:1/1;max-width:420px;width:100%;justify-self:center;">
+        <div class="neuro-synthesis-orb" style="position:relative;aspect-ratio:1/1;max-width:420px;width:100%;justify-self:center;">
           <div data-speed="-0.08" style="position:absolute;inset:0;">
             <img data-rot="0.03" src="assets/b7983c40-1bea-43f6-9022-d9b1a0e6f625.webp" alt="1000 Petals, artwork by Tatiana Plakhova" style="width:100%;height:100%;object-fit:cover;border-radius:50%;display:block;-webkit-mask-image:radial-gradient(closest-side,#000 82%,transparent 100%);mask-image:radial-gradient(closest-side,#000 82%,transparent 100%);">
           </div>
@@ -435,11 +457,8 @@ a:hover{color:#5E5A52;}
     </div>
   </section>
 
-  <section style="max-width:1200px;margin:0 auto;padding:clamp(72px,9vw,128px) 24px;">
-    <div style="display:flex;justify-content:space-between;align-items:baseline;gap:16px;margin-bottom:28px;">
-      <h2 data-reveal="" style="font-family:'Newsreader',serif;font-weight:400;font-size:clamp(32px,3.6vw,48px);letter-spacing:-0.02em;margin:0;"><em style="font-style:italic;">Watch</em></h2>
+  <section class="neuro-videos" style="max-width:1200px;margin:0 auto;padding:clamp(72px,9vw,128px) 24px;">
 
-    </div>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:20px;">
       <div style="min-width:0;">
         <div style="position:relative;aspect-ratio:16/9;overflow:hidden;border-radius:10px;background:#111112;">
@@ -748,7 +767,7 @@ a:hover{color:#5E5A52;}
       </div>
       <div class="scene-art cinema-art" aria-hidden="true">
         <div class="filmstrip"><div class="film-frame"><span>3</span></div><div class="film-frame"><span>2</span></div><div class="film-frame"><span>1</span></div></div>
-        <span class="cinema-caption">MUSIC IN MOTION</span>
+
       </div>
     </article>
     <article class="programme-scene flowers-scene" data-program-scene="">
@@ -879,7 +898,7 @@ a:hover{color:#5E5A52;}
         <article class="amstel-programme-card">
           <span class="eyebrow">{{ pr.num }} · {{ pr.tag }}</span>
           <h3>{{ pr.title }}</h3><p>{{ pr.desc }}</p>
-          <div class="composer-chips"><sc-for list="{{ pr.composerList }}" as="composer" hint-placeholder-count="3"><span>{{ composer }}</span></sc-for></div>
+          <p class="amstel-composers"><small>Composers</small>{{ pr.composers }}</p>
         </article>
       </sc-for>
     </div>
