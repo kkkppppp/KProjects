@@ -8,7 +8,8 @@
 <style>
 /* Responsive layout and touch behavior. */
 
-.neuro-wave{position:relative;height:clamp(160px,21vw,300px);width:100%;overflow:hidden;background:#000;border-block:1px solid rgba(236,232,223,.1);}
+.neuro-wave{position:relative;height:clamp(160px,21vw,300px);width:100%;overflow:hidden;background:#000;}
+.neuro-wave + section{border-top:0!important;}
 .neuro-wave-track{position:absolute;inset:0 auto 0 -25%;width:150%;background-image:url('assets/neuro-sound-wave.jpg');background-repeat:repeat-x;background-size:auto 220%;background-position:center 45%;will-change:transform;}
 .neuro-wave::after{content:'';position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,#060607,transparent 12%,transparent 88%,#060607);}
 .neuro-artwork{max-width:1200px;margin:clamp(48px,7vw,96px) auto 0;padding:0 24px;}
@@ -374,22 +375,20 @@ a:hover{color:#5E5A52;}
   <section style="max-width:1200px;margin:0 auto;padding:clamp(72px,9vw,128px) 24px;">
     <div style="display:flex;justify-content:space-between;align-items:baseline;gap:16px;margin-bottom:28px;">
       <h2 data-reveal="" style="font-family:'Newsreader',serif;font-weight:400;font-size:clamp(32px,3.6vw,48px);letter-spacing:-0.02em;margin:0;"><em style="font-style:italic;">Watch</em></h2>
-      <span style="font-size:13px;color:#8C877C;">Videos coming soon</span>
+
     </div>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:20px;">
-      <div data-reveal="" style="position:relative;aspect-ratio:16/9;border-radius:10px;overflow:hidden;background:#111112;border:1px solid rgba(236,232,223,0.12);">
-        <img data-rot="-0.02" src="assets/cbd067d8-c9b3-44f7-bc1b-9401c423acf1.webp" alt="" style="position:absolute;left:50%;top:50%;width:70%;aspect-ratio:1/1;margin:-35% 0 0 -35%;object-fit:cover;border-radius:50%;opacity:0.35;display:block;">
-        <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;">
-          <span style="width:64px;height:64px;border-radius:50%;border:1px solid rgba(236,232,223,0.5);display:flex;align-items:center;justify-content:center;font-size:18px;padding-left:4px;">▶</span>
-          <span style="font-size:13px;color:#BDB8AD;">Performance film</span>
+      <div style="min-width:0;">
+        <div style="position:relative;aspect-ratio:16/9;overflow:hidden;border-radius:10px;background:#111112;">
+          <iframe src="https://www.youtube-nocookie.com/embed/1btyGnzXk5E?rel=0&amp;playsinline=1" title="NeuroMusic — video 1" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" style="position:absolute;inset:0;width:100%;height:100%;border:0;"></iframe>
         </div>
+        <a href="https://www.youtube.com/watch?v=1btyGnzXk5E" target="_blank" rel="noopener noreferrer" style="display:inline-block;color:#BDB8AD;font-size:13px;padding:12px 0;">Watch on YouTube ↗</a>
       </div>
-      <div data-reveal="" data-reveal-delay="150" style="position:relative;aspect-ratio:16/9;border-radius:10px;overflow:hidden;background:#111112;border:1px solid rgba(236,232,223,0.12);">
-        <img data-rot="0.02" src="assets/b7983c40-1bea-43f6-9022-d9b1a0e6f625.webp" alt="" style="position:absolute;left:50%;top:50%;width:70%;aspect-ratio:1/1;margin:-35% 0 0 -35%;object-fit:cover;border-radius:50%;opacity:0.35;display:block;">
-        <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;">
-          <span style="width:64px;height:64px;border-radius:50%;border:1px solid rgba(236,232,223,0.5);display:flex;align-items:center;justify-content:center;font-size:18px;padding-left:4px;">▶</span>
-          <span style="font-size:13px;color:#BDB8AD;">Behind the project</span>
+      <div style="min-width:0;">
+        <div style="position:relative;aspect-ratio:16/9;overflow:hidden;border-radius:10px;background:#111112;">
+          <iframe src="https://www.youtube-nocookie.com/embed/io6M2XDulTM?rel=0&amp;playsinline=1" title="NeuroMusic — video 2" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" style="position:absolute;inset:0;width:100%;height:100%;border:0;"></iframe>
         </div>
+        <a href="https://www.youtube.com/watch?v=io6M2XDulTM" target="_blank" rel="noopener noreferrer" style="display:inline-block;color:#BDB8AD;font-size:13px;padding:12px 0;">Watch on YouTube ↗</a>
       </div>
     </div>
   </section>
