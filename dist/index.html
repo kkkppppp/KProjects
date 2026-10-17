@@ -3,6 +3,7 @@
 <script>window.__resources = {"https://unpkg.com/react@18.3.1/umd/react.production.min.js": "assets/49c4fc7f-b983-4205-a5e6-8653f482e032.js", "https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js": "assets/5be45fdf-4dca-47f4-a7af-90c3bf3b16ed.js"};</script>
 <meta name="description" content="International artists, music projects and collaborations. Explore the KProjects catalogue and contact producer Kate Podakin.">
 <meta charset="utf-8">
+<link rel="preload" as="image" href="assets/65f60e64-dc53-4fd2-b3bd-22cf05e68056.webp">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="assets/ad60e1a8-a068-4486-af0b-8d125bc61a1e.js"></script>
 <style>
@@ -10,7 +11,7 @@
 
 .neuro-wave{position:relative;height:clamp(160px,21vw,300px);width:100%;overflow:hidden;background:#000;}
 .neuro-wave + section{border-top:0!important;}
-.neuro-wave-track{position:absolute;inset:0 auto 0 -25%;width:150%;background-image:url('assets/neuro-sound-wave.jpg');background-repeat:repeat-x;background-size:auto 220%;background-position:center 45%;will-change:transform;}
+.neuro-wave-track{position:absolute;inset:0 auto 0 -25%;width:150%;background-image:url('assets/neuro-sound-wave-d6d5bcb3.webp');background-repeat:repeat-x;background-size:auto 220%;background-position:center 45%;will-change:transform;}
 .neuro-wave::after{content:'';position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,#060607,transparent 12%,transparent 88%,#060607);}
 .neuro-artwork{max-width:1200px;margin:clamp(48px,7vw,96px) auto 0;padding:0 24px;}
 .neuro-artwork-frame{overflow:hidden;border-radius:8px;background:#3e5750;}
@@ -176,6 +177,48 @@ a,button{-webkit-tap-highlight-color:transparent;touch-action:manipulation;}
  .neuro-synthesis-orb{order:-1;max-width:320px!important;}
  .neuro-synthesis>div>div>div:first-child{gap:0!important;width:100%;}
  .neuro-videos{padding-top:28px!important;}
+}
+</style>
+<style>
+/* Spacious media and compact editorial portraits. */
+.neuro-music-details{margin-top:64px;max-width:800px;}
+.neuro-music-details>div{gap:28px!important;}
+.neuro-videos{padding-top:64px!important;}
+.neuro-videos>div:first-child{gap:40px!important;}
+.neuro-synthesis>div>div{gap:56px!important;}
+.amstel-members{grid-template-columns:1fr!important;max-width:800px;margin:auto;gap:32px!important;}
+.amstel-members>div{display:grid!important;grid-template-columns:120px 100px minmax(0,1fr);align-items:center;gap:24px!important;padding:0!important;}
+.amstel-face-frame{display:block;position:relative;overflow:hidden;width:64px;height:64px;border-radius:50%;flex:none;background:#E7E2D7;}
+.amstel-face-frame img{width:64px;height:64px;object-fit:cover;display:block;}
+.amstel-members>div:nth-child(2) .amstel-face{position:absolute;width:280px!important;height:auto!important;max-width:none;left:-39px;top:-12px;border-radius:0;}
+@media(max-width:759px){
+.neuro-synthesis>div{padding-top:24px!important;}
+.neuro-synthesis>div>div{gap:48px!important;}
+.neuro-videos{padding-top:56px!important;padding-bottom:72px!important;}
+.neuro-music-details{margin-top:56px;}
+.neuro-music-details>div{gap:32px!important;}
+.vita-member{display:flow-root!important;width:100%;}
+.vita-member>div:first-child{float:left;width:36%;max-width:144px;margin:0 22px 14px 0;}
+.vita-member:nth-child(even)>div:first-child{float:right;margin:0 0 14px 22px;}
+.vita-member>div:last-child{display:contents!important;}
+.vita-member>div:last-child>span{display:block;margin-bottom:12px;}
+.vita-member>div:last-child>span:last-child{display:inline;line-height:1.75!important;}
+.vita-member>div:last-child>span:nth-child(2){font-size:27px!important;line-height:1.2!important;}
+.vita-profile-wrap>h2,.vita-programmes-wrap>h2{margin-bottom:32px!important;}
+.vita-profile-wrap>div:first-of-type,.vita-programmes-wrap>div:first-of-type{width:36%!important;max-width:144px!important;margin:0 0 18px 22px!important;float:right!important;}
+.vita-programmes-wrap>div:first-of-type{float:left!important;margin:0 22px 18px 0!important;}
+.vita-profile-wrap>p{min-width:0!important;overflow:visible!important;border:0!important;padding:0 0 24px!important;line-height:1.75!important;}
+.vita-programmes-wrap>div:not(:first-of-type){display:block!important;min-width:0!important;border:0!important;padding:0 0 28px!important;}
+.vita-programmes-wrap>div:not(:first-of-type)>div{display:contents!important;}
+.vita-programmes-wrap>div:not(:first-of-type)>span{font-size:20px!important;margin-right:8px;}
+.vita-programmes-wrap>div:not(:first-of-type)>div>span:first-child{font-size:23px!important;line-height:1.3!important;}
+.vita-programmes-wrap>div:not(:first-of-type)>div>span:last-child{display:block;margin-top:12px;line-height:1.75!important;}
+.vita-programmes-wrap>div:last-child{clear:both;}
+.amstel-members>div{grid-template-columns:104px minmax(0,1fr)!important;gap:6px 22px!important;}
+.amstel-member-heading{grid-row:span 2;}
+.amstel-members>div>span{font-size:17px!important;line-height:1.5!important;}
+.amstel-members>div>span:nth-child(2){align-self:end;font-size:24px!important;}
+.amstel-members>div>span:last-child{align-self:start;}
 }
 </style>
 </head>
@@ -347,7 +390,7 @@ a:hover{color:#5E5A52;}
       <sc-for list="{{ projects }}" as="p" hint-placeholder-count="4">
             <a class="project-card" href="#{{ p.id }}" sc-camel-on-click="{{ p.open }}" style="display:flex;flex-direction:column;gap:16px;color:#141413;" style-hover="color:#141413;">
               <span class="project-art" style="display:block;aspect-ratio:786/987;overflow:hidden;border-radius:10px;background:#EAE4D8;">
-                <img src="{{ p.image }}" alt="{{ p.name }}" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform 1.2s cubic-bezier(.2,.7,.2,1);" style-hover="transform:scale(1.04);">
+                <img loading="lazy" decoding="async" src="{{ p.image }}" alt="{{ p.name }}" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform 1.2s cubic-bezier(.2,.7,.2,1);" style-hover="transform:scale(1.04);">
               </span>
               <span style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:12px;align-items:baseline;">
                 <span style="display:flex;flex-direction:column;gap:4px;">
@@ -365,7 +408,7 @@ a:hover{color:#5E5A52;}
   <section ref="{{ aboutRef }}" style="background:#FAF7F1;border-top:1px solid rgba(20,20,19,0.12);scroll-margin-top:68px;">
     <div style="max-width:1200px;margin:0 auto;padding:clamp(56px,7vw,96px) 24px;display:flex;flex-wrap:wrap;gap:clamp(32px,5vw,72px);align-items:center;">
       <div class="kate-portrait" style="position:relative;aspect-ratio:1/1;flex:0 0 180px;max-width:180px;width:100%;overflow:hidden;border-radius:50%;background:#EAE4D8;">
-        <img src="assets/6c268133-3fc4-4c35-8188-200daa83dd0e.webp" alt="Kate Podakin" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:52% 18%;display:block;">
+        <img loading="lazy" decoding="async" src="assets/6c268133-3fc4-4c35-8188-200daa83dd0e.webp" alt="Kate Podakin" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:52% 18%;display:block;">
       </div>
       <div class="about-copy" style="display:flex;flex-direction:column;gap:20px;flex:1 1 320px;max-width:600px;">
         <h2 style="font-size:15px;font-weight:500;letter-spacing:0.01em;margin:0;color:#5E5A52;">About</h2>
@@ -414,7 +457,7 @@ a:hover{color:#5E5A52;}
   <section class="neuro-founders" style="position:relative;overflow:hidden;border-top:1px solid rgba(236,232,223,0.12);">
     <div style="max-width:1200px;margin:0 auto;padding:clamp(80px,10vw,144px) 24px;display:flex;flex-wrap:wrap;gap:clamp(40px,6vw,88px);align-items:center;">
       <div data-reveal="" style="position:relative;aspect-ratio:1/1;flex:0 0 260px;max-width:260px;width:100%;border-radius:50%;overflow:hidden;background:#111112;">
-        <img src="assets/6cc11256-4037-4c7f-ae4b-9d5888dbdb5b.webp" alt="Yury and Elena Revich" style="position: absolute; inset: 0; width: 469px; height: 539px; object-fit: cover; object-position: 50% 50%; display: block; left: -108px; top: -79px">
+        <img loading="lazy" decoding="async" src="assets/6cc11256-4037-4c7f-ae4b-9d5888dbdb5b.webp" alt="Yury and Elena Revich" style="position: absolute; inset: 0; width: 469px; height: 539px; object-fit: cover; object-position: 50% 50%; display: block; left: -108px; top: -79px">
       </div>
       <div style="display:flex;flex-direction:column;gap:24px;flex:1 1 320px;max-width:600px;">
         <div data-reveal="" style="display:flex;align-items:center;gap:14px;font-family:'Instrument Sans',sans-serif;font-style:normal;font-weight:500;font-size:15px;line-height:1;letter-spacing:0.01em;color:#C9C4B9;"><span>The founders</span></div>
@@ -430,13 +473,13 @@ a:hover{color:#5E5A52;}
 
   <section class="neuro-bio neuro-bio-yury">
     <div class="neuro-bio-layout">
-      <figure class="neuro-bio-photo"><img src="assets/624b5525-f606-45fe-b9c9-8cd287038797.webp" alt="Yury Revich with violin" width="320" height="400" loading="lazy"></figure>
+      <figure class="neuro-bio-photo"><img decoding="async" src="assets/624b5525-f606-45fe-b9c9-8cd287038797.webp" alt="Yury Revich with violin" width="320" height="400" loading="lazy"></figure>
       <div class="neuro-bio-copy"><span class="neuro-bio-role">Co-founder &amp; Artistic Director</span><h2>Yury Revich</h2><p class="neuro-bio-lead">Stradivari violinist, composer, ECHO Klassik and ICMA winner</p><p>Yury has performed at Carnegie Hall, the Vienna Musikverein and La Scala, with recordings featured in Netflix’s Bridgerton. Founder of Festival Nights and Honorary Representative of UNICEF Austria, he brings together music, visual art and social initiatives.</p></div>
     </div>
   </section>
   <section class="neuro-bio neuro-bio-elena">
     <div class="neuro-bio-layout">
-      <figure class="neuro-bio-photo"><img src="assets/d51f61a4-ab75-464d-a2e3-479f8cc6c2cd.webp" alt="Elena Revich with violin" width="320" height="400" loading="lazy"></figure>
+      <figure class="neuro-bio-photo"><img decoding="async" src="assets/d51f61a4-ab75-464d-a2e3-479f8cc6c2cd.webp" alt="Elena Revich with violin" width="320" height="400" loading="lazy"></figure>
       <div class="neuro-bio-copy"><span class="neuro-bio-role">Co-founder</span><h2>Elena Revich</h2><p class="neuro-bio-lead">Violinist, diploma winner of the International Tchaikovsky Competition</p><p>Elena is an internationally acclaimed violinist and the author of interdisciplinary projects that have received prestigious awards, including the Golden Mask. Elena developed the NeuroMusic approach in dialogue with neuroscientists, exploring how music shapes perception, emotion and attention.</p></div>
     </div>
   </section>
@@ -450,7 +493,7 @@ a:hover{color:#5E5A52;}
         </div>
         <div class="neuro-synthesis-orb" style="position:relative;aspect-ratio:1/1;max-width:420px;width:100%;justify-self:center;">
           <div data-speed="-0.08" style="position:absolute;inset:0;">
-            <img data-rot="0.03" src="assets/b7983c40-1bea-43f6-9022-d9b1a0e6f625.webp" alt="1000 Petals, artwork by Tatiana Plakhova" style="width:100%;height:100%;object-fit:cover;border-radius:50%;display:block;-webkit-mask-image:radial-gradient(closest-side,#000 82%,transparent 100%);mask-image:radial-gradient(closest-side,#000 82%,transparent 100%);">
+            <img decoding="async" data-rot="0.03" src="assets/b7983c40-1bea-43f6-9022-d9b1a0e6f625.webp" alt="1000 Petals, artwork by Tatiana Plakhova" style="width:100%;height:100%;object-fit:cover;border-radius:50%;display:block;-webkit-mask-image:radial-gradient(closest-side,#000 82%,transparent 100%);mask-image:radial-gradient(closest-side,#000 82%,transparent 100%);">
           </div>
         </div>
       </div>
@@ -473,10 +516,29 @@ a:hover{color:#5E5A52;}
         <a href="https://www.youtube.com/watch?v=io6M2XDulTM" target="_blank" rel="noopener noreferrer" style="display:inline-block;color:#BDB8AD;font-size:13px;padding:12px 0;">Watch on YouTube ↗</a>
       </div>
     </div>
+<div class="neuro-music-details">    <div style="display:flex;flex-direction:column;gap:24px;">
+      <h2 data-reveal="" style="font-family:'Newsreader',serif;font-weight:400;font-size:32px;letter-spacing:-0.01em;margin:0;">Music</h2>
+      <sc-for list="{{ neuro.facts }}" as="f" hint-placeholder-count="2">
+        <div data-reveal="" style="display:flex;flex-direction:column;gap:6px;padding-bottom:20px;">
+          <div style="font-size:13px;font-weight:600;letter-spacing:0.04em;color:#A8A397;">{{ f.label }}</div>
+          <div style="font-size:17px;line-height:1.55;">{{ f.text }}</div>
+        </div>
+      </sc-for>
+      <div data-reveal="" style="display:flex;flex-direction:column;gap:12px;">
+        <div style="font-size:13px;font-weight:600;letter-spacing:0.04em;color:#A8A397;">Formats</div>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;">
+          <sc-for list="{{ neuro.formatList }}" as="f" hint-placeholder-count="3">
+            <span style="font-size:13px;padding:5px 12px;border:1px solid rgba(236,232,223,0.3);border-radius:999px;">{{ f }}</span>
+          </sc-for>
+        </div>
+      </div>
+    </div>
+</div>
+
   </section>
 
   <section style="position:relative;overflow:hidden;height:clamp(280px,46vw,620px);background:#060607;">
-    <img data-drift="" src="assets/35325d66-becd-4ceb-860e-01d192e8d335.webp" alt="Artwork by Tatiana Plakhova" style="position:absolute;top:0;left:-10%;width:120%;height:100%;object-fit:cover;display:block;max-width:none;">
+    <img loading="lazy" decoding="async" data-drift="" src="assets/35325d66-becd-4ceb-860e-01d192e8d335.webp" alt="Artwork by Tatiana Plakhova" style="position:absolute;top:0;left:-10%;width:120%;height:100%;object-fit:cover;display:block;max-width:none;">
     <div aria-hidden="true" style="position:absolute;left:0;right:0;top:0;height:55%;background:linear-gradient(to bottom,#060607 0%,rgba(6,6,7,0.85) 25%,rgba(6,6,7,0.4) 60%,rgba(6,6,7,0) 100%);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);-webkit-mask-image:linear-gradient(to bottom,#000 0%,#000 30%,transparent 100%);mask-image:linear-gradient(to bottom,#000 0%,#000 30%,transparent 100%);pointer-events:none;"></div>
   </section>
   <section style="max-width:1200px;margin:0 auto;padding:clamp(64px,8vw,112px) 24px 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:clamp(32px,6vw,96px);align-items:start;">
@@ -492,39 +554,12 @@ a:hover{color:#5E5A52;}
   </section>
   <figure class="neuro-artwork">
     <div class="neuro-artwork-frame">
-      <img src="assets/neuro-krasatisha.jpg" alt="Abstract gold and teal filaments forming an intricate fan-shaped pattern" width="2000" height="1245" loading="lazy" decoding="async">
+      <img src="assets/neuro-krasatisha-cb2ed3b6.webp" alt="Abstract gold and teal filaments forming an intricate fan-shaped pattern" width="2000" height="1245" loading="lazy" decoding="async">
     </div>
   </figure>
 
 
-  <section style="max-width:1200px;margin:0 auto;padding:clamp(72px,9vw,128px) 24px clamp(56px,7vw,96px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:clamp(40px,6vw,96px);">
-    <div style="display:flex;flex-direction:column;gap:24px;">
-      <h2 data-reveal="" style="font-family:'Newsreader',serif;font-weight:400;font-size:32px;letter-spacing:-0.01em;margin:0;">Team</h2>
-      <sc-for list="{{ neuro.people }}" as="m" hint-placeholder-count="3">
-        <div data-reveal="" style="display:flex;flex-direction:column;gap:6px;padding-bottom:20px;border-bottom:1px solid rgba(236,232,223,0.14);">
-          <div style="font-size:13px;font-weight:600;letter-spacing:0.04em;color:#A8A397;">{{ m.label }}</div>
-          <div style="font-size:17px;line-height:1.55;">{{ m.text }}</div>
-        </div>
-      </sc-for>
-    </div>
-    <div style="display:flex;flex-direction:column;gap:24px;">
-      <h2 data-reveal="" style="font-family:'Newsreader',serif;font-weight:400;font-size:32px;letter-spacing:-0.01em;margin:0;">Music</h2>
-      <sc-for list="{{ neuro.facts }}" as="f" hint-placeholder-count="2">
-        <div data-reveal="" style="display:flex;flex-direction:column;gap:6px;padding-bottom:20px;border-bottom:1px solid rgba(236,232,223,0.14);">
-          <div style="font-size:13px;font-weight:600;letter-spacing:0.04em;color:#A8A397;">{{ f.label }}</div>
-          <div style="font-size:17px;line-height:1.55;">{{ f.text }}</div>
-        </div>
-      </sc-for>
-      <div data-reveal="" style="display:flex;flex-direction:column;gap:12px;">
-        <div style="font-size:13px;font-weight:600;letter-spacing:0.04em;color:#A8A397;">Formats</div>
-        <div style="display:flex;flex-wrap:wrap;gap:8px;">
-          <sc-for list="{{ neuro.formatList }}" as="f" hint-placeholder-count="3">
-            <span style="font-size:13px;padding:5px 12px;border:1px solid rgba(236,232,223,0.3);border-radius:999px;">{{ f }}</span>
-          </sc-for>
-        </div>
-      </div>
-    </div>
-  </section>
+
 
   <section style="max-width:1200px;margin:0 auto;padding:0 24px clamp(56px,7vw,96px);">
     <div style="border-top:1px solid rgba(236,232,223,0.14);padding-top:clamp(40px,5vw,64px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:24px 64px;align-items:end;">
@@ -590,7 +625,7 @@ a:hover{color:#5E5A52;}
         </div>
       </div>
       <div class="vita-hero-photo" style="flex:1 1 380px;display:flex;justify-content:center;align-items:flex-end;padding-top:clamp(24px,4vw,48px);">
-        <img src="assets/65f60e64-dc53-4fd2-b3bd-22cf05e68056.webp" alt="Vitaly Vatulya and Maria Nemtsova" style="height:clamp(340px,min(70vh,100vw),680px);max-width:100%;width:auto;object-fit:contain;object-position:bottom;display:block;margin-bottom:clamp(24px,4vw,48px);">
+        <img decoding="async" loading="eager" sc-camel-fetch-priority="high" width="883" height="1400" src="assets/65f60e64-dc53-4fd2-b3bd-22cf05e68056.webp" alt="Vitaly Vatulya and Maria Nemtsova" style="height:clamp(340px,min(70vh,100vw),680px);max-width:100%;width:auto;object-fit:contain;object-position:bottom;display:block;margin-bottom:clamp(24px,4vw,48px);">
       </div>
     </div>
   </section>
@@ -624,7 +659,7 @@ a:hover{color:#5E5A52;}
       <sc-for list="{{ vitaMembers }}" as="m" hint-placeholder-count="2">
         <div class="vita-member" style="display:flex;flex-direction:column;gap:24px;padding-top:{{ m.offset }};">
           <div style="overflow:hidden;border-radius:10px;aspect-ratio:2/3;max-height:max(380px,100vw - 300px);background:#EAE4D8;">
-            <img data-speed="{{ m.speed }}" src="{{ m.photo }}" alt="{{ m.name }}" style="width:100%;height:116%;margin-top:-8%;object-fit:cover;object-position:center top;display:block;">
+            <img loading="lazy" decoding="async" data-speed="{{ m.speed }}" src="{{ m.photo }}" alt="{{ m.name }}" style="width:100%;height:116%;margin-top:-8%;object-fit:cover;object-position:center top;display:block;">
           </div>
           <div data-reveal="" style="display:flex;flex-direction:column;gap:8px;">
             <span style="font-size:15px;font-weight:500;letter-spacing:0.01em;color:#5E5A52;">{{ m.role }}</span>
@@ -637,16 +672,16 @@ a:hover{color:#5E5A52;}
   </section>
 
   <section style="max-width:1200px;margin:0 auto;padding:clamp(72px,9vw,128px) 24px;">
-    <div style="display:flow-root;">
+    <div class="vita-profile-wrap" style="display:flow-root;">
       <h2 data-reveal="" style="font-family:'Newsreader',serif;font-weight:400;font-size:clamp(32px,3.6vw,48px);letter-spacing:-0.02em;margin:0 0 20px;">Artistic profile</h2>
-      <div data-reveal="" style="float:right;width:clamp(40%, (640px - 100%) * 999, 100%);max-width:440px;margin:0 0 32px clamp(0px, (100% - 640px) * 999, clamp(24px,5vw,72px));"><img src="assets/36e48d62-976b-40b5-850f-1f1e5fd4626e.webp" alt="Vitaly Vatulya and Maria Nemtsova with saxophone" style="width:100%;height:auto;display:block;border-radius:8px;"></div>
+      <div data-reveal="" style="float:right;width:clamp(40%, (640px - 100%) * 999, 100%);max-width:440px;margin:0 0 32px clamp(0px, (100% - 640px) * 999, clamp(24px,5vw,72px));"><img loading="lazy" decoding="async" src="assets/36e48d62-976b-40b5-850f-1f1e5fd4626e.webp" alt="Vitaly Vatulya and Maria Nemtsova with saxophone" style="width:100%;height:auto;display:block;border-radius:8px;"></div>
       <sc-for list="{{ vita.profile }}" as="item" hint-placeholder-count="4">
         <p data-reveal="" style="font-size:17px;line-height:1.6;margin:0;padding:16px 0;border-top:1px solid rgba(20,20,19,0.12);text-wrap:pretty;overflow:hidden;min-width:min(100%,320px);">{{ item }}</p>
       </sc-for>
     </div>
-    <div style="display:flow-root;margin-top:clamp(56px,7vw,96px);">
+    <div class="vita-programmes-wrap" style="display:flow-root;margin-top:clamp(56px,7vw,96px);">
       <h2 data-reveal="" style="font-family:'Newsreader',serif;font-weight:400;font-size:clamp(32px,3.6vw,48px);letter-spacing:-0.02em;margin:0 0 20px;">Programmes</h2>
-      <div data-reveal="" style="float:left;width:clamp(36%, (640px - 100%) * 999, 100%);max-width:400px;margin:0 clamp(0px, (100% - 640px) * 999, clamp(24px,5vw,72px)) 32px 0;"><img src="assets/35c58970-574f-479c-961f-104d9edb99d6.webp" alt="VitaDuo" style="width:100%;height:auto;display:block;border-radius:8px;"></div>
+      <div data-reveal="" style="float:left;width:clamp(36%, (640px - 100%) * 999, 100%);max-width:400px;margin:0 clamp(0px, (100% - 640px) * 999, clamp(24px,5vw,72px)) 32px 0;"><img loading="lazy" decoding="async" src="assets/35c58970-574f-479c-961f-104d9edb99d6.webp" alt="VitaDuo" style="width:100%;height:auto;display:block;border-radius:8px;"></div>
       <sc-for list="{{ vita.programmes }}" as="pr" hint-placeholder-count="3">
         <div data-reveal="" style="display:grid;grid-template-columns:52px minmax(0,1fr);gap:12px;padding:20px 0;border-top:1px solid rgba(20,20,19,0.12);min-width:min(100%,320px);">
           <span style="font-family:'Newsreader',serif;font-weight:400;font-style:italic;font-size:28px;line-height:1;color:#8A857B;">{{ pr.num }}</span>
@@ -678,7 +713,7 @@ a:hover{color:#5E5A52;}
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,160px),1fr));gap:12px;margin-top:12px;">
         <sc-for list="{{ vids }}" as="v" hint-placeholder-count="5">
           <button sc-camel-on-click="{{ v.pick }}" style="position:relative;padding:0;border:2px solid {{ v.border }};border-radius:8px;overflow:hidden;background:#000;cursor:pointer;aspect-ratio:16/9;opacity:{{ v.opacity }};transition:opacity .3s, border-color .3s;" style-hover="opacity:1;">
-            <img src="{{ v.thumb }}" alt="" style="width:100%;height:100%;object-fit:cover;display:block;">
+            <img loading="lazy" decoding="async" src="{{ v.thumb }}" alt="" style="width:100%;height:100%;object-fit:cover;display:block;">
             <span style="position:absolute;left:8px;bottom:6px;font-size:12px;font-weight:500;color:#F4F0E8;text-shadow:0 1px 6px rgba(0,0,0,0.8);">{{ v.label }}</span>
           </button>
         </sc-for>
@@ -719,7 +754,7 @@ a:hover{color:#5E5A52;}
         </div>
       </div>
       <div data-reveal="" style="flex:1 1 380px;max-width:520px;aspect-ratio:4/5;max-height:max(400px,100vw - 300px);border-radius:8px;overflow:hidden;background:#1E1E1C;">
-        <img data-speed="-0.04" src="assets/5dfd1022-4bc5-4443-a4c1-cf23fba9e24c.webp" alt="Elena Revich and Polina Osetinskaya" style="width:100%;height:108%;object-fit:cover;object-position:50% 18%;display:block;">
+        <img loading="lazy" decoding="async" data-speed="-0.04" src="assets/5dfd1022-4bc5-4443-a4c1-cf23fba9e24c.webp" alt="Elena Revich and Polina Osetinskaya" style="width:100%;height:108%;object-fit:cover;object-position:50% 18%;display:block;">
       </div>
     </div>
   </section>
@@ -778,7 +813,7 @@ a:hover{color:#5E5A52;}
       </div>
       <div class="scene-art flowers-art">
         <div class="album-flower-detail" aria-hidden="true"></div>
-        <img class="programme-album" src="assets/3ceb55819415e30cf356.webp" alt="Flowers and Fairy Tales album cover with Elena Revich, Polina Osetinskaya, birds and flowers" width="592" height="740" loading="lazy">
+        <img decoding="async" class="programme-album" src="assets/3ceb55819415e30cf356.webp" alt="Flowers and Fairy Tales album cover with Elena Revich, Polina Osetinskaya, birds and flowers" width="592" height="740" loading="lazy">
         <svg class="album-parrot" viewBox="155 40 140 230" aria-hidden="true"><defs><clipPath id="album-parrot-clip"><path d="M240 50 L267 50 L281 65 L280 99 L266 111 L247 106 L233 115 L226 137 L215 178 L198 219 L186 256 L178 243 L180 202 L166 190 L169 157 L187 128 L198 109 L208 82 L231 71 Z"/></clipPath></defs><image href="assets/3ceb55819415e30cf356.webp" width="592" height="740" clip-path="url(#album-parrot-clip)"/></svg>
       </div>
     </article>
@@ -834,7 +869,7 @@ a:hover{color:#5E5A52;}
         </div>
       </div>
       <div class="amstel-hero-photo" style="position:relative;height:clamp(320px,min(74vh,105vw),740px);">
-        <img data-speed="-0.1" src="assets/1a96ff23-b1d7-4896-8c0a-823d236c4d99.webp" alt="Amstel Quartet" style="position:absolute;right:0;bottom:0;height:100%;width:auto;max-width:none;display:block;">
+        <img loading="lazy" decoding="async" data-speed="-0.1" src="assets/1a96ff23-b1d7-4896-8c0a-823d236c4d99.webp" alt="Amstel Quartet" style="position:absolute;right:0;bottom:0;height:100%;width:auto;max-width:none;display:block;">
       </div>
     </div>
   </section>
@@ -851,7 +886,7 @@ a:hover{color:#5E5A52;}
     <div class="amstel-members" style="display:grid;grid-template-columns:repeat({{ catCols }},minmax(0,1fr));row-gap:32px;">
       <sc-for list="{{ amsMembers }}" as="m" hint-placeholder-count="4">
         <div data-reveal="" data-reveal-delay="{{ m.delay }}" style="display:flex;flex-direction:column;gap:12px;padding:0 0 32px 16px;">
-          <div class="amstel-member-heading"><span class="amstel-member-number">{{ m.n }}</span><img class="amstel-face" src="{{ m.photo }}" alt="{{ m.name }}" width="96" height="96" loading="lazy"></div>
+          <div class="amstel-member-heading"><span class="amstel-member-number">{{ m.n }}</span><span class="amstel-face-frame"><img decoding="async" class="amstel-face" src="{{ m.photo }}" alt="{{ m.name }}" width="96" height="96" loading="lazy"></span></div>
           <span style="font-family:'Newsreader',serif;font-weight:400;font-style:italic;font-size:24px;">{{ m.voice }}</span>
           <span style="font-size:15px;color:#5E5A52;">{{ m.name }}</span>
         </div>
@@ -862,7 +897,7 @@ a:hover{color:#5E5A52;}
   <section style="position:relative;background:#F4F0E8;border-top:1px solid rgba(20,20,19,0.12);border-bottom:1px solid rgba(20,20,19,0.12);">
     <div style="max-width:1200px;margin:0 auto;padding:clamp(64px,8vw,112px) 24px;display:flex;flex-direction:column;gap:clamp(32px,4vw,56px);">
       <div data-reveal="" style="width:100%;aspect-ratio:21/9;border-radius:8px;overflow:hidden;background:#EAE4D8;">
-        <img src="assets/6842bf9b-98d2-4e0e-90d6-18563c47a679.webp" alt="Amstel Quartet performing on stage" style="width:100%;height:100%;object-fit:cover;object-position:50% 70%;display:block;">
+        <img loading="lazy" decoding="async" src="assets/6842bf9b-98d2-4e0e-90d6-18563c47a679.webp" alt="Amstel Quartet performing on stage" style="width:100%;height:100%;object-fit:cover;object-position:50% 70%;display:block;">
       </div>
       <div style="min-width:0;display:flex;flex-direction:column;">
       <sc-for list="{{ amsProfile }}" as="p" hint-placeholder-count="3">
@@ -877,7 +912,7 @@ a:hover{color:#5E5A52;}
     <div style="flex:none;"></div>
     <div style="display:flex;flex-wrap:wrap;gap:clamp(32px,5vw,72px);align-items:flex-start;">
       <div data-reveal="" style="flex:1 1 340px;min-width:0;border-radius:8px;overflow:hidden;background:#EAE4D8;">
-        <img src="assets/30aa9392-bcfc-47e5-acd8-05ef1ba967b1.webp" alt="Amstel Quartet" style="width:100%;height:auto;display:block;">
+        <img loading="lazy" decoding="async" src="assets/30aa9392-bcfc-47e5-acd8-05ef1ba967b1.webp" alt="Amstel Quartet" style="width:100%;height:auto;display:block;">
       </div>
     <div style="flex:1.3 1 420px;min-width:0;display:flex;flex-direction:column;gap:24px;max-width:820px;">
       <p data-reveal="" style="font-family:'Newsreader',serif;font-weight:400;font-size:clamp(24px,2.6vw,34px);line-height:1.3;letter-spacing:-0.01em;margin:0;text-wrap:pretty;">Over 25 years, Amstel Quartet has set a new standard for the saxophone quartet and explored the instrument across its full range.</p>
@@ -941,7 +976,7 @@ a:hover{color:#5E5A52;}
 </footer>
 <sc-if value="{{ lbOpen }}" hint-placeholder-val="{{ false }}">
   <div sc-camel-on-click="{{ lbClose }}" style="position:fixed;inset:0;z-index:60;background:rgba(10,10,9,0.94);display:flex;align-items:center;justify-content:center;padding:56px 72px;cursor:zoom-out;">
-    <img src="{{ lb.src }}" alt="{{ lb.alt }}" style="max-width:100%;max-height:100%;object-fit:contain;display:block;border-radius:6px;box-shadow:0 30px 80px rgba(0,0,0,0.5);">
+    <img loading="lazy" decoding="async" src="{{ lb.src }}" alt="{{ lb.alt }}" style="max-width:100%;max-height:100%;object-fit:contain;display:block;border-radius:6px;box-shadow:0 30px 80px rgba(0,0,0,0.5);">
     <button sc-camel-on-click="{{ lbPrev }}" aria-label="Previous photo" style="position:absolute;left:16px;top:50%;margin-top:-24px;width:48px;height:48px;border-radius:50%;border:1px solid rgba(244,240,232,0.35);background:transparent;color:#F4F0E8;font-size:18px;cursor:pointer;" style-hover="background:rgba(244,240,232,0.12);">←</button>
     <button sc-camel-on-click="{{ lbNext }}" aria-label="Next photo" style="position:absolute;right:16px;top:50%;margin-top:-24px;width:48px;height:48px;border-radius:50%;border:1px solid rgba(244,240,232,0.35);background:transparent;color:#F4F0E8;font-size:18px;cursor:pointer;" style-hover="background:rgba(244,240,232,0.12);">→</button>
     <div style="position:absolute;top:18px;left:0;right:0;display:flex;justify-content:space-between;padding:0 24px;font-size:13px;color:#B5B0A6;"><span>{{ lb.count }}</span><span>Close ✕</span></div>
@@ -1359,7 +1394,7 @@ class Component extends DCLogic {
             revVids: RV.map((id, j) => ({ embed: 'https://www.youtube-nocookie.com/embed/' + id + '?rel=0&playsinline=1', url: 'https://www.youtube.com/watch?v=' + id, thumb: 'https://img.youtube.com/vi/' + id + '/hqdefault.jpg', label: 'Performance ' + pad(j + 1), border: j === k ? '#F4F0E8' : 'rgba(244,240,232,0.14)', opacity: j === k ? 1 : 0.55, pick: () => this.setState({ revVid: j }) })) }; })(),
           revProfile: rev.profile.map((t, j) => ({ text: t, num: pad(j + 1), delay: j * 100 })),
           ams: { ...ams, programmes: ams.programmes.map((pr, j) => ({ ...pr, composerList: pr.composers.split(' · '), num: pad(j + 1), delay: j * 120 })) },
-          amsMembers: ams.people.map((m, j) => ({ n: String(j + 1), photo: 'assets/amstel-' + ['soprano', 'alto', 'tenor', 'baritone'][j] + '.png', voice: m.label.replace(' saxophone', ''), name: m.text, delay: j * 110 })),
+          amsMembers: ams.people.map((m, j) => ({ n: String(j + 1), photo: j === 1 ? 'assets/1a96ff23-b1d7-4896-8c0a-823d236c4d99.webp' : ["assets/amstel-soprano-6e407550.webp", "assets/amstel-alto-1e14fed3.webp", "assets/amstel-tenor-1d5440fe.webp", "assets/amstel-baritone-66babb73.webp"][j], voice: m.label.replace(' saxophone', ''), name: m.text, delay: j * 110 })),
           amsVenues: doubled(['Concertgebouw Amsterdam', 'Carnegie Hall', 'Philharmonie Luxembourg', 'Concert Artists Guild', 'Kersjes Prize', 'Gaudeamus Prize']),
           amsDestinations: ['Netherlands', 'United States', 'Luxembourg', 'United Kingdom', 'Russia', 'China', 'Japan', 'Canada', 'Europe', 'Middle East'],
           amsProfile: ['Award-winning quartet: Concert Artists Guild, Kersjes and Gaudeamus prizes.', 'From Renaissance and Baroque to contemporary music and electronic sound.', 'Original arrangements and collaborations with living composers.']
