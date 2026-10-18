@@ -293,6 +293,23 @@ a,button{-webkit-tap-highlight-color:transparent;touch-action:manipulation;}
 .cinema-still{aspect-ratio:4/3;}
 }
 </style>
+<style>
+.neuro-bio-layout{align-items:stretch;}
+.neuro-bio-photo{position:relative;aspect-ratio:auto;align-self:stretch;}
+.neuro-bio-photo img{position:absolute;inset:0;}
+.neuro-bio-copy>p:last-child{margin-bottom:0;}
+@media(max-width:759px){
+.neuro-bio-layout{grid-template-columns:110px minmax(0,1fr)!important;gap:24px 18px!important;align-items:stretch!important;}
+.neuro-bio-elena .neuro-bio-layout{grid-template-columns:minmax(0,1fr) 110px!important;}
+.neuro-bio-photo,.neuro-bio-elena .neuro-bio-photo{grid-row:1!important;width:110px!important;height:100%;min-height:150px;aspect-ratio:auto!important;align-self:stretch!important;}
+.neuro-bio-heading{grid-row:1;grid-column:2;min-width:0;display:flex;flex-direction:column;justify-content:space-between;gap:12px;}
+.neuro-bio-elena .neuro-bio-heading{grid-column:1;}
+.neuro-bio-heading>*{margin:0!important;}
+.neuro-bio-heading h2{font-size:25px;line-height:1.15!important;}
+.neuro-bio-heading .neuro-bio-lead{font-size:17px;line-height:1.4!important;}
+.neuro-bio-copy>p:last-child{grid-row:2;grid-column:1/-1;margin:0!important;}
+}
+</style>
 </head>
 <body>
 <x-dc>
@@ -546,13 +563,13 @@ a:hover{color:#5E5A52;}
   <section class="neuro-bio neuro-bio-yury">
     <div class="neuro-bio-layout">
       <figure class="neuro-bio-photo"><img decoding="async" src="assets/624b5525-f606-45fe-b9c9-8cd287038797.webp" alt="Yury Revich with violin" width="320" height="400" loading="lazy"></figure>
-      <div class="neuro-bio-copy"><span class="neuro-bio-role">Co-founder &amp; Artistic Director</span><h2>Yury Revich</h2><p class="neuro-bio-lead">Stradivari violinist, composer, ECHO Klassik and ICMA winner</p><p>Yury has performed at Carnegie Hall, the Vienna Musikverein and La Scala, with recordings featured in Netflix’s Bridgerton. Founder of Festival Nights and Honorary Representative of UNICEF Austria, he brings together music, visual art and social initiatives.</p></div>
+      <div class="neuro-bio-copy"><div class="neuro-bio-heading"><span class="neuro-bio-role">Co-founder &amp; Artistic Director</span><h2>Yury Revich</h2><p class="neuro-bio-lead">Stradivari violinist, composer, ECHO Klassik and ICMA winner</p></div><p>Yury has performed at Carnegie Hall, the Vienna Musikverein and La Scala, with recordings featured in Netflix’s Bridgerton. Founder of Festival Nights and Honorary Representative of UNICEF Austria, he brings together music, visual art and social initiatives.</p></div>
     </div>
   </section>
   <section class="neuro-bio neuro-bio-elena">
     <div class="neuro-bio-layout">
       <figure class="neuro-bio-photo"><img decoding="async" src="assets/d51f61a4-ab75-464d-a2e3-479f8cc6c2cd.webp" alt="Elena Revich with violin" width="320" height="400" loading="lazy"></figure>
-      <div class="neuro-bio-copy"><span class="neuro-bio-role">Co-founder</span><h2>Elena Revich</h2><p class="neuro-bio-lead">Violinist, diploma winner of the International Tchaikovsky Competition</p><p>Elena is an internationally acclaimed violinist and the author of interdisciplinary projects that have received prestigious awards, including the Golden Mask. Elena developed the NeuroMusic approach in dialogue with neuroscientists, exploring how music shapes perception, emotion and attention.</p></div>
+      <div class="neuro-bio-copy"><div class="neuro-bio-heading"><span class="neuro-bio-role">Co-founder</span><h2>Elena Revich</h2><p class="neuro-bio-lead">Violinist, diploma winner of the International Tchaikovsky Competition</p></div><p>Elena is an internationally acclaimed violinist and the author of interdisciplinary projects that have received prestigious awards, including the Golden Mask. Elena developed the NeuroMusic approach in dialogue with neuroscientists, exploring how music shapes perception, emotion and attention.</p></div>
     </div>
   </section>
 
@@ -596,13 +613,11 @@ a:hover{color:#5E5A52;}
         <div style="position:relative;aspect-ratio:16/9;overflow:hidden;border-radius:10px;background:#111112;">
           <iframe src="https://www.youtube-nocookie.com/embed/1btyGnzXk5E?rel=0&amp;playsinline=1" title="NeuroMusic — video 1" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" style="position:absolute;inset:0;width:100%;height:100%;border:0;"></iframe>
         </div>
-        <a href="https://www.youtube.com/watch?v=1btyGnzXk5E" target="_blank" rel="noopener noreferrer" style="display:inline-block;color:#BDB8AD;font-size:13px;padding:12px 0;">Watch on YouTube ↗</a>
       </div>
       <div style="min-width:0;">
         <div style="position:relative;aspect-ratio:16/9;overflow:hidden;border-radius:10px;background:#111112;">
           <iframe src="https://www.youtube-nocookie.com/embed/io6M2XDulTM?rel=0&amp;playsinline=1" title="NeuroMusic — video 2" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" style="position:absolute;inset:0;width:100%;height:100%;border:0;"></iframe>
         </div>
-        <a href="https://www.youtube.com/watch?v=io6M2XDulTM" target="_blank" rel="noopener noreferrer" style="display:inline-block;color:#BDB8AD;font-size:13px;padding:12px 0;">Watch on YouTube ↗</a>
       </div>
     </div>
 <div class="neuro-music-details">    <div style="display:flex;flex-direction:column;gap:24px;">
