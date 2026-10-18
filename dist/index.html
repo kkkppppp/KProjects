@@ -408,11 +408,14 @@ a,button{-webkit-tap-highlight-color:transparent;touch-action:manipulation;}
 /* Keep programme copy full-width; only its photograph floats. */
 .vita-programmes-wrap>.vita-programme-layout{width:100%!important;max-width:none!important;float:none!important;margin:0!important;}
 .vita-programme-list>div:not(.vita-format-chips){padding-bottom:28px!important;}
-.vita-about{background:#FAF7F1!important;color:#141413;}
-.vita-timeline,.vita-video-section{background:#334F55!important;color:#F4F0E8;}
+.vita-page{--vita-accent:#D8D0C3;}
+.vita-about{background:#F4F0E8!important;color:#141413;}
+.vita-timeline,.vita-video-section{background:var(--vita-accent)!important;color:#24221F!important;}
+.vita-page .vita-booking-button{background:var(--vita-accent)!important;color:#24221F!important;}
+.vita-page .vita-booking-button:hover{filter:brightness(.96);}
 .vita-timeline-inner{max-width:1200px;margin:0 auto;padding:40px 24px;}
-.vita-timeline :is(span,figcaption){color:#E2E9E6!important;}
-.vita-timeline [style*="border-top"]{border-top-color:#E2E9E633!important;}
+.vita-timeline :is(span,figcaption){color:#454039!important;}
+.vita-timeline [style*="border-top"]{border-top-color:#45403933!important;}
 .amstel-profile-section{padding-bottom:0!important;border-bottom:0!important;}
 .amstel-profile-section>div{padding-bottom:12px!important;}
 .amstel-profile-fact:last-child{margin-bottom:0!important;padding-bottom:0!important;}
@@ -821,7 +824,7 @@ a:hover{color:#5E5A52;}
         <div data-reveal="" data-reveal-delay="300" style="display:flex;flex-direction:column;gap:18px;">
           <span style="font-size:17px;line-height:1.45;">International Chamber Duo<br>Saxophone &amp; Piano</span>
           <div style="display:flex;flex-wrap:wrap;gap:10px;">
-            <a href="mailto:kate@projects.art?subject=VitaDuo" style="font-size:14px;font-weight:500;padding:13px 22px;border-radius:999px;background:#141413;color:#F4F0E8;" style-hover="background:#2E2D2A;color:#F4F0E8;">Plan an event</a>
+            <a class="vita-booking-button" href="mailto:kate@projects.art?subject=VitaDuo" style="font-size:14px;font-weight:500;padding:13px 22px;border-radius:999px;background:#141413;color:#F4F0E8;" style-hover="background:#2E2D2A;color:#F4F0E8;">Plan an event</a>
           </div>
         </div>
       </div>
