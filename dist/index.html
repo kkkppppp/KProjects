@@ -358,6 +358,56 @@ a,button{-webkit-tap-highlight-color:transparent;touch-action:manipulation;}
  .vita-hero-copy>div{grid-column:1/-1;grid-row:3;clear:both;margin-top:28px;}
 }
 </style>
+<style>
+/* Final editorial layout: uniform media, compact spacing, genuine text wrapping. */
+.vita-video-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;}
+.vita-video-grid>.video-frame:first-child{grid-column:1/-1;}
+.vita-programmes-wrap>.vita-programme-layout{display:flow-root!important;}
+.vita-programme-photo{float:right!important;width:30%!important;max-width:220px!important;margin:0 0 20px 28px!important;}
+.vita-programme-list{display:contents;}
+.vita-programme-list>div:not(.vita-format-chips){display:block!important;border:0!important;padding:0 0 24px!important;min-width:0!important;}
+.vita-programme-list>div:not(.vita-format-chips)>div{display:contents!important;}
+.vita-programme-list>div:not(.vita-format-chips)>span{font-size:22px!important;margin-right:10px;}
+.vita-programme-list>div>div>span:last-child{display:block;margin-top:10px;line-height:1.65!important;}
+.vita-programme-list .vita-format-chips{clear:both;display:flex!important;flex-wrap:nowrap!important;gap:8px!important;justify-content:flex-start;}
+.vita-programme-list .vita-format-chips>span{white-space:nowrap;font-size:clamp(10px,2.75vw,13px)!important;padding:6px 9px!important;line-height:1.5!important;}
+.vita-about-dark{background:#141413!important;color:#F4F0E8;}
+.vita-about-dark :is(p,blockquote,span,figcaption){color:#E2DDD2!important;}
+.vita-about-dark [style*="border-top"]{border-top-color:#F4F0E830!important;}
+.amstel-hero-photo{position:relative;left:-20px;}
+.amstel-face-frame{background:#E7E2D7!important;}
+.amstel-members .amstel-face{position:absolute!important;width:280px!important;height:auto!important;max-width:none!important;border-radius:0!important;}
+.amstel-members>div:nth-child(1) .amstel-face{left:-107px;top:-96px;}
+.amstel-members>div:nth-child(2) .amstel-face{left:-39px;top:-12px;}
+.amstel-members>div:nth-child(3) .amstel-face{left:-52px;top:-142px;}
+.amstel-members>div:nth-child(4) .amstel-face{left:-162px;top:-43px;}
+.amstel-members-section{padding-bottom:24px!important;}
+.amstel-members-section>div:empty{display:none;}
+.amstel-profile-section{padding-top:0!important;}
+.amstel-profile-section>div{padding-top:24px!important;padding-bottom:24px!important;gap:20px!important;}
+.amstel-profile-fact{padding:10px 0;}
+.rev-page>section:not(:first-child)>div[style*="padding:clamp"]{padding-block:24px!important;}
+.rev-page>section>div>div:empty{display:none;}
+@media(min-width:760px){
+.vita-hero-photo img{height:500px!important;max-height:66vh!important;}
+.vita-hero{grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:24px!important;}
+.vita-hero-photo{justify-content:flex-end;}
+.amstel-hero-photo{height:540px!important;}
+.amstel-hero{grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;min-height:560px!important;}
+.rev-hero-photo{flex-basis:400px!important;max-width:400px!important;max-height:500px!important;align-self:flex-start;}
+.rev-hero-copy{align-self:flex-start;padding-top:16px;}
+}
+@media(max-width:759px){
+.vita-video-grid,.rev-video-grid,.neuro-videos>div:first-child{grid-template-columns:minmax(0,1fr)!important;gap:24px!important;}
+.vita-programme-photo{width:35%!important;max-width:140px!important;margin:0 0 16px 18px!important;}
+.vita-programme-list>div>div>span:first-child{font-size:22px!important;line-height:1.3!important;}
+.amstel-hero-photo{left:-10px;}
+.vita-page>section:not(:first-child)>div[style*="padding:clamp"]{padding-block:32px!important;}
+.vita-members{gap:32px!important;}
+.vita-programmes-wrap{margin-top:36px!important;}
+.rev-page>section:not(:first-child)>div[style*="padding:clamp"]{padding-block:20px!important;}
+}
+</style>
 </head>
 <body>
 <x-dc>
@@ -738,7 +788,7 @@ a:hover{color:#5E5A52;}
 </sc-if>
 
 <sc-if value="{{ isVita }}" hint-placeholder-val="{{ false }}">
-<main style="flex:1;">
+<main class="vita-page" style="flex:1;">
   <section style="position:relative;overflow:hidden;">
     <div style="max-width:1200px;margin:0 auto;padding:24px 24px 0;"><nav style="display:flex;gap:8px;font-size:13px;color:#5E5A52;"><a href="#" sc-camel-on-click="{{ goCatalogue }}" style="color:#5E5A52;" style-hover="color:#141413;">Catalogue</a><span>/</span><span style="color:#141413;">VitaDuo</span></nav></div>
     <div class="vita-hero" style="max-width:1200px;margin:0 auto;padding:0 24px;display:flex;flex-wrap:wrap;align-items:stretch;gap:0 clamp(24px,4vw,64px);">
@@ -751,7 +801,6 @@ a:hover{color:#5E5A52;}
           <span style="font-size:17px;line-height:1.45;">International Chamber Duo<br>Saxophone &amp; Piano</span>
           <div style="display:flex;flex-wrap:wrap;gap:10px;">
             <a href="mailto:kate@projects.art?subject=VitaDuo" style="font-size:14px;font-weight:500;padding:13px 22px;border-radius:999px;background:#141413;color:#F4F0E8;" style-hover="background:#2E2D2A;color:#F4F0E8;">Plan an event</a>
-            <a href="mailto:kate@projects.art?subject=VitaDuo%20press%20kit" target="_blank" rel="noopener" style="font-size:14px;font-weight:500;padding:13px 22px;border-radius:999px;border:1px solid rgba(20,20,19,0.3);color:#141413;" style-hover="background:#141413;color:#F4F0E8;">Request press kit</a>
           </div>
         </div>
       </div>
@@ -761,7 +810,7 @@ a:hover{color:#5E5A52;}
     </div>
   </section>
 
-  <section style="position:relative;background:#FAF7F1;border-top:1px solid rgba(20,20,19,0.12);border-bottom:1px solid rgba(20,20,19,0.12);">
+  <section class="vita-about-dark" style="position:relative;background:#FAF7F1;border-top:1px solid rgba(20,20,19,0.12);border-bottom:1px solid rgba(20,20,19,0.12);">
     <div style="max-width:1200px;margin:0 auto;padding:clamp(72px,9vw,128px) 24px;display:flex;flex-direction:column;gap:24px;">
       <div style="flex:none;"><span data-reveal="" style="font-size:15px;font-weight:500;letter-spacing:0.01em;color:#5E5A52;">About</span></div>
       <div style="flex:none;width:100%;min-width:0;display:flex;flex-direction:column;gap:24px;max-width:820px;">
@@ -831,25 +880,11 @@ a:hover{color:#5E5A52;}
     </div>
   </section>
 
-  <section style="background:#141413;color:#F4F0E8;">
-    <div style="max-width:1200px;margin:0 auto;padding:clamp(64px,8vw,112px) 24px;">
-      <div style="display:flex;justify-content:space-between;align-items:baseline;gap:16px;margin-bottom:28px;">
-        <h2 data-reveal="" style="font-family:'Newsreader',serif;font-weight:400;font-size:clamp(36px,4.4vw,60px);line-height:1;letter-spacing:-0.025em;margin:0;"><em style="font-style:italic;">Listen</em> &amp; watch</h2>
-        <span style="font-size:13px;color:#B5B0A6;">{{ vidCount }}</span>
-      </div>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:20px;align-items:start;">
-        <div data-reveal="" style="grid-column:1 / -1;position:relative;aspect-ratio:16/9;border-radius:10px;overflow:hidden;background:#000;">
-          <iframe src="{{ vidSrc }}" title="VitaDuo video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" style="position:absolute;inset:0;width:100%;height:100%;border:0;"></iframe>
-        </div>
-      </div>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,160px),1fr));gap:12px;margin-top:12px;">
-        <sc-for list="{{ vids }}" as="v" hint-placeholder-count="5">
-          <button sc-camel-on-click="{{ v.pick }}" style="position:relative;padding:0;border:2px solid {{ v.border }};border-radius:8px;overflow:hidden;background:#000;cursor:pointer;aspect-ratio:16/9;opacity:{{ v.opacity }};transition:opacity .3s, border-color .3s;" style-hover="opacity:1;">
-            <img loading="lazy" decoding="async" src="{{ v.thumb }}" alt="" style="width:100%;height:100%;object-fit:cover;display:block;">
-            <span style="position:absolute;left:8px;bottom:6px;font-size:12px;font-weight:500;color:#F4F0E8;text-shadow:0 1px 6px rgba(0,0,0,0.8);">{{ v.label }}</span>
-          </button>
-        </sc-for>
-      </div>
+  <section class="vita-video-section" style="background:#141413;color:#F4F0E8;">
+    <div class="editorial-section"><h2 class="section-title">Listen &amp; watch</h2>
+      <div class="vita-video-grid"><sc-for list="{{ vids }}" as="v" hint-placeholder-count="5">
+        <div class="video-frame"><iframe src="{{ v.embed }}" title="VitaDuo concert recording" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe></div>
+      </sc-for></div>
     </div>
   </section>
 
@@ -877,7 +912,7 @@ a:hover{color:#5E5A52;}
       <div class="rev-hero-photo" data-reveal="" style="flex:1 1 380px;max-width:520px;aspect-ratio:4/5;max-height:max(400px,100vw - 300px);border-radius:8px;overflow:hidden;background:#1E1E1C;">
         <img loading="eager" sc-camel-fetch-priority="high" decoding="async" data-speed="-0.04" src="assets/5dfd1022-4bc5-4443-a4c1-cf23fba9e24c.webp" alt="Elena Revich and Polina Osetinskaya" style="width:100%;height:108%;object-fit:cover;object-position:50% 18%;display:block;">
       </div>
-      <div style="flex:1 1 380px;display:flex;flex-direction:column;gap:32px;">
+      <div class="rev-hero-copy" style="flex:1 1 380px;display:flex;flex-direction:column;gap:32px;">
         <span data-reveal="" style="font-size:15px;font-weight:500;letter-spacing:0.01em;color:#A8A397;">Violin &amp; Piano Duo</span>
         <h1 class="rev-duo-title" style="font-family:'Newsreader',serif;font-weight:400;font-size:clamp(52px,6.6vw,100px);line-height:0.96;letter-spacing:-0.035em;margin:0;display:flex;flex-direction:column;">
           <span data-reveal="">Elena Revich</span>
@@ -957,7 +992,7 @@ a:hover{color:#5E5A52;}
       <sc-for list="{{ revVids }}" as="v" hint-placeholder-count="3">
         <article class="rev-video-card">
           <div class="video-frame"><iframe src="{{ v.embed }}" title="{{ v.label }} — Elena Revich and Polina Osetinskaya" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe></div>
-          <div class="video-caption"><span>{{ v.label }}</span><a href="{{ v.url }}" target="_blank" rel="noopener noreferrer">YouTube ↗</a></div>
+          <div class="video-caption"><a href="{{ v.url }}" target="_blank" rel="noopener noreferrer">YouTube ↗</a></div>
         </article>
       </sc-for>
     </div>
@@ -1013,7 +1048,7 @@ a:hover{color:#5E5A52;}
     <p>Concertgebouw Amsterdam · Carnegie Hall · Philharmonie Luxembourg</p>
   </section>
 
-  <section style="position:relative;max-width:1200px;margin:0 auto;padding:clamp(72px,9vw,128px) 24px;">
+  <section class="amstel-members-section" style="position:relative;max-width:1200px;margin:0 auto;padding:clamp(72px,9vw,128px) 24px;">
     <div data-reveal="" style="margin-bottom:clamp(32px,4vw,56px);"></div>
     <div class="amstel-members" style="display:grid;grid-template-columns:repeat({{ catCols }},minmax(0,1fr));row-gap:32px;">
       <sc-for list="{{ amsMembers }}" as="m" hint-placeholder-count="4">
@@ -1521,10 +1556,10 @@ class Component extends DCLogic {
           revProgrammes: rev.programmes.map((pr, j) => ({ ...pr, num: pad(j + 1), cover: pr.title === 'Flowers and Fairy Tales' ? 'assets/3ceb55819415e30cf356.webp' : '' })),
           ...(() => { const RV = ['mlriNmikY9o', 'MMWbc2nVUIQ', 'Dt2oMs3XQDk']; const k = this.state.revVid || 0; return {
             revVidSrc: 'https://www.youtube-nocookie.com/embed/' + RV[k] + '?rel=0',
-            revVids: RV.map((id, j) => ({ embed: 'https://www.youtube-nocookie.com/embed/' + id + '?rel=0&playsinline=1', url: 'https://www.youtube.com/watch?v=' + id, thumb: 'https://img.youtube.com/vi/' + id + '/hqdefault.jpg', label: 'Performance ' + pad(j + 1), border: j === k ? '#F4F0E8' : 'rgba(244,240,232,0.14)', opacity: j === k ? 1 : 0.55, pick: () => this.setState({ revVid: j }) })) }; })(),
+            revVids: RV.map((id, j) => ({ embed: 'https://www.youtube-nocookie.com/embed/' + id + '?rel=0&playsinline=1', url: 'https://www.youtube.com/watch?v=' + id, thumb: 'https://img.youtube.com/vi/' + id + '/hqdefault.jpg', label: 'Concert recording', border: j === k ? '#F4F0E8' : 'rgba(244,240,232,0.14)', opacity: j === k ? 1 : 0.55, pick: () => this.setState({ revVid: j }) })) }; })(),
           revProfile: rev.profile.map((t, j) => ({ text: t, num: pad(j + 1), delay: j * 100 })),
           ams: { ...ams, programmes: ams.programmes.map((pr, j) => ({ ...pr, composerList: pr.composers.split(' · '), num: pad(j + 1), delay: j * 120 })) },
-          amsMembers: ams.people.map((m, j) => ({ n: String(j + 1), photo: j === 1 ? 'assets/1a96ff23-b1d7-4896-8c0a-823d236c4d99.webp' : ["assets/amstel-soprano-6e407550.webp", "assets/amstel-alto-1e14fed3.webp", "assets/amstel-tenor-1d5440fe.webp", "assets/amstel-baritone-66babb73.webp"][j], voice: m.label.replace(' saxophone', ''), name: m.text, delay: j * 110 })),
+          amsMembers: ams.people.map((m, j) => ({ n: String(j + 1), photo: 'assets/1a96ff23-b1d7-4896-8c0a-823d236c4d99.webp', voice: m.label.replace(' saxophone', ''), name: m.text, delay: j * 110 })),
           amsVenues: doubled(['Concertgebouw Amsterdam', 'Carnegie Hall', 'Philharmonie Luxembourg', 'Concert Artists Guild', 'Kersjes Prize', 'Gaudeamus Prize']),
           amsDestinations: ['Netherlands', 'United States', 'Luxembourg', 'United Kingdom', 'Russia', 'China', 'Japan', 'Canada', 'Europe', 'Middle East'],
           amsProfile: ['Award-winning quartet: Concert Artists Guild, Kersjes and Gaudeamus prizes.', 'From Renaissance and Baroque to contemporary music and electronic sound.', 'Original arrangements and collaborations with living composers.']
@@ -1543,13 +1578,13 @@ class Component extends DCLogic {
         { role: 'Saxophone', name: 'Vitaly Vatulya', text: 'Winner of 15+ international competitions,\nmember of Amstel Quartet', photo: 'assets/8eaceb6e8507065efd81.webp', speed: '0.012', offset: 'clamp(0px,10vw,160px)' }
       ],
       ...(() => {
-        const V = ['Nc0s7ESIeXk', 'KWzD7Zl1gK0', 'AroHePWUPhs', 'ei0lfTgzW4k', 'gksLXNR_XK0'];
+        const V = ['KWzD7Zl1gK0', 'Nc0s7ESIeXk', 'AroHePWUPhs', 'ei0lfTgzW4k', 'gksLXNR_XK0'];
         const k = this.state.vid || 0;
         const G = SLIDES; const si = (this.state.slide || 0) % G.length;
         return {
           vidSrc: 'https://www.youtube-nocookie.com/embed/' + V[k] + '?rel=0',
           vidCount: (k + 1) + ' / ' + V.length,
-          vids: V.map((id, j) => ({ thumb: 'https://img.youtube.com/vi/' + id + '/hqdefault.jpg', label: 'Video ' + pad(j + 1),
+          vids: V.map((id, j) => ({ embed: 'https://www.youtube-nocookie.com/embed/' + id + '?rel=0&playsinline=1', thumb: 'https://img.youtube.com/vi/' + id + '/hqdefault.jpg', label: 'VitaDuo concert recording',
             border: j === k ? '#F4F0E8' : 'transparent', opacity: j === k ? 1 : 0.6, pick: () => this.setState({ vid: j }) })),
           slides: G.map((g, j) => ({ ...g, opacity: j === si ? 1 : 0, scale: j === si ? 1.03 : 1 })),
           slideCount: (si + 1) + ' / ' + G.length,
