@@ -221,6 +221,27 @@ a,button{-webkit-tap-highlight-color:transparent;touch-action:manipulation;}
 .amstel-members>div>span:last-child{align-self:start;}
 }
 </style>
+<style>
+/* Shared column edges and calmer reading rhythm. */
+.about-copy>p{font-size:16px!important;line-height:1.75!important;}
+.neuro-synthesis h2{line-height:1.3!important;padding-left:clamp(12px,2vw,28px);}
+.neuro-synthesis h2 em{white-space:normal!important;}
+@media(min-width:760px){
+ .neuro-bio{max-width:840px;}
+ .neuro-bio-layout{grid-template-columns:repeat(2,minmax(0,1fr));gap:72px;align-items:start;}
+ .neuro-bio-photo{max-width:none;justify-self:stretch;}
+ .neuro-bio-copy{min-width:0;}
+ .neuro-bio h2{font-size:clamp(32px,3.5vw,46px);}
+}
+@media(max-width:759px){
+ .about-section>div{flex-direction:column!important;text-align:center;}
+ .about-section .kate-portrait{margin-inline:auto;flex:none!important;}
+ .about-copy{align-items:center;flex:none!important;width:100%;margin-inline:auto;max-width:440px!important;}
+ .about-copy>p{font-size:15px!important;}
+ .about-copy>a{align-self:center!important;}
+ .neuro-synthesis h2{padding-left:12px;line-height:1.35!important;}
+}
+</style>
 </head>
 <body>
 <x-dc>
@@ -405,7 +426,7 @@ a:hover{color:#5E5A52;}
     </div>
   </section>
 
-  <section ref="{{ aboutRef }}" style="background:#FAF7F1;border-top:1px solid rgba(20,20,19,0.12);scroll-margin-top:68px;">
+  <section class="about-section" ref="{{ aboutRef }}" style="background:#FAF7F1;border-top:1px solid rgba(20,20,19,0.12);scroll-margin-top:68px;">
     <div style="max-width:1200px;margin:0 auto;padding:clamp(56px,7vw,96px) 24px;display:flex;flex-wrap:wrap;gap:clamp(32px,5vw,72px);align-items:center;">
       <div class="kate-portrait" style="position:relative;aspect-ratio:1/1;flex:0 0 180px;max-width:180px;width:100%;overflow:hidden;border-radius:50%;background:#EAE4D8;">
         <img loading="lazy" decoding="async" src="assets/6c268133-3fc4-4c35-8188-200daa83dd0e.webp" alt="Kate Podakin" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:52% 18%;display:block;">
@@ -500,6 +521,23 @@ a:hover{color:#5E5A52;}
     </div>
   </section>
 
+
+
+  <section style="position:relative;overflow:hidden;height:clamp(280px,46vw,620px);background:#060607;">
+    <img loading="lazy" decoding="async" data-drift="" src="assets/35325d66-becd-4ceb-860e-01d192e8d335.webp" alt="Artwork by Tatiana Plakhova" style="position:absolute;top:0;left:-10%;width:120%;height:100%;object-fit:cover;display:block;max-width:none;">
+    <div aria-hidden="true" style="position:absolute;left:0;right:0;top:0;height:55%;background:linear-gradient(to bottom,#060607 0%,rgba(6,6,7,0.85) 25%,rgba(6,6,7,0.4) 60%,rgba(6,6,7,0) 100%);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);-webkit-mask-image:linear-gradient(to bottom,#000 0%,#000 30%,transparent 100%);mask-image:linear-gradient(to bottom,#000 0%,#000 30%,transparent 100%);pointer-events:none;"></div>
+  </section>
+  <section style="max-width:1200px;margin:0 auto;padding:clamp(64px,8vw,112px) 24px 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:clamp(32px,6vw,96px);align-items:start;">
+    <div style="display:flex;flex-direction:column;gap:16px;">
+      <div data-reveal="" style="display:flex;align-items:center;gap:14px;font-family:'Instrument Sans',sans-serif;font-style:normal;font-weight:500;font-size:15px;line-height:1;letter-spacing:0.01em;color:#C9C4B9;"><span>Visual artist</span></div>
+      <h2 data-reveal="" data-reveal-delay="100" style="font-family:'Newsreader',serif;font-weight:400;font-size:clamp(40px,5vw,72px);line-height:1;letter-spacing:-0.025em;margin:0;">Tatiana Plakhova</h2>
+      <a data-reveal="" data-reveal-delay="200" href="https://tatianaplakhova.com/" target="_blank" rel="noopener" style="align-self:flex-start;font-size:14px;color:#ECE8DF;border-bottom:1px solid rgba(236,232,223,0.4);padding-bottom:4px;" style-hover="color:#FFFFFF;border-bottom-color:#ECE8DF;">Complexity Graphics ↗</a>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:20px;">
+      <p data-reveal="" style="font-family:'Newsreader',serif;font-size:clamp(22px,2.2vw,28px);line-height:1.35;margin:0;text-wrap:pretty;">NeuroMusic was developed with the participation of the internationally renowned visual artist Tatiana Plakhova.</p>
+      <p data-reveal="" data-reveal-delay="120" style="font-size:17px;line-height:1.65;color:#D6D1C6;margin:0;text-wrap:pretty;">Her visuals accompany the live performance and follow the programme from state to state, giving each listening state and the research behind it its own visual language.</p>
+    </div>
+  </section>
   <section class="neuro-videos" style="max-width:1200px;margin:0 auto;padding:clamp(72px,9vw,128px) 24px;">
 
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:20px;">
@@ -537,33 +575,12 @@ a:hover{color:#5E5A52;}
 
   </section>
 
-  <section style="position:relative;overflow:hidden;height:clamp(280px,46vw,620px);background:#060607;">
-    <img loading="lazy" decoding="async" data-drift="" src="assets/35325d66-becd-4ceb-860e-01d192e8d335.webp" alt="Artwork by Tatiana Plakhova" style="position:absolute;top:0;left:-10%;width:120%;height:100%;object-fit:cover;display:block;max-width:none;">
-    <div aria-hidden="true" style="position:absolute;left:0;right:0;top:0;height:55%;background:linear-gradient(to bottom,#060607 0%,rgba(6,6,7,0.85) 25%,rgba(6,6,7,0.4) 60%,rgba(6,6,7,0) 100%);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);-webkit-mask-image:linear-gradient(to bottom,#000 0%,#000 30%,transparent 100%);mask-image:linear-gradient(to bottom,#000 0%,#000 30%,transparent 100%);pointer-events:none;"></div>
-  </section>
-  <section style="max-width:1200px;margin:0 auto;padding:clamp(64px,8vw,112px) 24px 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:clamp(32px,6vw,96px);align-items:start;">
-    <div style="display:flex;flex-direction:column;gap:16px;">
-      <div data-reveal="" style="display:flex;align-items:center;gap:14px;font-family:'Instrument Sans',sans-serif;font-style:normal;font-weight:500;font-size:15px;line-height:1;letter-spacing:0.01em;color:#C9C4B9;"><span>Visual artist</span></div>
-      <h2 data-reveal="" data-reveal-delay="100" style="font-family:'Newsreader',serif;font-weight:400;font-size:clamp(40px,5vw,72px);line-height:1;letter-spacing:-0.025em;margin:0;">Tatiana Plakhova</h2>
-      <a data-reveal="" data-reveal-delay="200" href="https://tatianaplakhova.com/" target="_blank" rel="noopener" style="align-self:flex-start;font-size:14px;color:#ECE8DF;border-bottom:1px solid rgba(236,232,223,0.4);padding-bottom:4px;" style-hover="color:#FFFFFF;border-bottom-color:#ECE8DF;">Complexity Graphics ↗</a>
-    </div>
-    <div style="display:flex;flex-direction:column;gap:20px;">
-      <p data-reveal="" style="font-family:'Newsreader',serif;font-size:clamp(22px,2.2vw,28px);line-height:1.35;margin:0;text-wrap:pretty;">NeuroMusic was developed with the participation of the internationally renowned visual artist Tatiana Plakhova.</p>
-      <p data-reveal="" data-reveal-delay="120" style="font-size:17px;line-height:1.65;color:#D6D1C6;margin:0;text-wrap:pretty;">Her visuals accompany the live performance and follow the programme from state to state, giving each listening state and the research behind it its own visual language.</p>
-    </div>
-  </section>
-  <figure class="neuro-artwork">
-    <div class="neuro-artwork-frame">
-      <img src="assets/neuro-krasatisha-cb2ed3b6.webp" alt="Abstract gold and teal filaments forming an intricate fan-shaped pattern" width="2000" height="1245" loading="lazy" decoding="async">
-    </div>
-  </figure>
-
 
 
 
   <section style="max-width:1200px;margin:0 auto;padding:0 24px clamp(56px,7vw,96px);">
     <div style="border-top:1px solid rgba(236,232,223,0.14);padding-top:clamp(40px,5vw,64px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:24px 64px;align-items:end;">
-      <p data-reveal="" style="font-size:17px;line-height:1.6;color:#BDB8AD;margin:0;max-width:420px;">Programmes can be developed around <br>four listening states</p>
+      <p data-reveal="" style="font-size:17px;line-height:1.6;color:#BDB8AD;margin:0;max-width:420px;">Programmes can be developed<br>around four listening states</p>
       <div data-reveal="" data-reveal-delay="120" style="display:flex;flex-wrap:wrap;gap:8px 28px;">
         <sc-for list="{{ neuroStates }}" as="s" hint-placeholder-count="4">
           <span style="font-family:'Newsreader',serif;font-style:italic;font-size:clamp(28px,3vw,40px);line-height:1;">{{ s.name }}</span>
@@ -1442,7 +1459,9 @@ class Component extends DCLogic {
       neuroVisual: route === 'neuromusic' ? React.createElement(NeuroVisual, { key: 'nv' }) : null,
       neuroConceptRef: this.neuroConceptRef, curtainRef: this.curtainRef,
       goNeuroConcept: e => this.scrollToRef(this.neuroConceptRef, false, e),
-      ft: route === 'revich-osetinskaya'
+      ft: route === 'neuromusic'
+        ? { bg: '#060607', ink: '#ECE8DF', mute: '#BDB8AD', soft: '#D6D1C6', line: 'rgba(236,232,223,0.12)' }
+        : route === 'revich-osetinskaya'
         ? { bg: '#141413', ink: '#F4F0E8', mute: '#B5B0A6', soft: '#E2DDD2', line: 'rgba(244,240,232,0.14)' }
         : { bg: '#F4F0E8', ink: '#141413', mute: '#5E5A52', soft: '#2A2926', line: 'rgba(20,20,19,0.14)' },
       hd: route === 'revich-osetinskaya'
