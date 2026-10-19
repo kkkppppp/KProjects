@@ -433,31 +433,30 @@ a,button{-webkit-tap-highlight-color:transparent;touch-action:manipulation;}
 .programme-copy h3:first-child{margin-top:0;}
 </style>
 <style>
-.rev-biographies{max-width:1040px;margin:0 auto;padding:36px 24px 24px;}
-.rev-artist-story{display:flex;flex-direction:column;gap:28px;}
-.rev-artist-story+.rev-artist-story{margin-top:48px;}
-.rev-story-row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:clamp(24px,5vw,64px);align-items:center;}
-.rev-story-row-reverse{grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);}
-.rev-story-row-reverse>figure{grid-column:2;grid-row:1;}
-.rev-story-row-reverse>.rev-story-copy{grid-column:1;grid-row:1;}
-.rev-story-row figure{margin:0;min-width:0;}
-.rev-story-portrait{width:65%;max-width:210px;justify-self:center;}
-.rev-story-performance{width:100%;max-width:360px;justify-self:center;}
-.rev-story-row img{display:block;width:100%;height:auto;border-radius:8px;}
-.rev-story-copy{min-width:0;}
-.rev-story-role{font-size:13px;color:#B5B0A6;}
-.rev-story-copy h2{font:400 clamp(28px,3.2vw,42px)/1.15 'Newsreader',serif;letter-spacing:-.015em;margin:12px 0 18px;}
-.rev-story-copy p{font-size:17px;line-height:1.65;color:#D6D1C6;margin:0;text-wrap:pretty;}
+.rev-biographies{max-width:1000px;margin:0 auto;padding:36px 24px;}
+.rev-bio-editorial+.rev-bio-editorial{margin-top:56px;padding-top:40px;border-top:1px solid #F4F0E826;}
+.rev-bio-intro{display:grid;grid-template-columns:200px minmax(0,1fr);gap:20px 36px;align-items:start;}
+.rev-bio-portrait{grid-row:span 2;margin:0;}
+.rev-bio-portrait img{display:block;width:100%;height:auto;border-radius:8px;}
+.rev-bio-heading{align-self:end;min-width:0;}
+.rev-bio-heading>span{font-size:13px;color:#B5B0A6;}
+.rev-bio-heading h2{font:400 clamp(30px,3.5vw,46px)/1.15 'Newsreader',serif;margin:10px 0 0;}
+.rev-bio-editorial p{font-size:17px;line-height:1.75;color:#D6D1C6;margin:0;text-wrap:pretty;}
+.rev-bio-body{max-width:760px;margin:28px auto 0;display:flex;flex-direction:column;gap:24px;}
+.rev-bio-concert{width:78%;max-width:560px;align-self:flex-end;margin:4px 0;}
+.rev-bio-editorial:nth-child(2) .rev-bio-concert{align-self:flex-start;}
+.rev-bio-concert img{display:block;width:100%;height:auto;border-radius:8px;}
 @media(max-width:599px){
-.rev-biographies{padding:24px 24px;}
-.rev-story-row,.rev-story-row-reverse{display:flow-root;}
-.rev-story-row figure{float:left;width:36%;max-width:140px;margin:0 18px 12px 0;}
-.rev-story-row-reverse figure{float:right;margin:0 0 12px 18px;}
-.rev-story-row figure.rev-story-performance{width:46%;max-width:180px;}
-.rev-story-copy h2{font-size:clamp(25px,6.4vw,34px);margin:10px 0 14px;}
-.rev-story-copy p{font-size:15px;line-height:1.65;}
-.rev-artist-story{gap:24px;}
-.rev-artist-story+.rev-artist-story{margin-top:36px;}
+.rev-biographies{padding:24px;}
+.rev-bio-intro{grid-template-columns:100px minmax(0,1fr);gap:20px;align-items:center;}
+.rev-bio-portrait{grid-row:auto;}
+.rev-bio-heading{align-self:center;}
+.rev-bio-heading h2{font-size:clamp(26px,6vw,34px);}
+.rev-bio-lead{grid-column:1/-1;}
+.rev-bio-editorial p{font-size:16px;line-height:1.75;}
+.rev-bio-body{margin-top:22px;gap:22px;}
+.rev-bio-concert{width:90%;}
+.rev-bio-editorial+.rev-bio-editorial{margin-top:36px;padding-top:32px;}
 }
 </style>
 </head>
@@ -985,27 +984,31 @@ a:hover{color:#5E5A52;}
   </section>
 
   <section class="rev-biographies" aria-label="The performers">
-    <article class="rev-artist-story">
-      <div class="rev-story-row">
-        <figure class="rev-story-portrait"><img src="assets/elena-bio-portrait.webp" alt="Elena Revich with her violin" width="733" height="1100" loading="lazy" decoding="async"></figure>
-        <div class="rev-story-copy"><span class="rev-story-role">Violin</span><h2>Elena Revich</h2><p>Violinist and diploma winner of the International Tchaikovsky Competition.</p></div>
-      </div>
-      <div class="rev-story-row rev-story-row-reverse">
-        <figure class="rev-story-performance"><img src="assets/elena-bio-performance.webp" alt="Elena Revich playing the violin" width="1000" height="666" loading="lazy" decoding="async"></figure>
-        <div class="rev-story-copy"><p>Her collaborations include Gidon Kremer, Yuri Bashmet and Teodor Currentzis.</p></div>
-      </div>
-    </article>
-    <article class="rev-artist-story">
-      <div class="rev-story-row rev-story-row-reverse">
-        <figure class="rev-story-portrait"><img src="assets/polina-bio-portrait.webp" alt="Portrait of Polina Osetinskaya" width="880" height="1100" loading="lazy" decoding="async"></figure>
-        <div class="rev-story-copy"><span class="rev-story-role">Piano</span><h2>Polina Osetinskaya</h2><p>Her international performances include Carnegie Hall and the Musikverein in Vienna.</p></div>
-      </div>
-      <div class="rev-story-row">
-        <figure class="rev-story-performance"><img src="assets/polina-bio-performance.webp" alt="Polina Osetinskaya at the grand piano" width="1000" height="667" loading="lazy" decoding="async"></figure>
-        <div class="rev-story-copy"><p>She has also performed at the Berlin Philharmonie and Sydney Opera House.</p></div>
-      </div>
-    </article>
-  </section>
+<article class="rev-bio-editorial" aria-labelledby="bio-elena">
+ <header class="rev-bio-intro">
+  <figure class="rev-bio-portrait"><img src="assets/elena-bio-portrait.webp" alt="Elena Revich" loading="lazy" decoding="async" width="733" height="1100"></figure>
+  <div class="rev-bio-heading"><span>Violinist</span><h2 id="bio-elena">Elena Revich</h2></div>
+  <p class="rev-bio-lead">Elena Revich is an internationally acclaimed violinist, a prizewinner of the International Tchaikovsky Competition, and an active performer of both classical and contemporary music. Her artistic career spans solo performances, chamber music, and interdisciplinary productions.</p>
+ </header>
+ <div class="rev-bio-body">
+  <p>She has appeared at prestigious venues including the Prinzregententheater in Munich, the Accademia di Santa Cecilia in Rome, and Finlandia Hall in Helsinki. Throughout her career, she has collaborated with distinguished musicians such as Gidon Kremer, Yuri Bashmet, Natalia Gutman, and Teodor Currentzis, including performances with the MusicAeterna ensemble.</p>
+  <figure class="rev-bio-concert"><img src="assets/elena-bio-performance.webp" alt="Elena Revich in performance" loading="lazy" decoding="async" width="1000" height="666"></figure>
+  <p>A dedicated advocate of contemporary music, Elena has premiered numerous compositions, including works written especially for her. Her artistic interests extend beyond traditional concert formats to experimental theatre and multidisciplinary performance. She was among the creators and performers of <em>Galileo Galilei</em>, a production recognised with three Golden Mask theatre awards.</p><p>Her repertoire combines the classical violin tradition with contemporary compositions, rarely performed works, and innovative chamber music programmes.</p>
+ </div>
+</article>
+<article class="rev-bio-editorial" aria-labelledby="bio-polina">
+ <header class="rev-bio-intro">
+  <figure class="rev-bio-portrait"><img src="assets/polina-bio-portrait.webp" alt="Polina Osetinskaya" loading="lazy" decoding="async" width="880" height="1100"></figure>
+  <div class="rev-bio-heading"><span>Pianist</span><h2 id="bio-polina">Polina Osetinskaya</h2></div>
+  <p class="rev-bio-lead">Polina Osetinskaya is an internationally renowned pianist celebrated for her distinctive interpretations, expressive musicality, and exceptionally diverse repertoire. Having begun performing publicly as a child prodigy, she has developed an extensive international career as a soloist and chamber musician.</p>
+ </header>
+ <div class="rev-bio-body">
+  <p>She has performed at some of the world's most prestigious concert venues, including Carnegie Hall in New York, the Musikverein in Vienna, the Barbican Centre in London, the Berlin Philharmonie, and the Sydney Opera House. Her festival appearances include the Salzburg Festival and numerous major international music events.</p>
+  <figure class="rev-bio-concert"><img src="assets/polina-bio-performance.webp" alt="Polina Osetinskaya in performance" loading="lazy" decoding="async" width="1000" height="667"></figure>
+  <p>Polina has collaborated with leading musicians, including violinist Maxim Vengerov, with whom she has maintained a longstanding artistic partnership. Her repertoire ranges from Bach, Mozart, and Rachmaninoff to contemporary composers such as Arvo Pärt, Valentin Silvestrov, and Leonid Desyatnikov.</p><p>Alongside her concert career, she has released numerous recordings and developed distinctive recital programmes that bring together familiar masterpieces and lesser-known compositions. Her performances are recognised for their individuality, emotional depth, and thoughtful approach to musical interpretation.</p>
+ </div>
+</article>
+</section>
 
   <section>
     <div style="max-width:1200px;margin:0 auto;padding:clamp(56px,7vw,104px) 24px;display:flex;flex-direction:column;gap:24px;">
