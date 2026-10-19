@@ -432,6 +432,34 @@ a,button{-webkit-tap-highlight-color:transparent;touch-action:manipulation;}
 @media(max-width:759px){.amstel-members>div{grid-template-columns:64px minmax(0,1fr)!important;gap:6px 24px!important;}}
 .programme-copy h3:first-child{margin-top:0;}
 </style>
+<style>
+.rev-biographies{max-width:1040px;margin:0 auto;padding:36px 24px 24px;}
+.rev-artist-story{display:flex;flex-direction:column;gap:28px;}
+.rev-artist-story+.rev-artist-story{margin-top:48px;}
+.rev-story-row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:clamp(24px,5vw,64px);align-items:center;}
+.rev-story-row-reverse{grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);}
+.rev-story-row-reverse>figure{grid-column:2;grid-row:1;}
+.rev-story-row-reverse>.rev-story-copy{grid-column:1;grid-row:1;}
+.rev-story-row figure{margin:0;min-width:0;}
+.rev-story-portrait{width:65%;max-width:210px;justify-self:center;}
+.rev-story-performance{width:100%;max-width:360px;justify-self:center;}
+.rev-story-row img{display:block;width:100%;height:auto;border-radius:8px;}
+.rev-story-copy{min-width:0;}
+.rev-story-role{font-size:13px;color:#B5B0A6;}
+.rev-story-copy h2{font:400 clamp(28px,3.2vw,42px)/1.15 'Newsreader',serif;letter-spacing:-.015em;margin:12px 0 18px;}
+.rev-story-copy p{font-size:17px;line-height:1.65;color:#D6D1C6;margin:0;text-wrap:pretty;}
+@media(max-width:599px){
+.rev-biographies{padding:24px 24px;}
+.rev-story-row,.rev-story-row-reverse{display:flow-root;}
+.rev-story-row figure{float:left;width:36%;max-width:140px;margin:0 18px 12px 0;}
+.rev-story-row-reverse figure{float:right;margin:0 0 12px 18px;}
+.rev-story-row figure.rev-story-performance{width:46%;max-width:180px;}
+.rev-story-copy h2{font-size:clamp(25px,6.4vw,34px);margin:10px 0 14px;}
+.rev-story-copy p{font-size:15px;line-height:1.65;}
+.rev-artist-story{gap:24px;}
+.rev-artist-story+.rev-artist-story{margin-top:36px;}
+}
+</style>
 </head>
 <body>
 <x-dc>
@@ -956,21 +984,27 @@ a:hover{color:#5E5A52;}
     </div>
   </section>
 
-  <section>
-    <div style="max-width:1200px;margin:0 auto;padding:clamp(56px,7vw,104px) 24px;display:flex;flex-direction:column;gap:24px;">
-      
-      <div style="flex:none;width:100%;min-width:0;">
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:40px clamp(32px,4vw,64px);">
-          <sc-for list="{{ revMembers }}" as="m" hint-placeholder-count="2">
-            <div data-reveal="" data-reveal-delay="{{ m.delay }}" style="display:flex;flex-direction:column;gap:12px;padding-top:20px;border-top:1px solid rgba(244,240,232,0.24);">
-              <span style="font-size:13px;color:#A8A397;">{{ m.role }}</span>
-              <span style="font-family:'Newsreader',serif;font-weight:400;font-size:clamp(28px,2.8vw,36px);line-height:1.1;letter-spacing:-0.01em;">{{ m.name }}</span>
-              <span style="font-size:16px;line-height:1.6;color:#D6D1C6;text-wrap:pretty;">{{ m.text }}</span>
-            </div>
-          </sc-for>
-        </div>
+  <section class="rev-biographies" aria-label="The performers">
+    <article class="rev-artist-story">
+      <div class="rev-story-row">
+        <figure class="rev-story-portrait"><img src="assets/elena-bio-portrait.webp" alt="Elena Revich with her violin" width="733" height="1100" loading="lazy" decoding="async"></figure>
+        <div class="rev-story-copy"><span class="rev-story-role">Violin</span><h2>Elena Revich</h2><p>Violinist and diploma winner of the International Tchaikovsky Competition.</p></div>
       </div>
-    </div>
+      <div class="rev-story-row rev-story-row-reverse">
+        <figure class="rev-story-performance"><img src="assets/elena-bio-performance.webp" alt="Elena Revich playing the violin" width="1000" height="666" loading="lazy" decoding="async"></figure>
+        <div class="rev-story-copy"><p>Her collaborations include Gidon Kremer, Yuri Bashmet and Teodor Currentzis.</p></div>
+      </div>
+    </article>
+    <article class="rev-artist-story">
+      <div class="rev-story-row rev-story-row-reverse">
+        <figure class="rev-story-portrait"><img src="assets/polina-bio-portrait.webp" alt="Portrait of Polina Osetinskaya" width="880" height="1100" loading="lazy" decoding="async"></figure>
+        <div class="rev-story-copy"><span class="rev-story-role">Piano</span><h2>Polina Osetinskaya</h2><p>Her international performances include Carnegie Hall and the Musikverein in Vienna.</p></div>
+      </div>
+      <div class="rev-story-row">
+        <figure class="rev-story-performance"><img src="assets/polina-bio-performance.webp" alt="Polina Osetinskaya at the grand piano" width="1000" height="667" loading="lazy" decoding="async"></figure>
+        <div class="rev-story-copy"><p>She has also performed at the Berlin Philharmonie and Sydney Opera House.</p></div>
+      </div>
+    </article>
   </section>
 
   <section>
