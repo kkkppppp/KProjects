@@ -20,7 +20,7 @@
 <link rel="preload" as="image" media="(min-width:760px)" href="assets/878ab2a6852c442cf5c4.webp">
 <link rel="preload" as="image" media="(max-width:759px)" href="assets/9a4201c3a1e2403a8070-mobile.webp">
 <link rel="preload" as="image" media="(min-width:760px)" href="assets/9a4201c3a1e2403a8070.webp">
-<link rel="preload" as="image" href="assets/65f60e64-dc53-4fd2-b3bd-22cf05e68056.webp">
+<link rel="preload" as="image" href="assets/vitaduo-cover-hq.webp">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="assets/ad60e1a8-a068-4486-af0b-8d125bc61a1e.js"></script>
 <style>
@@ -480,8 +480,8 @@ main:not(.rev-import) p[style*="Newsreader"],main:not(.rev-import) blockquote{fo
 }
 </style>
 <style>
-.vita-photo-hero{max-width:1200px;margin:0 auto;padding:40px 24px 56px;display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:48px;align-items:center;}
-.vita-photo-hero-copy{display:flex;flex-direction:column;gap:24px;min-width:0;}
+.vita-photo-hero{max-width:1200px;margin:0 auto;padding:40px 24px 56px;display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:48px;align-items:stretch;}
+.vita-photo-hero-copy{display:flex;flex-direction:column;justify-content:space-between;gap:24px;min-width:0;}
 main.vita-page .vita-photo-hero h1{font-size:clamp(58px,6vw,84px)!important;}
 .vita-photo-hero-image{display:block;width:100%;height:auto;border-radius:8px;}
 .vita-about-layout{max-width:1200px;margin:0 auto;padding:56px 24px;display:grid;grid-template-columns:minmax(0,1fr) 240px;gap:24px 56px;align-items:center;}
@@ -495,7 +495,11 @@ main.vita-page .vita-photo-hero h1{font-size:clamp(54px,14vw,76px)!important;}
 .vita-about-figures{grid-column:1;grid-row:auto;width:190px;justify-self:center;margin-top:4px;}
 }
 </style>
-</head>
+<style>
+main blockquote{text-wrap:wrap!important;}
+@media(min-width:1200px){main.vita-page .vita-timeline blockquote{font-size:22px!important;white-space:nowrap;letter-spacing:-.015em;}}
+@media(max-width:759px){.vita-photo-hero-copy{gap:20px;}}
+</style></head>
 <body>
 <x-dc>
 <helmet>
@@ -873,7 +877,7 @@ a:hover{color:#5E5A52;}
         <p style="font-size:17px;line-height:1.5;margin:0;">International Chamber Duo<br>Saxophone &amp; Piano</p>
         <a class="vita-booking-button" href="mailto:kate@projects.art?subject=VitaDuo" style="align-self:flex-start;font-size:14px;font-weight:500;padding:13px 22px;border-radius:999px;text-decoration:none;">Plan an event</a>
       </div>
-      <img class="vita-photo-hero-image" loading="eager" decoding="async" sc-camel-fetch-priority="high" src="assets/vitaduo-hero-portrait.jpeg" width="832" height="576" alt="Vitaly Vatulya with saxophone and Maria Nemtsova">
+      <img class="vita-photo-hero-image" loading="eager" decoding="async" sc-camel-fetch-priority="high" src="assets/vitaduo-cover-hq.webp" width="1536" height="1024" alt="Vitaly Vatulya with saxophone and Maria Nemtsova">
     </div>
   </section>
 
@@ -890,7 +894,7 @@ a:hover{color:#5E5A52;}
   </section>
   <section class="vita-timeline" aria-label="VitaDuo milestones">
     <div class="vita-timeline-inner">
-      <div style="max-width:820px;">
+      <div style="width:100%;min-width:0;">
         <div data-reveal="" data-reveal-delay="150" style="display:flex;flex-direction:column;margin-top:8px;">
           <sc-for list="{{ vitaMilestones }}" as="ms" hint-placeholder-count="5">
             <div style="display:grid;grid-template-columns:72px minmax(0,1fr);gap:16px;align-items:baseline;padding:14px 0;border-top:1px solid rgba(20,20,19,0.14);">
@@ -1561,8 +1565,8 @@ class Component extends DCLogic {
         { year: '2022', text: 'Named the ‘Golden Duo’ by De Nieuwe Muze after their Amsterdam recital' }
       ],
       vitaMembers: [
-        { role: 'Piano', name: 'Maria Nemtsova', text: 'Performances at Carnegie Hall, Wigmore Hall and major concert venues in Europe and Asia', photo: 'assets/212ef18ac2a956a7614e.webp', speed: '-0.012', offset: '0px' },
-        { role: 'Saxophone', name: 'Vitaly Vatulya', text: 'Winner of 15+ international competitions,\nmember of Amstel Quartet', photo: 'assets/8eaceb6e8507065efd81.webp', speed: '0.012', offset: 'clamp(0px,10vw,160px)' }
+        { role: 'Piano', name: 'Maria Nemtsova', text: 'Performances at Carnegie Hall, Wigmore Hall and major concert venues in Europe and Asia', photo: 'assets/maria-nemtsova-hq.webp', speed: '-0.012', offset: '0px' },
+        { role: 'Saxophone', name: 'Vitaly Vatulya', text: 'Winner of 15+ international competitions,\nmember of Amstel Quartet', photo: 'assets/vitaly-vatulya-hq.webp', speed: '0.012', offset: 'clamp(0px,10vw,160px)' }
       ],
       vids: VITA_VIDEOS.map(id => ({ embed: embed(id) })),
 
