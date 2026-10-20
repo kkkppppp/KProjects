@@ -499,7 +499,19 @@ main.vita-page .vita-photo-hero h1{font-size:clamp(54px,14vw,76px)!important;}
 main blockquote{text-wrap:wrap!important;}
 @media(min-width:1200px){main.vita-page .vita-timeline blockquote{font-size:22px!important;white-space:nowrap;letter-spacing:-.015em;}}
 @media(max-width:759px){.vita-photo-hero-copy{gap:20px;}}
-</style></head>
+</style><style>
+@media(max-width:759px){
+.vita-about-figures{justify-self:center;transform:translateX(clamp(16px,5vw,28px));max-width:calc(100% - 56px);}
+.vita-member{align-items:stretch!important;}
+.vita-member>div:first-child,.vita-member:nth-child(even)>div:first-child{position:relative;align-self:stretch!important;aspect-ratio:auto!important;min-height:160px;height:100%;max-height:none!important;}
+.vita-member>div:first-child img{position:absolute;inset:0;width:100%!important;height:100%!important;margin:0!important;object-fit:cover;object-position:center top;transform:none!important;}
+.vita-member>div:last-child{display:flex!important;flex-direction:column;justify-content:space-between;gap:10px;align-self:stretch;}
+.vita-member>div:last-child>span{margin:0!important;}
+.vita-member>div:last-child>span:nth-child(2){font-size:23px!important;}
+.vita-member>div:last-child>span:last-child{line-height:1.45!important;}
+}
+</style>
+</head>
 <body>
 <x-dc>
 <helmet>
