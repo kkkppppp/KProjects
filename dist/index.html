@@ -677,7 +677,7 @@ a:hover{color:#5E5A52;}
       
     </div>
     <div style="display:grid;grid-template-columns:repeat({{ catCols }},minmax(0,1fr));gap:clamp(20px,2.4vw,32px);">
-      <sc-for list="{{ catalogueProjects }}" as="p" hint-placeholder-count="4">
+      <sc-for list="{{ catalogueProjects }}" as="p" hint-placeholder-count="3">
             <a class="project-card" href="#{{ p.id }}" sc-camel-on-click="{{ p.open }}" style="display:flex;flex-direction:column;gap:16px;color:#141413;" style-hover="color:#141413;">
               <span class="project-art" style="display:block;aspect-ratio:786/987;overflow:hidden;border-radius:10px;background:#EAE4D8;">
                 <img loading="lazy" decoding="async" src="{{ p.image }}" alt="{{ p.name }}" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform 1.2s cubic-bezier(.2,.7,.2,1);" style-hover="transform:scale(1.04);">
@@ -1240,6 +1240,8 @@ a:hover{color:#5E5A52;}
 </x-dc>
 <script type="text/x-dc" data-dc-script="">
 const FMT_RECITAL = 'Recitals / Concert series / Cultural events';
+// Set to true to restore Amstel Quartet in the catalogue and its route.
+const AMSTEL_VISIBLE = false;
 const DATA = [
   { id: 'neuromusic', name: 'NeuroMusic', subtitle: 'Live Music & Neuroscience', image: 'assets/neuromusic-lifeforms-cover.webp',
     facts: [
@@ -1540,7 +1542,7 @@ class Component extends DCLogic {
   }
 
   renderVals() {
-    const route = this.state.route;
+    const route = !AMSTEL_VISIBLE && this.state.route === 'amstel-quartet' ? '' : this.state.route;
     const vw = this.state.vw || window.innerWidth;
     const projects = DATA.map((p, i) => ({
       ...p,
@@ -1556,8 +1558,8 @@ class Component extends DCLogic {
     return {
       isHome: idx < 0,
       isNeuro: route === 'neuromusic', isVita: route === 'vitaduo', isRevich: route === 'revich-osetinskaya', isAmstel: route === 'amstel-quartet',
-      catalogueProjects: [neuro, rev, ams, vita],
-      catCols: vw >= 900 ? 4 : vw >= 480 ? 2 : 1,
+      catalogueProjects: [neuro, rev, ...(AMSTEL_VISIBLE ? [ams] : []), vita],
+      catCols: vw >= 900 ? (AMSTEL_VISIBLE ? 4 : 3) : vw >= 480 ? 2 : 1,
       next: projects[(i + 1) % n], prev: projects[(i - 1 + n) % n],
 
       neuro,
