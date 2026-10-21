@@ -1,4 +1,4 @@
-/* The selector has its own row on small screens so translated navigation never crowds the logo. */
+/* Compact, single-row navigation across all supported languages. */
 .site-header-inner { height:auto!important; min-height:68px; flex-wrap:wrap; padding-top:10px!important; padding-bottom:10px!important; }
 .site-header-inner nav { margin-left:auto; min-width:0; flex-wrap:wrap; }
 /* A compact label over a native select preserves the platform picker and keyboard controls. */
@@ -9,13 +9,18 @@ kp-language select { position:absolute; inset:0; width:100%; height:100%; opacit
 kp-language option { background:#F4F0E8; color:#141413; }
 kp-language:focus-within { outline:2px solid currentColor; outline-offset:3px; }
 @media(max-width:600px){
- .site-header-inner { gap:8px!important; }
- .site-header-inner kp-language { margin-left:auto; }
- .site-header-inner nav { order:3; flex-basis:100%; justify-content:flex-end; font-size:13px!important; }
- .site-header-inner nav a { padding:8px 10px!important; }
- .neuro-hero>div:last-child { padding-top:148px!important; }
- .neuro-page { margin-top:-112px!important; }
+ .site-header-inner { flex-wrap:nowrap!important; gap:4px!important; height:68px!important; padding:10px 12px!important; }
+ .site-header-inner>a { flex:none; }
+ .site-header-inner>a>span { font-size:clamp(18px,4.6vw,22px)!important; }
+ .site-header-inner nav { order:0; flex:0 0 auto; flex-wrap:nowrap; justify-content:flex-end; gap:0!important; font-size:clamp(11px,2.9vw,13px)!important; white-space:nowrap; }
+ .site-header-inner nav a { padding:10px clamp(3px,1vw,6px)!important; margin-left:0!important; }
+ .site-header-inner kp-language { width:38px; height:34px; margin-left:2px; }
+ .site-header-inner kp-language::before { font-size:11px; padding-right:8px; }
+ .site-header-inner kp-language::after { right:6px; top:12px; width:4px; height:4px; }
+ .neuro-hero>div:last-child { padding-top:110px!important; }
+ .neuro-page { margin-top:-69px!important; }
 }
+
 html:not([lang="en"]) main { overflow-wrap:break-word; }
 html:not([lang="en"]) h1,html:not([lang="en"]) h2,html:not([lang="en"]) h3 { text-wrap:balance; }
 html:not([lang="en"]) .catalogue .project-card>span:last-child { grid-template-columns:minmax(0,1fr)!important; }
