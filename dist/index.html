@@ -812,12 +812,12 @@ a:hover{color:#5E5A52;}
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:20px;">
       <div style="min-width:0;">
         <div style="position:relative;aspect-ratio:16/9;overflow:hidden;border-radius:10px;background:#111112;">
-          <iframe src="https://www.youtube-nocookie.com/embed/1btyGnzXk5E?rel=0&amp;playsinline=1" title="NeuroMusic — video 1" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" style="position:absolute;inset:0;width:100%;height:100%;border:0;"></iframe>
+          <iframe src="https://www.youtube-nocookie.com/embed/1btyGnzXk5E?rel=0&amp;hl=en&amp;playsinline=1" title="NeuroMusic — video 1" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" style="position:absolute;inset:0;width:100%;height:100%;border:0;"></iframe>
         </div>
       </div>
       <div style="min-width:0;">
         <div style="position:relative;aspect-ratio:16/9;overflow:hidden;border-radius:10px;background:#111112;">
-          <iframe src="https://www.youtube-nocookie.com/embed/io6M2XDulTM?rel=0&amp;playsinline=1" title="NeuroMusic — video 2" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" style="position:absolute;inset:0;width:100%;height:100%;border:0;"></iframe>
+          <iframe src="https://www.youtube-nocookie.com/embed/io6M2XDulTM?rel=0&amp;hl=en&amp;playsinline=1" title="NeuroMusic — video 2" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" style="position:absolute;inset:0;width:100%;height:100%;border:0;"></iframe>
         </div>
       </div>
     </div>
@@ -1346,7 +1346,7 @@ const NEURO_REFS = [
 const NEURO_STATES = ['Energy', 'Focus', 'Calm', 'Reset'];
 const REV_VIDEOS = ['mlriNmikY9o', 'MMWbc2nVUIQ', 'Dt2oMs3XQDk'];
 const VITA_VIDEOS = ['KWzD7Zl1gK0', 'Nc0s7ESIeXk', 'AroHePWUPhs', 'ei0lfTgzW4k', 'gksLXNR_XK0'];
-const embed = id => 'https://www.youtube-nocookie.com/embed/' + id + '?rel=0&playsinline=1';
+const embed = id => 'https://www.youtube-nocookie.com/embed/' + id + '?rel=0&hl=en&playsinline=1';
 const REDUCED = () => window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
 const NEURO_LAYERS = [
   { src: 'assets/9a4201c3a1e2403a8070.webp', mobileSrc: 'assets/9a4201c3a1e2403a8070-mobile.webp', w: 1.55, ar: 1200 / 1920, x: 0.66, y: 0.5, z0: -2600, z1: -260, ry0: 70, ry1: -16, rx1: 6, spin: -2.2, op: 0.8, tilt: 10, drift: 0, mask: false },
@@ -1594,7 +1594,7 @@ class Component extends DCLogic {
         { id: 'Dt2oMs3XQDk', title: 'Rachmaninoff – Daisies, Op. 38 No. 3' },
         { id: 'mlriNmikY9o', title: 'Elena Revich, violin' }
       ].map(v => ({ ...v, thumb: 'https://i.ytimg.com/vi/' + v.id + '/hqdefault.jpg',
-        src: 'https://www.youtube-nocookie.com/embed/' + v.id + '?rel=0&autoplay=1&playsinline=1',
+        src: 'https://www.youtube-nocookie.com/embed/' + v.id + '?rel=0&hl=en&autoplay=1&playsinline=1',
         playing: this.state.revPlaying === v.id, idle: this.state.revPlaying !== v.id,
         play: () => this.setState({ revPlaying: v.id }) })),
       revVids: REV_VIDEOS.map(id => ({ embed: embed(id), url: 'https://www.youtube.com/watch?v=' + id, label: 'Concert recording' })),
