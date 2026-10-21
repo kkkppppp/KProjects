@@ -1,10 +1,13 @@
 /* The selector has its own row on small screens so translated navigation never crowds the logo. */
 .site-header-inner { height:auto!important; min-height:68px; flex-wrap:wrap; padding-top:10px!important; padding-bottom:10px!important; }
 .site-header-inner nav { margin-left:auto; min-width:0; flex-wrap:wrap; }
-kp-language { display:inline-flex; margin-left:10px; color:inherit; flex:none; }
-kp-language select { font:inherit; font-size:12px; line-height:1.4; color:inherit; background:transparent; border:1px solid currentColor; border-radius:6px; padding:9px 6px; max-width:160px; cursor:pointer; }
+/* A compact label over a native select preserves the platform picker and keyboard controls. */
+kp-language { position:relative; display:inline-flex; align-items:center; justify-content:center; width:54px; height:36px; margin-left:8px; color:inherit; flex:none; border:1px solid currentColor; border-radius:6px; }
+kp-language::before { content:attr(data-language); font:500 12px/1 'Instrument Sans',sans-serif; letter-spacing:.04em; padding-right:10px; pointer-events:none; }
+kp-language::after { content:""; position:absolute; right:9px; top:13px; width:5px; height:5px; border-right:1px solid currentColor; border-bottom:1px solid currentColor; transform:rotate(45deg); pointer-events:none; }
+kp-language select { position:absolute; inset:0; width:100%; height:100%; opacity:0; cursor:pointer; font:inherit; font-size:16px; }
 kp-language option { background:#F4F0E8; color:#141413; }
-kp-language select:focus-visible { outline:2px solid currentColor; outline-offset:3px; }
+kp-language:focus-within { outline:2px solid currentColor; outline-offset:3px; }
 @media(max-width:600px){
  .site-header-inner { gap:8px!important; }
  .site-header-inner kp-language { margin-left:auto; }

@@ -107,6 +107,7 @@
       selectElement.setAttribute('aria-label', labels[language][0]);
       selectElement.options[0].textContent = `${labels[language][1]} · ${language.toUpperCase()}`;
       selectElement.value = manual || 'auto';
+      this.setAttribute('data-language', language.toUpperCase());
     }
   }
   customElements.define('kp-language', LanguageControl);
