@@ -1,0 +1,43 @@
+/* The selector has its own row on small screens so translated navigation never crowds the logo. */
+.site-header-inner { height:auto!important; min-height:68px; flex-wrap:wrap; padding-top:10px!important; padding-bottom:10px!important; }
+.site-header-inner nav { margin-left:auto; min-width:0; flex-wrap:wrap; }
+kp-language { display:inline-flex; margin-left:10px; color:inherit; flex:none; }
+kp-language select { font:inherit; font-size:12px; line-height:1.4; color:inherit; background:transparent; border:1px solid currentColor; border-radius:6px; padding:9px 6px; max-width:160px; cursor:pointer; }
+kp-language option { background:#F4F0E8; color:#141413; }
+kp-language select:focus-visible { outline:2px solid currentColor; outline-offset:3px; }
+@media(max-width:600px){
+ .site-header-inner { gap:8px!important; }
+ .site-header-inner kp-language { margin-left:auto; }
+ .site-header-inner nav { order:3; flex-basis:100%; justify-content:flex-end; font-size:13px!important; }
+ .site-header-inner nav a { padding:8px 10px!important; }
+ .neuro-hero>div:last-child { padding-top:148px!important; }
+ .neuro-page { margin-top:-112px!important; }
+}
+html:not([lang="en"]) main { overflow-wrap:break-word; }
+html:not([lang="en"]) h1,html:not([lang="en"]) h2,html:not([lang="en"]) h3 { text-wrap:balance; }
+html:not([lang="en"]) .catalogue .project-card>span:last-child { grid-template-columns:minmax(0,1fr)!important; }
+html:not([lang="en"]) .vita-format-chips { flex-wrap:wrap!important; }
+html:not([lang="en"]) .vita-format-chips>span { white-space:normal!important; font-size:13px!important; }
+html:not([lang="en"]) .listening-states { flex-wrap:wrap!important; justify-content:flex-start!important; }
+html:not([lang="en"]) .listening-states>span { font-size:clamp(21px,3.4vw,36px)!important; }
+html:not([lang="en"]) .rev-import .rev-repertoire-summary { white-space:normal!important; }
+html:not([lang="en"]) .vita-timeline blockquote { white-space:normal!important; text-wrap:pretty; }
+html:not([lang="en"]) .neuro-synthesis em { white-space:normal!important; }
+html:not([lang="en"]) .vita-member>div:last-child { min-width:0; }
+@media(max-width:600px){
+ html:not([lang="en"]) .vita-member { grid-template-columns:minmax(94px,30%) minmax(0,1fr)!important; gap:16px!important; }
+ html:not([lang="en"]) .vita-member:nth-child(2) { grid-template-columns:minmax(0,1fr) minmax(94px,30%)!important; }
+ html:not([lang="en"]) .vita-member>div:last-child>span:last-child { font-size:14px!important; line-height:1.5!important; }
+ html:not([lang="en"]) .vita-member>div:last-child>span:nth-child(2) { font-size:clamp(21px,5vw,25px)!important; }
+}
+@media(max-width:600px){
+ html:not([lang="en"]) .vita-member>div:first-child { width:100%!important; }
+}
+@media(max-width:380px){
+ html:not([lang="en"]) .vita-member,
+ html:not([lang="en"]) .vita-member:nth-child(2) { grid-template-columns:minmax(0,1fr)!important; }
+ html:not([lang="en"]) .vita-member>div:first-child,
+ html:not([lang="en"]) .vita-member:nth-child(even)>div:first-child { grid-column:1; grid-row:1; width:100%!important; max-width:none; aspect-ratio:2/3!important; height:auto; min-height:0; }
+ html:not([lang="en"]) .vita-member>div:last-child,
+ html:not([lang="en"]) .vita-member:nth-child(even)>div:last-child { grid-column:1; grid-row:2; }
+}

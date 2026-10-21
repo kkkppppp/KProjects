@@ -511,6 +511,9 @@ main blockquote{text-wrap:wrap!important;}
 .vita-member>div:last-child>span:last-child{line-height:1.45!important;}
 }
 </style>
+<link rel="stylesheet" href="assets/localization.css">
+<script defer src="assets/translations.js"></script>
+<script defer src="assets/localization.js"></script>
 </head>
 <body>
 <x-dc>
@@ -645,7 +648,7 @@ a:hover{color:#5E5A52;}
 <div style="font-family:'Instrument Sans',sans-serif;font-size:16px;line-height:1.6;color:#141413;background:#F4F0E8;min-height:100vh;display:flex;flex-direction:column;-webkit-font-smoothing:antialiased;">
 
 <header style="position:sticky;top:0;z-index:20;background:{{ hd.bg }};backdrop-filter:blur(8px);border-bottom:1px solid {{ hd.line }};transition:background .6s, border-color .6s;">
-  <div style="max-width:1200px;margin:0 auto;padding:0 clamp(16px,4vw,24px);height:68px;display:flex;align-items:center;justify-content:space-between;gap:clamp(8px,3vw,24px);">
+  <div class="site-header-inner" style="max-width:1200px;margin:0 auto;padding:0 clamp(16px,4vw,24px);height:68px;display:flex;align-items:center;justify-content:space-between;gap:clamp(8px,3vw,24px);">
     <a href="#" sc-camel-on-click="{{ goHome }}" style="display:flex;align-items:baseline;gap:10px;color:{{ hd.ink }};">
       <span style="font-family:'Newsreader',serif;font-size:clamp(19px,5vw,22px);font-weight:500;letter-spacing:-0.01em;white-space:nowrap;">KProjects</span>
     </a>
@@ -654,6 +657,7 @@ a:hover{color:#5E5A52;}
       <a href="#" sc-camel-on-click="{{ goAbout }}" style="padding:10px clamp(7px,2.4vw,14px);border-radius:6px;color:{{ hd.ink }};" style-hover="background:{{ hd.hover }};">About</a>
       <a href="#" sc-camel-on-click="{{ goContact }}" style="padding:10px clamp(10px,3vw,16px);border-radius:6px;background:{{ hd.ink }};color:{{ hd.inv }};margin-left:clamp(2px,1.5vw,8px);" style-hover="opacity:0.85;color:{{ hd.inv }};">Contact</a>
     </nav>
+    <kp-language style="color:{{ hd.ink }};" translate="no"></kp-language>
   </div>
 </header>
 
