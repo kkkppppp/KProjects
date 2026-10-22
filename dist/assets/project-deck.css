@@ -1,8 +1,10 @@
 @media(max-width:759px){
+ .catalogue { padding-bottom:24px!important; }
+ .catalogue .project-deck .project-art img { object-position:center top; }
  .catalogue .project-deck-stage { display:grid!important; grid-template-columns:minmax(0,1fr)!important; gap:24px!important; }
  .catalogue .project-deck .project-card { box-sizing:border-box; height:var(--card-height,560px); padding:0; gap:14px!important; background:#FAF7F1; border:0; border-radius:14px; overflow:hidden; box-shadow:0 5px 16px rgba(38,33,25,.07); }
  .catalogue .project-deck .project-art { flex:1 1 0; min-height:0; aspect-ratio:auto!important; border-radius:14px 14px 0 0!important; }
- .catalogue .project-deck .project-card>span:last-child { flex:0 0 124px; padding:0 14px 16px; }
+ .catalogue .project-deck .project-card>span:last-child { flex:0 0 auto; padding:0 14px 16px; }
  .catalogue .project-deck .project-card>span:last-child>span>span:first-child { font-size:clamp(22px,5.6vw,29px)!important; line-height:1.12!important; }
  .catalogue .project-deck .project-card>span:last-child>span>span:last-child { font-size:13px!important; line-height:1.4!important; margin-top:4px; }
  .catalogue .project-deck[data-stack="true"] { position:relative; height:calc(var(--stage-height) + var(--deck-travel)); }

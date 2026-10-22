@@ -11,11 +11,12 @@
     cards.forEach((card, index) => {
       const distance = index - progress;
       // The front card lifts away; the cards behind retain visible, separated edges.
-      const y = distance >= 0 ? distance * 28 : Math.max(distance, -1) * (cardHeight + 96);
+      const y = distance >= 0 ? distance * 20 : Math.max(distance / .4, -1) * (cardHeight + 96);
       const scale = 1 - Math.max(distance, 0) * .025;
       card.style.transform = `translate3d(0,${y.toFixed(2)}px,0) scale(${scale.toFixed(4)})`;
+      card.style.setProperty('opacity', String(distance < 0 ? clamp(1 + distance / .3, 0, 1) : 1), 'important');
       card.style.zIndex = String(cards.length - index);
-      card.style.pointerEvents = index === Math.min(Math.floor(progress + .9), cards.length - 1) ? 'auto' : 'none';
+      card.style.pointerEvents = index === Math.min(Math.floor(progress + .7), cards.length - 1) ? 'auto' : 'none';
     });
   }
   function schedule() { if (!frame) frame = requestAnimationFrame(draw); }
@@ -27,15 +28,15 @@
     top = (header?.getBoundingClientRect().height || 68) + 40;
     // Reserve room for the sticky header and the exposed edges of the deck.
     const viewport = document.documentElement.clientHeight || innerHeight;
-    cardHeight = clamp(viewport - top - 90, 310, 580);
+    cardHeight = clamp(viewport - top - 56, 300, 640);
     step = cardHeight + 30;
     enabled = mobile.matches && !reduced.matches && viewport >= 500 && cards.length > 1;
     deck.setAttribute('data-stack', String(enabled));
     deck.style.setProperty('--card-height', cardHeight + 'px');
-    deck.style.setProperty('--stage-height', (cardHeight + 64) + 'px');
+    deck.style.setProperty('--stage-height', (cardHeight + 44) + 'px');
     deck.style.setProperty('--deck-travel', ((cards.length - 1) * step) + 'px');
     deck.style.setProperty('--deck-top', top + 'px');
-    if (!enabled) cards.forEach(card => {card.style.transform = '';card.style.zIndex = '';card.style.pointerEvents = '';});
+    if (!enabled) cards.forEach(card => {card.style.transform = '';card.style.removeProperty('opacity');card.style.zIndex = '';card.style.pointerEvents = '';});
     schedule();
   }
   new MutationObserver(records => {
