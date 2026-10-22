@@ -2,7 +2,7 @@
 (() => {
   const mobile = matchMedia('(max-width:759px)');
   const reduced = matchMedia('(prefers-reduced-motion:reduce)');
-  let deck, cards = [], cardHeight = 0, step = 0, top = 84, enabled = false, frame = 0;
+  let deck, cards = [], cardHeight = 0, step = 0, top = 108, enabled = false, frame = 0;
   const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
   function draw() {
     frame = 0;
@@ -11,7 +11,7 @@
     cards.forEach((card, index) => {
       const distance = index - progress;
       // The front card lifts away; the cards behind retain visible, separated edges.
-      const y = distance >= 0 ? distance * 28 : Math.max(distance, -1) * (cardHeight + 30);
+      const y = distance >= 0 ? distance * 28 : Math.max(distance, -1) * (cardHeight + 96);
       const scale = 1 - Math.max(distance, 0) * .025;
       card.style.transform = `translate3d(0,${y.toFixed(2)}px,0) scale(${scale.toFixed(4)})`;
       card.style.zIndex = String(cards.length - index);
@@ -24,7 +24,7 @@
     if (!deck) { enabled = false; return; }
     cards = Array.from(deck.querySelectorAll('.project-card'));
     const header = document.querySelector('#dc-root header');
-    top = (header?.getBoundingClientRect().height || 68) + 16;
+    top = (header?.getBoundingClientRect().height || 68) + 40;
     // Reserve room for the sticky header and the exposed edges of the deck.
     const viewport = document.documentElement.clientHeight || innerHeight;
     cardHeight = clamp(viewport - top - 90, 310, 580);
