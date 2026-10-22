@@ -3,20 +3,23 @@
   const mobile = matchMedia('(max-width:759px)');
   const reduced = matchMedia('(prefers-reduced-motion:reduce)');
   let deck, cards = [], cardHeight = 0, step = 0, top = 108, enabled = false, frame = 0;
+  let stableViewport = 0, viewportWidth = 0;
   const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
   function draw() {
     frame = 0;
     if (!enabled || !deck?.isConnected) return;
-    const progress = clamp((top - deck.getBoundingClientRect().top) / step, 0, cards.length - 1);
+    const raw = clamp((top - deck.getBoundingClientRect().top) / step, 0, cards.length - 1);
+    const fraction = raw - Math.floor(raw);
+    const progress = Math.floor(raw) + fraction * fraction * (3 - 2 * fraction);
     cards.forEach((card, index) => {
       const distance = index - progress;
-      // The front card lifts away; the cards behind retain visible, separated edges.
-      const y = distance >= 0 ? distance * 20 : Math.max(distance / .4, -1) * (cardHeight + 96);
-      const scale = 1 - Math.max(distance, 0) * .025;
+      // A restrained lift and dissolve reveal the next card without a large fly-away.
+      const y = distance >= 0 ? distance * 20 : Math.max(distance, -1) * 24;
+      const scale = distance >= 0 ? 1 - distance * .018 : 1 + Math.max(distance, -1) * .018;
       card.style.transform = `translate3d(0,${y.toFixed(2)}px,0) scale(${scale.toFixed(4)})`;
-      card.style.setProperty('opacity', String(distance < 0 ? clamp(1 + distance / .3, 0, 1) : 1), 'important');
+      card.style.setProperty('opacity', String(distance < 0 ? clamp(1 + distance, 0, 1) : 1), 'important');
       card.style.zIndex = String(cards.length - index);
-      card.style.pointerEvents = index === Math.min(Math.floor(progress + .7), cards.length - 1) ? 'auto' : 'none';
+      card.style.pointerEvents = index === Math.min(Math.floor(progress + .5), cards.length - 1) ? 'auto' : 'none';
     });
   }
   function schedule() { if (!frame) frame = requestAnimationFrame(draw); }
@@ -27,7 +30,13 @@
     const header = document.querySelector('#dc-root header');
     top = (header?.getBoundingClientRect().height || 68) + 40;
     // Reserve room for the sticky header and the exposed edges of the deck.
-    const viewport = document.documentElement.clientHeight || innerHeight;
+    const currentHeight = document.documentElement.clientHeight || innerHeight;
+    const width = document.documentElement.clientWidth || window.innerWidth || 390;
+    // Ignore mobile browser toolbar height changes to keep scroll progress stable.
+    if (!stableViewport || width !== viewportWidth || Math.abs(currentHeight - stableViewport) > 140) {
+      stableViewport = currentHeight; viewportWidth = width;
+    }
+    const viewport = stableViewport;
     cardHeight = clamp(viewport - top - 56, 300, 640);
     step = cardHeight + 30;
     enabled = mobile.matches && !reduced.matches && viewport >= 500 && cards.length > 1;

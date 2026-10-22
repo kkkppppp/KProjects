@@ -88,18 +88,26 @@
     apply();
     if (!manual) detectCountry();
   }
+  const boundSelectors = new WeakSet();
   class LanguageControl extends HTMLElement {
     connectedCallback() {
-      if (this.firstChild) return;
-      const selectElement = document.createElement('select');
-      selectElement.setAttribute('aria-label', labels[language][0]);
-      for (const value of ['auto', ...languages]) {
-        const option = document.createElement('option'); option.value = value;
-        option.textContent = value === 'auto' ? labels[language][1] : nativeNames[value];
-        selectElement.appendChild(option);
+      // Do not populate the raw template: its descendants are later cloned by React.
+      if (this.closest?.('x-dc')) return;
+      let selectElement = this.querySelector('select');
+      if (!selectElement) {
+        selectElement = document.createElement('select');
+        for (const value of ['auto', ...languages]) {
+          const option = document.createElement('option'); option.value = value;
+          option.textContent = value === 'auto' ? labels[language][1] : nativeNames[value];
+          selectElement.appendChild(option);
+        }
+        this.appendChild(selectElement);
       }
-      selectElement.addEventListener('change', event => select(event.target.value));
-      this.appendChild(selectElement);
+      // Bind an existing/cloned select too, exactly once per actual DOM element.
+      if (!boundSelectors.has(selectElement)) {
+        selectElement.addEventListener('change', event => select(event.target.value));
+        boundSelectors.add(selectElement);
+      }
       this.refresh();
     }
     refresh() {

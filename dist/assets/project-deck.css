@@ -14,3 +14,5 @@
 @media(prefers-reduced-motion:reduce){
  .catalogue .project-deck .project-card { transform:none!important; }
 }
+
+.catalogue .project-card[href="#vitaduo"] .project-art img{object-position:30% top!important}

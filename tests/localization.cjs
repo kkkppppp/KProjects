@@ -1,19 +1,21 @@
 const fs=require('fs'),vm=require('vm'),assert=require('assert');
 const code=fs.readFileSync('dist/assets/localization.js','utf8');
 const dict=fs.readFileSync('dist/assets/translations.js','utf8');
-function setup({manual=null,browser=['en'],country='ES',pending=false,blockedStorage=false,failure=false}={}){
+function setup({manual=null,browser=['en'],country='ES',pending=false,blockedStorage=false,failure=false,cloned=false,raw=false}={}){
  const values=new Map(manual?[['kprojects.language.v1',manual]]:[]);const nodes=[];let observer,controlClass,selectElement,finish,fetches=0;
  const parent={closest:()=>null};
  const root={querySelectorAll:()=>[]};
  const document={body:{},documentElement:{},getElementById:()=>root,querySelector:()=>null,querySelectorAll:()=>[],createTreeWalker:()=>{let i=0;return {nextNode(){return i<nodes.length?(this.currentNode=nodes[i++],true):false}}},createElement(tag){if(tag==='select'){selectElement={options:[],setAttribute(){},appendChild(o){this.options.push(o)},addEventListener(_,f){this.change=f}};return selectElement}return {}}};
  const storage={getItem:k=>{if(blockedStorage)throw Error();return values.get(k)||null},setItem:(k,v)=>{if(blockedStorage)throw Error();values.set(k,v)},removeItem:k=>values.delete(k)};
- const ctx={window:{localStorage:storage,sessionStorage:storage},document,navigator:{languages:browser},HTMLElement:class{setAttribute(){}appendChild(x){this.firstChild=x}querySelector(){return selectElement}},customElements:{define:(_,c)=>controlClass=c},NodeFilter:{SHOW_TEXT:4},MutationObserver:class{constructor(f){observer=f}observe(){}},requestAnimationFrame:f=>f(),AbortController,setTimeout,clearTimeout,fetch:()=>{fetches++;if(failure)return Promise.reject(Error());const response={ok:true,json:async()=>({country})};return pending?new Promise(r=>finish=()=>r(response)):Promise.resolve(response)}};
+ const ctx={window:{localStorage:storage,sessionStorage:storage},document,navigator:{languages:browser},HTMLElement:class{setAttribute(){}closest(){return raw?{}:null}appendChild(x){this.firstChild=x}querySelector(){return selectElement}},customElements:{define:(_,c)=>controlClass=c},NodeFilter:{SHOW_TEXT:4},MutationObserver:class{constructor(f){observer=f}observe(){}},requestAnimationFrame:f=>f(),AbortController,setTimeout,clearTimeout,fetch:()=>{fetches++;if(failure)return Promise.reject(Error());const response={ok:true,json:async()=>({country})};return pending?new Promise(r=>finish=()=>r(response)):Promise.resolve(response)}};
  vm.runInNewContext(dict,ctx);vm.runInNewContext(code,ctx);
- const control=new controlClass();control.connectedCallback();
- return {ctx,nodes,values,add(t){const n={nodeValue:t,parentElement:parent};nodes.push(n);return n},update(){observer([{target:{parentElement:parent}}])},choose(value){selectElement.change({target:{value}})},resolve(){finish()},get fetches(){return fetches}};
+ const control=new controlClass();if(cloned){const element=document.createElement('select');for(const value of ['auto','en','es','pt','fr'])element.appendChild({value});control.appendChild(element);}control.connectedCallback();control.connectedCallback();
+ return {ctx,nodes,values,control,add(t){const n={nodeValue:t,parentElement:parent};nodes.push(n);return n},update(){observer([{target:{parentElement:parent}}])},choose(value){selectElement.change({target:{value}})},resolve(){finish()},get fetches(){return fetches}};
 }
 const tick=()=>new Promise(r=>setImmediate(r));
 (async()=>{
+ const raw=setup({manual:'en',raw:true});assert.equal(raw.control.firstChild,undefined);
+ const cloned=setup({manual:'en',cloned:true});const label=cloned.add('Plan an event');cloned.choose('fr');assert.equal(label.nodeValue,'Organiser un événement');
  for(const [country,lang] of [['ES','es'],['MX','es'],['BR','pt'],['PT','pt'],['FR','fr'],['SN','fr'],['JP','en']]){const s=setup({country});await tick();assert.equal(s.ctx.document.documentElement.lang,lang);}
  for(const lang of ['en','es','pt','fr']){
   const s=setup({manual:lang,country:'BR'});const n=s.add('  Plan an event  ');s.update();await tick();assert.equal(s.fetches,0);assert.equal(s.ctx.document.documentElement.lang,lang);assert.equal(n.nodeValue,lang==='en'?'  Plan an event  ':'  '+s.ctx.window.KP_TRANSLATIONS['Plan an event'][lang]+'  ');
