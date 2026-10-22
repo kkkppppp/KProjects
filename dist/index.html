@@ -514,6 +514,8 @@ main blockquote{text-wrap:wrap!important;}
 <link rel="stylesheet" href="assets/localization.css">
 <script defer src="assets/translations.js"></script>
 <script defer src="assets/localization.js"></script>
+<link rel="stylesheet" href="assets/project-deck.css">
+<script defer src="assets/project-deck.js"></script>
 </head>
 <body>
 <x-dc>
@@ -680,7 +682,7 @@ a:hover{color:#5E5A52;}
     <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:clamp(36px,5vw,64px);">
       
     </div>
-    <div style="display:grid;grid-template-columns:repeat({{ catCols }},minmax(0,1fr));gap:clamp(20px,2.4vw,32px);">
+    <div class="project-deck"><div class="project-deck-stage" style="display:grid;grid-template-columns:repeat({{ catCols }},minmax(0,1fr));gap:clamp(20px,2.4vw,32px);">
       <sc-for list="{{ catalogueProjects }}" as="p" hint-placeholder-count="3">
             <a class="project-card" href="#{{ p.id }}" sc-camel-on-click="{{ p.open }}" style="display:flex;flex-direction:column;gap:16px;color:#141413;" style-hover="color:#141413;">
               <span class="project-art" style="display:block;aspect-ratio:786/987;overflow:hidden;border-radius:10px;background:#EAE4D8;">
@@ -696,7 +698,7 @@ a:hover{color:#5E5A52;}
             </a>
           
       </sc-for>
-    </div>
+    </div></div>
   </section>
 
   <section class="about-section" ref="{{ aboutRef }}" style="background:#FAF7F1;border-top:1px solid rgba(20,20,19,0.12);scroll-margin-top:68px;">
