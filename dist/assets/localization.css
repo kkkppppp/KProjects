@@ -49,3 +49,5 @@ html:not([lang="en"]) .vita-member>div:last-child { min-width:0; }
  html:not([lang="en"]) .vita-member>div:last-child,
  html:not([lang="en"]) .vita-member:nth-child(even)>div:last-child { grid-column:1; grid-row:2; }
 }
+
+@media(max-width:759px){html[lang="en"] .about-copy>p{text-align:left;width:100%;text-wrap:pretty;}}

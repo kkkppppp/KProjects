@@ -13,11 +13,11 @@
     const progress = Math.floor(raw) + fraction * fraction * (3 - 2 * fraction);
     cards.forEach((card, index) => {
       const distance = index - progress;
-      // A restrained lift and dissolve reveal the next card without a large fly-away.
-      const y = distance >= 0 ? distance * 20 : Math.max(distance, -1) * 24;
+      // Move the opaque front card away to reveal the next physical card.
+      const y = distance >= 0 ? distance * 20 : Math.max(distance, -1) * (cardHeight + 44);
       const scale = distance >= 0 ? 1 - distance * .018 : 1 + Math.max(distance, -1) * .018;
       card.style.transform = `translate3d(0,${y.toFixed(2)}px,0) scale(${scale.toFixed(4)})`;
-      card.style.setProperty('opacity', String(distance < 0 ? clamp(1 + distance, 0, 1) : 1), 'important');
+      card.style.setProperty('opacity', '1', 'important');
       card.style.zIndex = String(cards.length - index);
       card.style.pointerEvents = index === Math.min(Math.floor(progress + .5), cards.length - 1) ? 'auto' : 'none';
     });
