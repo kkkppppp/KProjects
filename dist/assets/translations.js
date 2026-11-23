@@ -765,11 +765,6 @@ window.KP_TRANSLATIONS = {
     "pt": "O percurso musical",
     "fr": "Le parcours musical"
   },
-  "Research on music perception, attention and emotion informs the selection and sequence of works. Tempo, rhythm, repetition, melody, harmony, dynamics and timbre provide the musical framework.": {
-    "es": "La investigación sobre percepción musical, atención y emoción orienta la selección y el orden de las obras. El tempo, el ritmo, la repetición, la melodía, la armonía, la dinámica y el timbre conforman la estructura musical.",
-    "pt": "A investigação sobre perceção musical, atenção e emoção orienta a seleção e a sequência das obras. O tempo, o ritmo, a repetição, a melodia, a harmonia, a dinâmica e o timbre constituem a estrutura musical.",
-    "fr": "Les recherches sur la perception musicale, l’attention et les émotions guident le choix et l’enchaînement des œuvres. Tempo, rythme, répétition, mélodie, harmonie, nuances et timbre constituent la trame musicale."
-  },
   "Visual art & space": {
     "es": "Arte visual y espacio",
     "pt": "Arte visual e espaço",
