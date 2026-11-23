@@ -96,17 +96,6 @@ a,button{-webkit-tap-highlight-color:transparent;touch-action:manipulation;}
 }
 @media(prefers-reduced-motion:reduce){.project-art{transform:none!important;}}
 
-/* Concert offer: responsive editorial sections, matching the NeuroMusic palette. */
-.neuro-offer{max-width:1200px;margin:0 auto;padding:clamp(40px,6vw,80px) 24px;color:#ECE8DF}
-.neuro-offer header{max-width:780px;margin-bottom:32px}
-.neuro-offer h2{font-family:'Newsreader',serif;font-weight:400;font-size:clamp(32px,3.6vw,48px);line-height:1.12;letter-spacing:-.02em;margin:0 0 20px;text-wrap:balance}
-.neuro-offer h3,.neuro-repertoire dt{font-family:'Newsreader',serif;font-weight:400;font-size:clamp(24px,2.3vw,30px);line-height:1.2;margin:0 0 16px;text-wrap:balance}
-.neuro-offer p,.neuro-repertoire dd{font-size:17px;line-height:1.65;color:#C9C4B9;margin:0;text-wrap:pretty}
-.neuro-format-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:48px}
-.neuro-format-grid article{padding:0;min-width:0}
-.neuro-format-grid .neuro-format-lineup{font-size:14px;color:#B8D6E4;line-height:1.5;margin-bottom:20px}
-.neuro-repertoire dl{margin:0}.neuro-repertoire dl>div{display:grid;grid-template-columns:1fr 1.35fr;gap:20px 48px;padding:25px 0;border-top:1px solid #303035}.neuro-repertoire dt{margin:0}.neuro-repertoire dd{margin:0}
-@media(max-width:760px){.neuro-format-grid{grid-template-columns:1fr;gap:32px}.neuro-repertoire dl>div{grid-template-columns:1fr;gap:10px}.neuro-offer{padding-top:40px;padding-bottom:40px}}
 </style>
 <style>
 /* Editorial programmes, touring destinations and readable mobile type. */
@@ -169,56 +158,15 @@ a,button{-webkit-tap-highlight-color:transparent;touch-action:manipulation;}
 .amstel-programme-card .amstel-composers{margin-top:auto;padding-top:10px;font-size:14px;line-height:1.8;color:#5e5a52;text-wrap:balance;}
 .amstel-composers>small{display:block;font-size:11px;line-height:1.6;text-transform:uppercase;letter-spacing:.08em;margin-bottom:5px;color:#777166;}
 .neuro-page>section{border-top:0!important;border-bottom:0!important;}
-.neuro-bio{max-width:1200px;margin:0 auto;padding:56px 24px;}
-.neuro-bio-layout{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;}
-.neuro-bio-photo{margin:0;max-width:280px;width:100%;aspect-ratio:4/5;border-radius:10px;overflow:hidden;justify-self:center;}
-.neuro-bio-photo img{display:block;width:100%;height:100%;object-fit:cover;object-position:center top;}
-.neuro-bio-yury .neuro-bio-photo{grid-column:2;grid-row:1;}
-.neuro-bio-yury .neuro-bio-copy{grid-column:1;grid-row:1;}
-.neuro-bio-role{font-size:13px;line-height:1.6;color:#c9c4b9;}
-.neuro-bio h2{font:400 clamp(32px,4.4vw,54px)/1.2 'Newsreader',serif;margin:14px 0 20px;}
-.neuro-bio p{font-size:17px;line-height:1.7;color:#bdb8ad;margin:0 0 18px;}
-.neuro-bio .neuro-bio-lead{font:400 24px/1.5 'Newsreader',serif;color:#ece8df;}
-.neuro-synthesis>div{padding-top:28px!important;}
-.neuro-videos{padding-top:32px!important;}
-@media(max-width:759px){
- .neuro-founders>div{padding-top:32px!important;padding-bottom:40px!important;gap:24px!important;}
- .neuro-founders>div>div:first-child{flex:0 0 160px!important;width:160px!important;max-width:160px!important;}
- .neuro-founders>div>div:first-child img{width:180.4%!important;height:207.3%!important;left:-41.5%!important;top:-30.4%!important;}
- .neuro-bio{padding:28px 24px;}
- .neuro-bio-layout{display:flow-root;}
- .neuro-bio-copy{display:contents;}
- .neuro-bio-photo{width:clamp(104px,30vw,136px);max-width:36%;margin:3px 18px 12px 0;float:left;border-radius:7px;}
- .neuro-bio-elena .neuro-bio-photo{float:right;margin:3px 0 12px 18px;}
- .neuro-bio h2{font-size:28px;margin:8px 0 14px;}
- .neuro-bio p{font-size:16px;margin:0 0 16px;text-wrap:wrap;}
- .neuro-bio .neuro-bio-lead{font-size:19px;}
- .neuro-bio-role{font-size:11px;line-height:1.5;}
- .neuro-synthesis>div{padding-top:0!important;}
- .neuro-synthesis>div>div{display:flex!important;flex-direction:column;gap:16px!important;}
- .neuro-synthesis-orb{order:-1;max-width:320px!important;}
- .neuro-synthesis>div>div>div:first-child{gap:0!important;width:100%;}
- .neuro-videos{padding-top:28px!important;}
-}
 </style>
 <style>
 /* Spacious media and compact editorial portraits. */
-.neuro-music-details{margin-top:64px;max-width:800px;}
-.neuro-music-details>div{gap:28px!important;}
-.neuro-videos{padding-top:64px!important;}
-.neuro-videos>div:first-child{gap:40px!important;}
-.neuro-synthesis>div>div{gap:56px!important;}
 .amstel-members{grid-template-columns:1fr!important;max-width:800px;margin:auto;gap:32px!important;}
 .amstel-members>div{display:grid!important;grid-template-columns:120px 100px minmax(0,1fr);align-items:center;gap:24px!important;padding:0!important;}
 .amstel-face-frame{display:block;position:relative;overflow:hidden;width:64px;height:64px;border-radius:50%;flex:none;background:#E7E2D7;}
 .amstel-face-frame img{width:64px;height:64px;object-fit:cover;display:block;}
 .amstel-members>div:nth-child(2) .amstel-face{position:absolute;width:280px!important;height:auto!important;max-width:none;left:-39px;top:-12px;border-radius:0;}
 @media(max-width:759px){
-.neuro-synthesis>div{padding-top:24px!important;}
-.neuro-synthesis>div>div{gap:48px!important;}
-.neuro-videos{padding-top:56px!important;padding-bottom:72px!important;}
-.neuro-music-details{margin-top:56px;}
-.neuro-music-details>div{gap:32px!important;}
 .vita-member{display:flow-root!important;width:100%;}
 .vita-member>div:first-child{float:left;width:36%;max-width:144px;margin:0 22px 14px 0;}
 .vita-member:nth-child(even)>div:first-child{float:right;margin:0 0 14px 22px;}
@@ -240,28 +188,15 @@ a,button{-webkit-tap-highlight-color:transparent;touch-action:manipulation;}
 /* Shared column edges and calmer reading rhythm. */
 @media(min-width:760px){.rev-page>section:not(:first-child)>div[style*="padding:clamp"]{padding-top:40px!important;padding-bottom:40px!important;}}
 .about-copy>p{font-size:16px!important;line-height:1.75!important;}
-.neuro-synthesis h2{line-height:1.3!important;padding-left:clamp(12px,2vw,28px);}
-.neuro-synthesis h2 em{white-space:normal!important;}
-@media(min-width:760px){
- .neuro-bio{max-width:840px;}
- .neuro-bio-layout{grid-template-columns:repeat(2,minmax(0,1fr));gap:72px;align-items:start;}
- .neuro-bio-photo{max-width:none;justify-self:stretch;}
- .neuro-bio-copy{min-width:0;}
- .neuro-bio h2{font-size:clamp(32px,3.5vw,46px);}
-}
 @media(max-width:759px){
  .about-section>div{flex-direction:column!important;text-align:center;}
  .about-section .kate-portrait{margin-inline:auto;flex:none!important;}
  .about-copy{align-items:center;flex:none!important;width:100%;margin-inline:auto;max-width:440px!important;}
  .about-copy>p{font-size:15px!important;}
  .about-copy>a{align-self:center!important;}
- .neuro-synthesis h2{padding-left:12px;line-height:1.35!important;}
 }
 </style>
 <style>
-.neuro-founders>div{flex-direction:column!important;text-align:center;gap:28px!important;}
-.neuro-founders>div>div{flex:none!important;margin-inline:auto;}
-.neuro-founders>div>div:last-child{align-items:center;}
 .listening-states{display:flex!important;flex-wrap:nowrap!important;justify-content:space-between;gap:clamp(12px,3vw,28px)!important;}
 .listening-states>span{white-space:nowrap;font-size:clamp(22px,5.6vw,40px)!important;}
 .amstel-page{isolation:isolate;}
@@ -274,16 +209,6 @@ a,button{-webkit-tap-highlight-color:transparent;touch-action:manipulation;}
 .cinema-still img{width:100%;height:100%;object-fit:cover;object-position:center 40%;display:block;}
 .cinema-light{position:absolute;inset:0;background:linear-gradient(110deg,#0007,transparent 55%,#0005);pointer-events:none;}
 @media(max-width:759px){
-.neuro-bio-layout{display:grid!important;grid-template-columns:96px minmax(0,1fr);gap:8px 18px;}
-.neuro-bio-photo,.neuro-bio-elena .neuro-bio-photo{float:none!important;width:96px!important;max-width:100%!important;margin:0!important;grid-column:1!important;grid-row:1/4!important;}
-.neuro-bio-copy{display:contents!important;}
-.neuro-bio-role,.neuro-bio h2,.neuro-bio-lead{grid-column:2;min-width:0;overflow-wrap:anywhere;}
-.neuro-bio h2{font-size:26px;margin:0!important;}
-.neuro-bio .neuro-bio-lead{font-size:17px;margin:0!important;}
-.neuro-bio-copy>p:last-child{grid-column:1/-1;margin-top:16px;min-width:0;overflow-wrap:anywhere;}
-.neuro-bio-elena .neuro-bio-photo{grid-column:2!important;}
-.neuro-bio-elena .neuro-bio-layout{grid-template-columns:minmax(0,1fr) 96px;}
-.neuro-bio-elena :is(.neuro-bio-role,h2,.neuro-bio-lead){grid-column:1;}
 .vita-member{display:grid!important;grid-template-columns:96px minmax(0,1fr);gap:18px!important;align-items:start;}
 .vita-member>div:first-child,.vita-member:nth-child(even)>div:first-child{float:none!important;width:96px!important;margin:0!important;grid-row:1;grid-column:1;}
 .vita-member>div:last-child{display:block!important;grid-row:1;grid-column:2;min-width:0;}
@@ -295,8 +220,6 @@ a,button{-webkit-tap-highlight-color:transparent;touch-action:manipulation;}
 .vita-member>div:last-child>span:last-child{display:block!important;font-size:15px!important;}
 .vita-programmes-wrap>div.vita-format-chips:last-child{display:flex!important;flex-wrap:wrap!important;gap:10px!important;padding:0!important;margin-top:16px!important;}
 .vita-programmes-wrap>div.vita-format-chips>span{display:inline-flex;align-items:center;font-size:13px!important;line-height:1.5!important;margin:0!important;padding:7px 12px!important;}
-.neuro-founders>div{padding-block:36px!important;}
-#neuro-concept{padding-bottom:24px!important;}
 .rev-page>section:not(:first-child)>div[style*="padding:clamp"]{padding-top:28px!important;padding-bottom:28px!important;}
 .amstel-page>section{padding-top:32px!important;padding-bottom:32px!important;}
 .amstel-page>section>div[data-reveal]:empty{display:none;}
@@ -304,21 +227,6 @@ a,button{-webkit-tap-highlight-color:transparent;touch-action:manipulation;}
 }
 </style>
 <style>
-.neuro-bio-layout{align-items:stretch;}
-.neuro-bio-photo{position:relative;aspect-ratio:auto;align-self:stretch;}
-.neuro-bio-photo img{position:absolute;inset:0;}
-.neuro-bio-copy>p:last-child{margin-bottom:0;}
-@media(max-width:759px){
-.neuro-bio-layout{grid-template-columns:110px minmax(0,1fr)!important;gap:24px 18px!important;align-items:stretch!important;}
-.neuro-bio-elena .neuro-bio-layout{grid-template-columns:minmax(0,1fr) 110px!important;}
-.neuro-bio-photo,.neuro-bio-elena .neuro-bio-photo{grid-row:1!important;width:110px!important;height:100%;min-height:150px;aspect-ratio:auto!important;align-self:stretch!important;}
-.neuro-bio-heading{grid-row:1;grid-column:2;min-width:0;display:flex;flex-direction:column;justify-content:space-between;gap:12px;}
-.neuro-bio-elena .neuro-bio-heading{grid-column:1;}
-.neuro-bio-heading>*{margin:0!important;}
-.neuro-bio-heading h2{font-size:25px;line-height:1.15!important;}
-.neuro-bio-heading .neuro-bio-lead{font-size:17px;line-height:1.4!important;}
-.neuro-bio-copy>p:last-child{grid-row:2;grid-column:1/-1;margin:0!important;}
-}
 </style>
 <style>
 .vita-hero{display:grid!important;grid-template-columns:minmax(0,1fr) minmax(0,0.85fr);align-items:center!important;gap:40px!important;padding-top:32px!important;padding-bottom:48px!important;}
@@ -356,6 +264,99 @@ a,button{-webkit-tap-highlight-color:transparent;touch-action:manipulation;}
 </style>
 <style>.amstel-page .amstel-programme-card *{background-color:transparent!important;}</style>
 <style>@media(min-width:760px){.neuro-art-stage{clip-path:inset(0 0 0 48%);}}</style>
+<style>
+/* NeuroMusic layout system.
+   One content width, one two-column grid and one spacing scale, so every heading,
+   paragraph, photo and artwork sits on the same column lines at every screen size. */
+.neuro-page{--nm-gap:clamp(32px,5vw,80px);--nm-space:clamp(72px,10vw,144px);--nm-line:rgba(236,232,223,.14);--nm-ink:#ECE8DF;--nm-soft:#C9C4B9;--nm-label:#A8A397;}
+.nm-wrap{width:min(1152px,100% - 48px);margin-inline:auto;}
+.nm-section{padding-block:calc(var(--nm-space) / 2);}
+.nm-rule{border-top:1px solid var(--nm-line);padding-top:calc(var(--nm-space) / 2);}
+.nm-split{display:grid;grid-template-columns:minmax(0,1fr);gap:32px;}
+.nm-head{display:flex;flex-direction:column;align-items:flex-start;gap:20px;min-width:0;}
+
+/* Type */
+.nm-eyebrow{display:flex;align-items:center;gap:12px;margin:0;font:500 12px/1.4 'Instrument Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--nm-label);}
+.nm-num{display:inline-flex;align-items:center;gap:12px;color:var(--nm-ink);font-variant-numeric:tabular-nums;}
+.nm-num::after{content:'';width:28px;height:1px;background:var(--nm-label);opacity:.6;}
+.nm-title{margin:0;font-family:'Newsreader',serif;font-weight:400;font-size:clamp(34px,4.2vw,56px);line-height:1.08;letter-spacing:-.02em;color:var(--nm-ink);text-wrap:balance;}
+.nm-title em{font-style:italic;}
+.nm-lead{margin:0;max-width:34em;font-size:clamp(18px,1.6vw,20px);line-height:1.6;color:var(--nm-ink);text-wrap:pretty;}
+.nm-serif{font-family:'Newsreader',serif;font-size:clamp(21px,2vw,26px);line-height:1.4;}
+.nm-body{margin:0;max-width:36em;font-size:17px;line-height:1.65;color:var(--nm-soft);text-wrap:pretty;}
+
+/* 01 The project: heading left, introduction resting on its last line */
+.nm-concept{padding-top:calc(var(--nm-space) * .75);scroll-margin-top:68px;}
+
+/* 02 The founders: portrait circle, then the two biographies alternating sides */
+.nm-founders-photo{position:relative;width:clamp(220px,26vw,340px);aspect-ratio:1;border-radius:50%;overflow:hidden;background:#111112;justify-self:center;}
+.nm-founders-photo img{position:absolute;left:-41.5%;top:-30.4%;width:180.4%;height:207.3%;max-width:none;object-fit:cover;display:block;}
+.nm-bio{padding-block:calc(var(--nm-space) / 4);}
+.nm-bio-photo{margin:0;width:100%;max-width:340px;aspect-ratio:4/5;border-radius:10px;overflow:hidden;background:#111112;justify-self:center;}
+.nm-bio-photo img{display:block;width:100%;height:100%;object-fit:cover;object-position:center top;}
+.nm-bio-copy{display:flex;flex-direction:column;gap:20px;min-width:0;}
+.nm-bio-heading{display:flex;flex-direction:column;gap:12px;min-width:0;}
+.nm-name{margin:0;font:400 clamp(32px,3.4vw,46px)/1.1 'Newsreader',serif;letter-spacing:-.015em;color:var(--nm-ink);}
+.nm-bio-lead{margin:0;font:400 clamp(19px,1.7vw,22px)/1.45 'Newsreader',serif;color:var(--nm-ink);text-wrap:pretty;}
+
+/* 03 The performance: text and artwork share one centre line */
+.nm-orb{position:relative;width:min(100%,440px);aspect-ratio:1;justify-self:center;}
+.nm-orb img{width:100%;height:100%;display:block;object-fit:cover;border-radius:50%;-webkit-mask-image:radial-gradient(closest-side,#000 82%,transparent 100%);mask-image:radial-gradient(closest-side,#000 82%,transparent 100%);}
+
+/* 04 Formats and 05 Method */
+.nm-block-head{margin-bottom:clamp(36px,4.5vw,64px);}
+.nm-format{min-width:0;}
+.nm-format h3,.nm-steps dt{margin:0;font:400 clamp(24px,2.3vw,30px)/1.2 'Newsreader',serif;color:var(--nm-ink);text-wrap:balance;}
+.nm-format-lineup{margin:10px 0 16px;font-size:14px;line-height:1.5;color:#B8D6E4;}
+.nm-steps{margin:0;}
+.nm-steps>div{padding-block:28px;border-top:1px solid var(--nm-line);}
+.nm-steps>div:last-child{border-bottom:1px solid var(--nm-line);}
+.nm-steps dd{margin:0;}
+
+/* 06 Visual artist, videos and listening states */
+.nm-copy{display:flex;flex-direction:column;gap:20px;min-width:0;}
+.nm-copy .nm-serif{text-wrap:wrap;}
+.nm-video{position:relative;aspect-ratio:16/9;overflow:hidden;border-radius:10px;background:#111112;min-width:0;}
+.nm-video iframe{position:absolute;inset:0;width:100%;height:100%;border:0;}
+.nm-artist + .nm-videos{padding-top:0;}
+.nm-states{padding-bottom:calc(var(--nm-space) / 4);}
+.nm-states .listening-states>span{font-family:'Newsreader',serif;font-style:italic;line-height:1;}
+
+/* Desktop and tablet landscape: two equal columns */
+@media(min-width:860px){
+ .nm-split{grid-template-columns:repeat(2,minmax(0,1fr));column-gap:var(--nm-gap);row-gap:48px;}
+ .nm-concept .nm-split,.nm-method .nm-block-head,.nm-states .nm-split{align-items:end;}
+ .nm-founders .nm-split,.nm-bio .nm-split,.nm-performance .nm-split{align-items:center;}
+ .nm-artist .nm-split{align-items:start;}
+ .nm-founders-photo{order:-1;}
+ .nm-bio-yury .nm-bio-photo{order:2;}
+ .nm-steps .nm-split{row-gap:12px;}
+ .nm-videos .nm-split{column-gap:24px;}
+}
+
+/* Phones and portrait tablets: one column, media centred, text on the left edge */
+@media(max-width:859px){
+ .neuro-page{--nm-space:clamp(64px,14vw,96px);}
+ .nm-split{gap:28px;}
+ .nm-founders-photo{width:min(64vw,260px);}
+ .nm-orb{width:min(78vw,340px);}
+ .nm-bio{--nm-thumb:clamp(104px,24vw,180px);}
+ .nm-bio .nm-split{grid-template-columns:var(--nm-thumb) minmax(0,1fr);gap:20px clamp(18px,3vw,28px);align-items:center;}
+ .nm-bio-photo{grid-row:1;grid-column:1;width:var(--nm-thumb);border-radius:8px;justify-self:start;}
+ .nm-bio-copy{display:contents;}
+ .nm-bio-heading{grid-row:1;grid-column:2;gap:8px;}
+ .nm-bio-copy>.nm-body{grid-row:2;grid-column:1/-1;}
+ .nm-name{font-size:28px;}
+ .nm-bio-lead{font-size:18px;}
+ .nm-bio .nm-eyebrow{font-size:11px;letter-spacing:.1em;}
+ .nm-formats .nm-split{gap:40px;}
+ .nm-steps .nm-split{gap:10px;}
+ .nm-steps>div{padding-block:24px;}
+ .nm-videos .nm-split{gap:20px;}
+}
+@media(min-width:600px) and (max-width:859px){.nm-videos .nm-split,.nm-formats .nm-split{grid-template-columns:repeat(2,minmax(0,1fr));column-gap:24px;}}
+@media(max-width:380px){.nm-name{font-size:25px;}}
+</style>
 <style>
 @media(max-width:759px){
  .vita-hero{display:grid!important;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:0 8px!important;align-items:end!important;}
@@ -408,7 +409,7 @@ a,button{-webkit-tap-highlight-color:transparent;touch-action:manipulation;}
 .rev-hero-copy{align-self:flex-start;padding-top:16px;}
 }
 @media(max-width:759px){
-.vita-video-grid,.rev-video-grid,.neuro-videos>div:first-child{grid-template-columns:minmax(0,1fr)!important;gap:24px!important;}
+.vita-video-grid,.rev-video-grid{grid-template-columns:minmax(0,1fr)!important;gap:24px!important;}
 .vita-programme-photo{width:35%!important;max-width:140px!important;margin:0 0 16px 18px!important;}
 .vita-programme-list>div>div>span:first-child{font-size:22px!important;line-height:1.3!important;}
 .amstel-hero-photo{left:-10px;}
@@ -757,25 +758,25 @@ a:hover{color:#5E5A52;}
     </div>
   </section>
 
-  <section id="neuro-concept" ref="{{ neuroConceptRef }}" style="max-width:1200px;margin:0 auto;padding:clamp(48px,6vw,80px) 24px;scroll-margin-top:68px;">
-    
-    <p data-reveal="" data-reveal-delay="100" style="font-family:'Newsreader',serif;font-weight:400;font-size:clamp(32px,4.4vw,60px);line-height:1.1;letter-spacing:-0.02em;margin:0;max-width:960px;text-wrap:balance;">Concert programmes shaped neuroscience</p>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:24px 64px;margin-top:clamp(40px,5vw,64px);">
-      <p data-reveal="" data-reveal-delay="200" style="font-size:20px;line-height:1.55;color:#ECE8DF;margin:0;text-wrap:pretty;">Created by violinists Yury and Elena Revich, NeuroMusic brings classical repertoire and original compositions into a carefully sequenced live performance.</p>
-      
+  <section id="neuro-concept" class="nm-section nm-concept" ref="{{ neuroConceptRef }}">
+    <div class="nm-wrap nm-split">
+      <div class="nm-head">
+        <p class="nm-eyebrow" data-reveal=""><span class="nm-num">01</span><span>The project</span></p>
+        <h2 class="nm-title" data-reveal="" data-reveal-delay="100">Concert programmes shaped by neuroscience</h2>
+      </div>
+      <p class="nm-lead" data-reveal="" data-reveal-delay="200">Created by violinists Yury and Elena Revich, NeuroMusic brings classical repertoire and original compositions into a carefully sequenced live performance.</p>
     </div>
   </section>
 
-  <section class="neuro-founders" style="position:relative;overflow:hidden;border-top:1px solid rgba(236,232,223,0.12);">
-    <div style="max-width:1200px;margin:0 auto;padding:clamp(80px,10vw,144px) 24px;display:flex;flex-wrap:wrap;gap:clamp(40px,6vw,88px);align-items:center;">
-      <div data-reveal="" style="position:relative;aspect-ratio:1/1;flex:0 0 260px;max-width:260px;width:100%;border-radius:50%;overflow:hidden;background:#111112;">
-        <img loading="lazy" decoding="async" src="assets/6cc11256-4037-4c7f-ae4b-9d5888dbdb5b.webp" alt="Yury and Elena Revich" style="position: absolute; inset: 0; width: 469px; height: 539px; object-fit: cover; object-position: 50% 50%; display: block; left: -108px; top: -79px">
+  <section class="nm-section nm-founders">
+    <div class="nm-wrap nm-rule nm-split">
+      <div class="nm-head">
+        <p class="nm-eyebrow" data-reveal=""><span class="nm-num">02</span><span>The founders</span></p>
+        <h2 class="nm-title" data-reveal="" data-reveal-delay="100">Yury &amp; Elena Revich</h2>
+        <p class="nm-lead nm-serif" data-reveal="" data-reveal-delay="200">Brother and sister. Violinists. Heirs to a musical tradition spanning for more than four generations.</p>
       </div>
-      <div style="display:flex;flex-direction:column;gap:24px;flex:1 1 320px;max-width:600px;">
-        <div data-reveal="" style="display:flex;align-items:center;gap:14px;font-family:'Instrument Sans',sans-serif;font-style:normal;font-weight:500;font-size:15px;line-height:1;letter-spacing:0.01em;color:#C9C4B9;"><span>The founders</span></div>
-        <h2 data-reveal="" data-reveal-delay="100" style="font-family:'Newsreader',serif;font-weight:400;font-size:clamp(36px,4.4vw,60px);line-height:1.04;letter-spacing:-0.025em;margin:0;">Yury &amp; Elena Revich</h2>
-        <p data-reveal="" data-reveal-delay="200" style="font-family:'Newsreader',serif;font-weight:400;font-size:clamp(20px,2vw,26px);line-height:1.4;margin:0;color:#ECE8DF;text-wrap:pretty;">Brother and sister. Violinists. Heirs to a musical tradition spanning for more than four generations.</p>
-        
+      <div class="nm-founders-photo" data-reveal="">
+        <img loading="lazy" decoding="async" src="assets/6cc11256-4037-4c7f-ae4b-9d5888dbdb5b.webp" alt="Yury and Elena Revich">
       </div>
     </div>
   </section>
@@ -783,37 +784,42 @@ a:hover{color:#5E5A52;}
     <div class="neuro-wave-track" data-wave-pan=""></div>
   </div>
 
-  <section class="neuro-bio neuro-bio-yury">
-    <div class="neuro-bio-layout">
-      <figure class="neuro-bio-photo"><img decoding="async" src="assets/624b5525-f606-45fe-b9c9-8cd287038797.webp" alt="Yury Revich with violin" width="320" height="400" loading="lazy"></figure>
-      <div class="neuro-bio-copy"><div class="neuro-bio-heading"><span class="neuro-bio-role">Co-founder &amp; Artistic Director</span><h2>Yury Revich</h2><p class="neuro-bio-lead">Stradivari violinist, composer, ECHO Klassik and ICMA winner</p></div><p>Yury has performed at Carnegie Hall, the Vienna Musikverein and La Scala, with recordings featured in Netflix’s Bridgerton. Founder of Festival Nights and Honorary Representative of UNICEF Austria, he brings together music, visual art and social initiatives.</p></div>
+  <section class="nm-section nm-bio nm-bio-yury">
+    <div class="nm-wrap nm-split">
+      <figure class="nm-bio-photo"><img decoding="async" src="assets/624b5525-f606-45fe-b9c9-8cd287038797.webp" alt="Yury Revich with violin" width="320" height="400" loading="lazy"></figure>
+      <div class="nm-bio-copy"><div class="nm-bio-heading"><span class="nm-eyebrow">Co-founder &amp; Artistic Director</span><h2 class="nm-name">Yury Revich</h2><p class="nm-bio-lead">Stradivari violinist, composer, ECHO Klassik and ICMA winner</p></div><p class="nm-body">Yury has performed at Carnegie Hall, the Vienna Musikverein and La Scala, with recordings featured in Netflix’s Bridgerton. Founder of Festival Nights and Honorary Representative of UNICEF Austria, he brings together music, visual art and social initiatives.</p></div>
     </div>
   </section>
-  <section class="neuro-bio neuro-bio-elena">
-    <div class="neuro-bio-layout">
-      <figure class="neuro-bio-photo"><img decoding="async" src="assets/d51f61a4-ab75-464d-a2e3-479f8cc6c2cd.webp" alt="Elena Revich with violin" width="320" height="400" loading="lazy"></figure>
-      <div class="neuro-bio-copy"><div class="neuro-bio-heading"><span class="neuro-bio-role">Co-founder &amp; Programme Director</span><h2>Elena Revich</h2><p class="neuro-bio-lead">Violinist, diploma winner of the International Tchaikovsky Competition</p></div><p>Elena is an internationally acclaimed violinist and the author of interdisciplinary projects that have received prestigious awards, including the Golden Mask. Elena developed the NeuroMusic approach in dialogue with neuroscientists, exploring how music shapes perception, emotion and attention.</p></div>
+  <section class="nm-section nm-bio nm-bio-elena">
+    <div class="nm-wrap nm-split">
+      <figure class="nm-bio-photo"><img decoding="async" src="assets/d51f61a4-ab75-464d-a2e3-479f8cc6c2cd.webp" alt="Elena Revich with violin" width="320" height="400" loading="lazy"></figure>
+      <div class="nm-bio-copy"><div class="nm-bio-heading"><span class="nm-eyebrow">Co-founder &amp; Programme Director</span><h2 class="nm-name">Elena Revich</h2><p class="nm-bio-lead">Violinist, diploma winner of the International Tchaikovsky Competition</p></div><p class="nm-body">Elena is an internationally acclaimed violinist and the author of interdisciplinary projects that have received prestigious awards, including the Golden Mask. Elena developed the NeuroMusic approach in dialogue with neuroscientists, exploring how music shapes perception, emotion and attention.</p></div>
     </div>
   </section>
 
-  <section class="neuro-synthesis" style="position:relative;background:#060607;border-top:1px solid rgba(236,232,223,0.12);">
-    <div style="position:relative;max-width:1200px;margin:0 auto;padding:clamp(72px,9vw,128px) 24px 0;display:flex;flex-direction:column;gap:28px;">
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:32px clamp(40px,6vw,96px);align-items:center;">
-        <div style="display:flex;flex-direction:column;gap:28px;">
-          <div data-reveal="" style="display:flex;align-items:center;gap:14px;font-family:'Instrument Sans',sans-serif;font-style:normal;font-weight:500;font-size:15px;line-height:1;letter-spacing:0.01em;color:#D6D1C6;"></div>
-          <h2 data-reveal="" data-reveal-delay="100" style="font-family:'Newsreader',serif;font-weight:400;font-size:clamp(32px,3.6vw,52px);line-height:1.05;letter-spacing:-0.03em;margin:0;max-width:880px;text-wrap:balance;">Live music, visual art<br>and neuroscience<br><em style="font-style:italic;white-space:nowrap;">in one performance</em></h2>
-          <p data-reveal="" style="font-size:17px;line-height:1.65;color:#C9C4B9;margin:0;text-wrap:pretty;">Research on music perception, attention and emotion informs the selection and sequence of works. Tempo, rhythm, repetition, melody, harmony, dynamics and timbre provide the musical framework.</p>
-        </div>
-        <div class="neuro-synthesis-orb" style="position:relative;aspect-ratio:1/1;max-width:420px;width:100%;justify-self:center;">
-          <div data-speed="-0.08" style="position:absolute;inset:0;">
-            <img decoding="async" data-rot="0.03" src="assets/b7983c40-1bea-43f6-9022-d9b1a0e6f625.webp" alt="1000 Petals, artwork by Tatiana Plakhova" style="width:100%;height:100%;object-fit:cover;border-radius:50%;display:block;-webkit-mask-image:radial-gradient(closest-side,#000 82%,transparent 100%);mask-image:radial-gradient(closest-side,#000 82%,transparent 100%);">
-          </div>
-        </div>
+  <section class="nm-section nm-performance">
+    <div class="nm-wrap nm-rule nm-split">
+      <div class="nm-head">
+        <p class="nm-eyebrow" data-reveal=""><span class="nm-num">03</span><span>The performance</span></p>
+        <h2 class="nm-title" data-reveal="" data-reveal-delay="100">Live music, visual art<br>and neuroscience<br><em>in one performance</em></h2>
+        <p class="nm-body" data-reveal="" data-reveal-delay="200">Research on music perception, attention and emotion informs the selection and sequence of works. Tempo, rhythm, repetition, melody, harmony, dynamics and timbre provide the musical framework.</p>
       </div>
+      <div class="nm-orb"><img decoding="async" data-rot="0.03" src="assets/b7983c40-1bea-43f6-9022-d9b1a0e6f625.webp" alt="1000 Petals, artwork by Tatiana Plakhova"></div>
     </div>
   </section>
 
-<section class="neuro-offer" aria-labelledby="neuro-formats"><header><h2 id="neuro-formats">Concert formats</h2></header><div class="neuro-format-grid"><article><h3>Violin duo and electronics</h3><p class="neuro-format-lineup">Two violins with curated electronics</p><p>The violin duo is joined by carefully selected electronic textures, opening up a wider sound world while keeping live performance at its heart.</p></article><article><h3>Expanded ensemble</h3><p class="neuro-format-lineup">Additional musicians &amp; distinctive instruments</p><p>The programme can be extended for a larger ensemble, with piano, cello or distinctive instrumental colours such as alphorn, flugelhorn, corno da caccia, didgeridoo and duduk.</p></article></div></section><section class="neuro-offer neuro-repertoire" aria-labelledby="neuro-repertoire"><header><h2 id="neuro-repertoire">How the programme takes shape</h2><p>Each NeuroMusic programme brings together original compositions, selected classical works and curated electronics. Research on how music relates to attention, perception and emotional response informs the choice of repertoire.</p></header><dl><div><dt>Rhythm &amp; pace</dt><dd>Tempo and rhythm determine how the programme moves. More energetic pieces are balanced with quieter, slower ones, so the listener's attention can rise and rest.</dd></div><div><dt>Melody &amp; harmony</dt><dd>Melody and harmony create tension and resolve it. They shape the emotional arc of the programme, from familiar, recognisable moments to more unexpected ones.</dd></div><div><dt>Timbre &amp; texture</dt><dd>The sound of acoustic instruments is combined with electronic textures. This contrast brings out details in the music and encourages more attentive listening.</dd></div></dl></section>
+  <section class="nm-section nm-formats" aria-labelledby="neuro-formats">
+    <div class="nm-wrap nm-rule">
+      <header class="nm-head nm-block-head"><p class="nm-eyebrow" data-reveal=""><span class="nm-num">04</span><span>Line-up</span></p><h2 id="neuro-formats" class="nm-title">Concert formats</h2></header>
+      <div class="nm-split"><article class="nm-format" data-reveal=""><h3>Violin duo and electronics</h3><p class="nm-format-lineup">Two violins with curated electronics</p><p class="nm-body">The violin duo is joined by carefully selected electronic textures, opening up a wider sound world while keeping live performance at its heart.</p></article><article class="nm-format" data-reveal=""><h3>Expanded ensemble</h3><p class="nm-format-lineup">Additional musicians &amp; distinctive instruments</p><p class="nm-body">The programme can be extended for a larger ensemble, with piano, cello or distinctive instrumental colours such as alphorn, flugelhorn, corno da caccia, didgeridoo and duduk.</p></article></div>
+    </div>
+  </section>
+  <section class="nm-section nm-method" aria-labelledby="neuro-repertoire">
+    <div class="nm-wrap nm-rule">
+      <header class="nm-split nm-block-head"><div class="nm-head"><p class="nm-eyebrow" data-reveal=""><span class="nm-num">05</span><span>Method</span></p><h2 id="neuro-repertoire" class="nm-title">How the programme takes shape</h2></div><p class="nm-body">Each NeuroMusic programme brings together original compositions, selected classical works and curated electronics. Research on how music relates to attention, perception and emotional response informs the choice of repertoire.</p></header>
+      <dl class="nm-steps"><div class="nm-split"><dt>Rhythm &amp; pace</dt><dd class="nm-body">Tempo and rhythm determine how the programme moves. More energetic pieces are balanced with quieter, slower ones, so the listener's attention can rise and rest.</dd></div><div class="nm-split"><dt>Melody &amp; harmony</dt><dd class="nm-body">Melody and harmony create tension and resolve it. They shape the emotional arc of the programme, from familiar, recognisable moments to more unexpected ones.</dd></div><div class="nm-split"><dt>Timbre &amp; texture</dt><dd class="nm-body">The sound of acoustic instruments is combined with electronic textures. This contrast brings out details in the music and encourages more attentive listening.</dd></div></dl>
+    </div>
+  </section>
 
 
 
@@ -822,41 +828,33 @@ a:hover{color:#5E5A52;}
     <img loading="lazy" decoding="async" data-drift="" src="assets/35325d66-becd-4ceb-860e-01d192e8d335.webp" alt="Artwork by Tatiana Plakhova" style="position:absolute;top:0;left:-10%;width:120%;height:100%;object-fit:cover;display:block;max-width:none;">
     <div aria-hidden="true" style="position:absolute;left:0;right:0;top:0;height:55%;background:linear-gradient(to bottom,#060607 0%,rgba(6,6,7,0.85) 25%,rgba(6,6,7,0.4) 60%,rgba(6,6,7,0) 100%);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);-webkit-mask-image:linear-gradient(to bottom,#000 0%,#000 30%,transparent 100%);mask-image:linear-gradient(to bottom,#000 0%,#000 30%,transparent 100%);pointer-events:none;"></div>
   </section>
-  <section style="max-width:1200px;margin:0 auto;padding:clamp(64px,8vw,112px) 24px 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:clamp(32px,6vw,96px);align-items:start;">
-    <div style="display:flex;flex-direction:column;gap:16px;">
-      <div data-reveal="" style="display:flex;align-items:center;gap:14px;font-family:'Instrument Sans',sans-serif;font-style:normal;font-weight:500;font-size:15px;line-height:1;letter-spacing:0.01em;color:#C9C4B9;"><span>Visual artist</span></div>
-      <h2 data-reveal="" data-reveal-delay="100" style="font-family:'Newsreader',serif;font-weight:400;font-size:clamp(40px,5vw,72px);line-height:1;letter-spacing:-0.025em;margin:0;">Tatiana Plakhova</h2>
-      <a data-reveal="" data-reveal-delay="200" href="https://tatianaplakhova.com/" target="_blank" rel="noopener" style="align-self:flex-start;font-size:14px;color:#ECE8DF;border-bottom:1px solid rgba(236,232,223,0.4);padding-bottom:4px;" style-hover="color:#FFFFFF;border-bottom-color:#ECE8DF;">tatianaplakhova.com </a>
-    </div>
-    <div style="display:flex;flex-direction:column;gap:20px;">
-      <p data-reveal="" style="font-family:'Newsreader',serif;font-size:clamp(22px,2.2vw,28px);line-height:1.35;margin:0;text-wrap:pretty;">NeuroMusic was developed with the participation of the internationally renowned visual artist <a href="https://tatianaplakhova.com/" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:5px;" style-hover="color:#FFFFFF;">Tatiana Plakhova</a>.</p>
-      <p data-reveal="" data-reveal-delay="120" style="font-size:17px;line-height:1.65;color:#D6D1C6;margin:0;text-wrap:pretty;">Complex graphics accompany the live performance, offering a visual interpretation of the musical and scientific concepts explored throughout the programme.</p>
+  <section class="nm-section nm-artist">
+    <div class="nm-wrap nm-split">
+      <div class="nm-head">
+        <p class="nm-eyebrow" data-reveal=""><span class="nm-num">06</span><span>Visual artist</span></p>
+        <h2 class="nm-title" data-reveal="" data-reveal-delay="100">Tatiana Plakhova</h2>
+        <a data-reveal="" data-reveal-delay="200" href="https://tatianaplakhova.com/" target="_blank" rel="noopener" style="align-self:flex-start;font-size:14px;color:#ECE8DF;border-bottom:1px solid rgba(236,232,223,0.4);padding-bottom:4px;" style-hover="color:#FFFFFF;border-bottom-color:#ECE8DF;">tatianaplakhova.com </a>
+      </div>
+      <div class="nm-copy">
+        <p class="nm-lead nm-serif" data-reveal="">NeuroMusic was developed with the participation of the internationally renowned visual artist <a href="https://tatianaplakhova.com/" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:5px;" style-hover="color:#FFFFFF;">Tatiana Plakhova</a>.</p>
+        <p class="nm-body" data-reveal="" data-reveal-delay="120">Complex graphics accompany the live performance, offering a visual interpretation of the musical and scientific concepts explored throughout the programme.</p>
+      </div>
     </div>
   </section>
-  <section class="neuro-videos" style="max-width:1200px;margin:0 auto;padding:clamp(72px,9vw,128px) 24px;">
-
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:20px;">
-      <div style="min-width:0;">
-        <div style="position:relative;aspect-ratio:16/9;overflow:hidden;border-radius:10px;background:#111112;">
-          <iframe src="https://www.youtube-nocookie.com/embed/1btyGnzXk5E?rel=0&amp;hl=en&amp;playsinline=1" title="NeuroMusic — video 1" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" style="position:absolute;inset:0;width:100%;height:100%;border:0;"></iframe>
-        </div>
-      </div>
-      <div style="min-width:0;">
-        <div style="position:relative;aspect-ratio:16/9;overflow:hidden;border-radius:10px;background:#111112;">
-          <iframe src="https://www.youtube-nocookie.com/embed/io6M2XDulTM?rel=0&amp;hl=en&amp;playsinline=1" title="NeuroMusic — video 2" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" style="position:absolute;inset:0;width:100%;height:100%;border:0;"></iframe>
-        </div>
-      </div>
+  <section class="nm-section nm-videos">
+    <div class="nm-wrap nm-split">
+      <div class="nm-video"><iframe src="https://www.youtube-nocookie.com/embed/1btyGnzXk5E?rel=0&amp;hl=en&amp;playsinline=1" title="NeuroMusic — video 1" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" style="position:absolute;inset:0;width:100%;height:100%;border:0;"></iframe></div>
+      <div class="nm-video"><iframe src="https://www.youtube-nocookie.com/embed/io6M2XDulTM?rel=0&amp;hl=en&amp;playsinline=1" title="NeuroMusic — video 2" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" style="position:absolute;inset:0;width:100%;height:100%;border:0;"></iframe></div>
     </div>
-
   </section>
 
 
 
 
-  <section style="max-width:1200px;margin:0 auto;padding:0 24px clamp(56px,7vw,96px);">
-    <div style="border-top:1px solid rgba(236,232,223,0.14);padding-top:clamp(40px,5vw,64px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:24px 64px;align-items:end;">
-      <p data-reveal="" style="font-size:17px;line-height:1.6;color:#BDB8AD;margin:0;max-width:420px;">Programmes can be developed<br>around four listening states</p>
-      <div class="listening-states" data-reveal="" data-reveal-delay="120" style="display:flex;flex-wrap:wrap;gap:8px 28px;">
+  <section class="nm-section nm-states">
+    <div class="nm-wrap nm-rule nm-split">
+      <p class="nm-body" data-reveal="">Programmes can be developed<br>around four listening states</p>
+      <div class="listening-states" data-reveal="" data-reveal-delay="120">
         <sc-for list="{{ neuroStates }}" as="s" hint-placeholder-count="4">
           <span style="font-family:'Newsreader',serif;font-style:italic;font-size:clamp(28px,3vw,40px);line-height:1;">{{ s.name }}</span>
         </sc-for>

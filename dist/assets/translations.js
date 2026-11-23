@@ -1,5 +1,30 @@
 /* Prepared translations. English keys preserve the original site copy. */
 window.KP_TRANSLATIONS = {
+  "Concert programmes shaped by neuroscience": {
+    "es": "Programas de concierto inspirados en la neurociencia",
+    "pt": "Programas de concerto inspirados na neurociência",
+    "fr": "Des programmes de concert inspirés des neurosciences"
+  },
+  "The project": {
+    "es": "El proyecto",
+    "pt": "O projeto",
+    "fr": "Le projet"
+  },
+  "The performance": {
+    "es": "El concierto",
+    "pt": "O concerto",
+    "fr": "Le concert"
+  },
+  "Line-up": {
+    "es": "Formación",
+    "pt": "Formação",
+    "fr": "Formation"
+  },
+  "Method": {
+    "es": "Método",
+    "pt": "Método",
+    "fr": "Méthode"
+  },
   "KProjects — Music Projects Catalogue": {
     "es": "KProjects — Catálogo de proyectos musicales",
     "pt": "KProjects — Catálogo de projetos musicais",
