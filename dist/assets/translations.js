@@ -1,9 +1,14 @@
 /* Prepared translations. English keys preserve the original site copy. */
 window.KP_TRANSLATIONS = {
-  "KProjects — Music Projects Catalogue": {
-    "es": "KProjects — Catálogo de proyectos musicales",
-    "pt": "KProjects — Catálogo de projetos musicais",
-    "fr": "KProjects — Catalogue de projets musicaux"
+  "Concert programmes shaped by neuroscience": {
+    "es": "Programas de concierto inspirados en la neurociencia",
+    "pt": "Programas de concerto inspirados na neurociência",
+    "fr": "Des programmes de concert inspirés des neurosciences"
+  },
+  "KProjects – Music Projects Catalogue": {
+    "es": "KProjects – Catálogo de proyectos musicales",
+    "pt": "KProjects – Catálogo de projetos musicais",
+    "fr": "KProjects – Catalogue de projets musicaux"
   },
   "Catalogue": {
     "es": "Catálogo",
@@ -300,10 +305,10 @@ window.KP_TRANSLATIONS = {
     "pt": "Seleção do repertório",
     "fr": "Sélection du répertoire"
   },
-  "Sergei Drezhnin — Fantasy on themes from The Godfather": {
-    "es": "Sergei Drezhnin — Fantasía sobre temas de El padrino",
-    "pt": "Sergei Drezhnin — Fantasia sobre temas de O Padrinho",
-    "fr": "Sergei Drezhnin — Fantaisie sur des thèmes du Parrain"
+  "Sergei Drezhnin – Fantasy on themes from The Godfather": {
+    "es": "Sergei Drezhnin – Fantasía sobre temas de El padrino",
+    "pt": "Sergei Drezhnin – Fantasia sobre temas de O Padrinho",
+    "fr": "Sergei Drezhnin – Fantaisie sur des thèmes du Parrain"
   },
   "Flowers and Fairy Tales": {
     "es": "Flores y cuentos de hadas",
@@ -315,30 +320,30 @@ window.KP_TRANSLATIONS = {
     "pt": "Um mundo colorido de miniaturas líricas, imaginação e narrativas musicais.",
     "fr": "Un univers coloré de miniatures lyriques, d’imagination et de récits musicaux."
   },
-  "Rachmaninoff — Lilacs and Daisies": {
-    "es": "Rachmaninoff — Lilas y margaritas",
-    "pt": "Rachmaninoff — Lilases e margaridas",
-    "fr": "Rachmaninov — Lilas et Marguerites"
+  "Rachmaninoff – Lilacs and Daisies": {
+    "es": "Rachmaninoff – Lilas y margaritas",
+    "pt": "Rachmaninoff – Lilases e margaridas",
+    "fr": "Rachmaninov – Lilas et Marguerites"
   },
-  "Arensky — Forget-Me-Not": {
-    "es": "Arensky — No me olvides",
-    "pt": "Arensky — Não-me-esqueças",
-    "fr": "Arenski — Myosotis"
+  "Arensky – Forget-Me-Not": {
+    "es": "Arensky – No me olvides",
+    "pt": "Arensky – Não-me-esqueças",
+    "fr": "Arenski – Myosotis"
   },
-  "Taneyev — Fairy Tale": {
-    "es": "Taneyev — Cuento de hadas",
-    "pt": "Taneyev — Conto de fadas",
-    "fr": "Taneïev — Conte de fées"
+  "Taneyev – Fairy Tale": {
+    "es": "Taneyev – Cuento de hadas",
+    "pt": "Taneyev – Conto de fadas",
+    "fr": "Taneïev – Conte de fées"
   },
-  "Medtner — Violin Sonata No. 1": {
-    "es": "Medtner — Sonata para violín n.º 1",
-    "pt": "Medtner — Sonata para violino n.º 1",
-    "fr": "Medtner — Sonate pour violon nº 1"
+  "Medtner – Violin Sonata No. 1": {
+    "es": "Medtner – Sonata para violín n.º 1",
+    "pt": "Medtner – Sonata para violino n.º 1",
+    "fr": "Medtner – Sonate pour violon nº 1"
   },
-  "Stravinsky — Russian Dance from Petrushka": {
-    "es": "Stravinsky — Danza rusa de Petrushka",
-    "pt": "Stravinsky — Dança russa de Petrushka",
-    "fr": "Stravinsky — Danse russe de Petrouchka"
+  "Stravinsky – Russian Dance from Petrushka": {
+    "es": "Stravinsky – Danza rusa de Petrushka",
+    "pt": "Stravinsky – Dança russa de Petrushka",
+    "fr": "Stravinsky – Danse russe de Petrouchka"
   },
   "Watch": {
     "es": "Vídeos",
@@ -426,9 +431,9 @@ window.KP_TRANSLATIONS = {
     "fr": "Des concerts dans plus de 50 villes du monde"
   },
   "First Prize – International Chamber Music Competition Marco Fiorindo, Italy (2015)": {
-    "es": "Primer premio — Concurso Internacional de Música de Cámara Marco Fiorindo, Italia (2015)",
-    "pt": "Primeiro prémio — Concurso Internacional de Música de Câmara Marco Fiorindo, Itália (2015)",
-    "fr": "Premier prix — Concours international de musique de chambre Marco Fiorindo, Italie (2015)"
+    "es": "Primer premio – Concurso Internacional de Música de Cámara Marco Fiorindo, Italia (2015)",
+    "pt": "Primeiro prémio – Concurso Internacional de Música de Câmara Marco Fiorindo, Itália (2015)",
+    "fr": "Premier prix – Concours international de musique de chambre Marco Fiorindo, Italie (2015)"
   },
   "Two recorded albums: VitaDuo (2012) and XX Century Sax (2015)": {
     "es": "Dos álbumes grabados: VitaDuo (2012) y XX Century Sax (2015)",
@@ -536,9 +541,9 @@ window.KP_TRANSLATIONS = {
     "fr": "Elena Revich et Polina Osetinskaya en concert"
   },
   "Rachmaninoff – Daisies, Op. 38 No. 3": {
-    "es": "Rachmaninoff — Margaritas, op. 38 n.º 3",
-    "pt": "Rachmaninoff — Margaridas, op. 38 n.º 3",
-    "fr": "Rachmaninov — Marguerites, op. 38 nº 3"
+    "es": "Rachmaninoff – Margaritas, op. 38 n.º 3",
+    "pt": "Rachmaninoff – Margaridas, op. 38 n.º 3",
+    "fr": "Rachmaninov – Marguerites, op. 38 nº 3"
   },
   "Elena Revich, violin": {
     "es": "Elena Revich, violín",
@@ -560,15 +565,15 @@ window.KP_TRANSLATIONS = {
     "pt": "Marcos do VitaDuo",
     "fr": "Dates clés de VitaDuo"
   },
-  "NeuroMusic — video 1": {
-    "es": "NeuroMusic — vídeo 1",
-    "pt": "NeuroMusic — vídeo 1",
-    "fr": "NeuroMusic — vidéo 1"
+  "NeuroMusic – video 1": {
+    "es": "NeuroMusic – vídeo 1",
+    "pt": "NeuroMusic – vídeo 1",
+    "fr": "NeuroMusic – vidéo 1"
   },
-  "NeuroMusic — video 2": {
-    "es": "NeuroMusic — vídeo 2",
-    "pt": "NeuroMusic — vídeo 2",
-    "fr": "NeuroMusic — vidéo 2"
+  "NeuroMusic – video 2": {
+    "es": "NeuroMusic – vídeo 2",
+    "pt": "NeuroMusic – vídeo 2",
+    "fr": "NeuroMusic – vidéo 2"
   },
   "Yury Revich with violin": {
     "es": "Yury Revich con su violín",
@@ -759,11 +764,6 @@ window.KP_TRANSLATIONS = {
     "es": "El recorrido musical",
     "pt": "O percurso musical",
     "fr": "Le parcours musical"
-  },
-  "Research on music perception, attention and emotion informs the selection and sequence of works. Tempo, rhythm, repetition, melody, harmony, dynamics and timbre provide the musical framework.": {
-    "es": "La investigación sobre percepción musical, atención y emoción orienta la selección y el orden de las obras. El tempo, el ritmo, la repetición, la melodía, la armonía, la dinámica y el timbre conforman la estructura musical.",
-    "pt": "A investigação sobre perceção musical, atenção e emoção orienta a seleção e a sequência das obras. O tempo, o ritmo, a repetição, a melodia, a harmonia, a dinâmica e o timbre constituem a estrutura musical.",
-    "fr": "Les recherches sur la perception musicale, l’attention et les émotions guident le choix et l’enchaînement des œuvres. Tempo, rythme, répétition, mélodie, harmonie, nuances et timbre constituent la trame musicale."
   },
   "Visual art & space": {
     "es": "Arte visual y espacio",
