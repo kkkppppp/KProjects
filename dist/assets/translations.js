@@ -5,30 +5,10 @@ window.KP_TRANSLATIONS = {
     "pt": "Programas de concerto inspirados na neurociência",
     "fr": "Des programmes de concert inspirés des neurosciences"
   },
-  "The project": {
-    "es": "El proyecto",
-    "pt": "O projeto",
-    "fr": "Le projet"
-  },
-  "The performance": {
-    "es": "El concierto",
-    "pt": "O concerto",
-    "fr": "Le concert"
-  },
-  "Line-up": {
-    "es": "Formación",
-    "pt": "Formação",
-    "fr": "Formation"
-  },
-  "Method": {
-    "es": "Método",
-    "pt": "Método",
-    "fr": "Méthode"
-  },
-  "KProjects — Music Projects Catalogue": {
-    "es": "KProjects — Catálogo de proyectos musicales",
-    "pt": "KProjects — Catálogo de projetos musicais",
-    "fr": "KProjects — Catalogue de projets musicaux"
+  "KProjects – Music Projects Catalogue": {
+    "es": "KProjects – Catálogo de proyectos musicales",
+    "pt": "KProjects – Catálogo de projetos musicais",
+    "fr": "KProjects – Catalogue de projets musicaux"
   },
   "Catalogue": {
     "es": "Catálogo",
@@ -325,10 +305,10 @@ window.KP_TRANSLATIONS = {
     "pt": "Seleção do repertório",
     "fr": "Sélection du répertoire"
   },
-  "Sergei Drezhnin — Fantasy on themes from The Godfather": {
-    "es": "Sergei Drezhnin — Fantasía sobre temas de El padrino",
-    "pt": "Sergei Drezhnin — Fantasia sobre temas de O Padrinho",
-    "fr": "Sergei Drezhnin — Fantaisie sur des thèmes du Parrain"
+  "Sergei Drezhnin – Fantasy on themes from The Godfather": {
+    "es": "Sergei Drezhnin – Fantasía sobre temas de El padrino",
+    "pt": "Sergei Drezhnin – Fantasia sobre temas de O Padrinho",
+    "fr": "Sergei Drezhnin – Fantaisie sur des thèmes du Parrain"
   },
   "Flowers and Fairy Tales": {
     "es": "Flores y cuentos de hadas",
@@ -340,30 +320,30 @@ window.KP_TRANSLATIONS = {
     "pt": "Um mundo colorido de miniaturas líricas, imaginação e narrativas musicais.",
     "fr": "Un univers coloré de miniatures lyriques, d’imagination et de récits musicaux."
   },
-  "Rachmaninoff — Lilacs and Daisies": {
-    "es": "Rachmaninoff — Lilas y margaritas",
-    "pt": "Rachmaninoff — Lilases e margaridas",
-    "fr": "Rachmaninov — Lilas et Marguerites"
+  "Rachmaninoff – Lilacs and Daisies": {
+    "es": "Rachmaninoff – Lilas y margaritas",
+    "pt": "Rachmaninoff – Lilases e margaridas",
+    "fr": "Rachmaninov – Lilas et Marguerites"
   },
-  "Arensky — Forget-Me-Not": {
-    "es": "Arensky — No me olvides",
-    "pt": "Arensky — Não-me-esqueças",
-    "fr": "Arenski — Myosotis"
+  "Arensky – Forget-Me-Not": {
+    "es": "Arensky – No me olvides",
+    "pt": "Arensky – Não-me-esqueças",
+    "fr": "Arenski – Myosotis"
   },
-  "Taneyev — Fairy Tale": {
-    "es": "Taneyev — Cuento de hadas",
-    "pt": "Taneyev — Conto de fadas",
-    "fr": "Taneïev — Conte de fées"
+  "Taneyev – Fairy Tale": {
+    "es": "Taneyev – Cuento de hadas",
+    "pt": "Taneyev – Conto de fadas",
+    "fr": "Taneïev – Conte de fées"
   },
-  "Medtner — Violin Sonata No. 1": {
-    "es": "Medtner — Sonata para violín n.º 1",
-    "pt": "Medtner — Sonata para violino n.º 1",
-    "fr": "Medtner — Sonate pour violon nº 1"
+  "Medtner – Violin Sonata No. 1": {
+    "es": "Medtner – Sonata para violín n.º 1",
+    "pt": "Medtner – Sonata para violino n.º 1",
+    "fr": "Medtner – Sonate pour violon nº 1"
   },
-  "Stravinsky — Russian Dance from Petrushka": {
-    "es": "Stravinsky — Danza rusa de Petrushka",
-    "pt": "Stravinsky — Dança russa de Petrushka",
-    "fr": "Stravinsky — Danse russe de Petrouchka"
+  "Stravinsky – Russian Dance from Petrushka": {
+    "es": "Stravinsky – Danza rusa de Petrushka",
+    "pt": "Stravinsky – Dança russa de Petrushka",
+    "fr": "Stravinsky – Danse russe de Petrouchka"
   },
   "Watch": {
     "es": "Vídeos",
@@ -451,9 +431,9 @@ window.KP_TRANSLATIONS = {
     "fr": "Des concerts dans plus de 50 villes du monde"
   },
   "First Prize – International Chamber Music Competition Marco Fiorindo, Italy (2015)": {
-    "es": "Primer premio — Concurso Internacional de Música de Cámara Marco Fiorindo, Italia (2015)",
-    "pt": "Primeiro prémio — Concurso Internacional de Música de Câmara Marco Fiorindo, Itália (2015)",
-    "fr": "Premier prix — Concours international de musique de chambre Marco Fiorindo, Italie (2015)"
+    "es": "Primer premio – Concurso Internacional de Música de Cámara Marco Fiorindo, Italia (2015)",
+    "pt": "Primeiro prémio – Concurso Internacional de Música de Câmara Marco Fiorindo, Itália (2015)",
+    "fr": "Premier prix – Concours international de musique de chambre Marco Fiorindo, Italie (2015)"
   },
   "Two recorded albums: VitaDuo (2012) and XX Century Sax (2015)": {
     "es": "Dos álbumes grabados: VitaDuo (2012) y XX Century Sax (2015)",
@@ -561,9 +541,9 @@ window.KP_TRANSLATIONS = {
     "fr": "Elena Revich et Polina Osetinskaya en concert"
   },
   "Rachmaninoff – Daisies, Op. 38 No. 3": {
-    "es": "Rachmaninoff — Margaritas, op. 38 n.º 3",
-    "pt": "Rachmaninoff — Margaridas, op. 38 n.º 3",
-    "fr": "Rachmaninov — Marguerites, op. 38 nº 3"
+    "es": "Rachmaninoff – Margaritas, op. 38 n.º 3",
+    "pt": "Rachmaninoff – Margaridas, op. 38 n.º 3",
+    "fr": "Rachmaninov – Marguerites, op. 38 nº 3"
   },
   "Elena Revich, violin": {
     "es": "Elena Revich, violín",
@@ -585,15 +565,15 @@ window.KP_TRANSLATIONS = {
     "pt": "Marcos do VitaDuo",
     "fr": "Dates clés de VitaDuo"
   },
-  "NeuroMusic — video 1": {
-    "es": "NeuroMusic — vídeo 1",
-    "pt": "NeuroMusic — vídeo 1",
-    "fr": "NeuroMusic — vidéo 1"
+  "NeuroMusic – video 1": {
+    "es": "NeuroMusic – vídeo 1",
+    "pt": "NeuroMusic – vídeo 1",
+    "fr": "NeuroMusic – vidéo 1"
   },
-  "NeuroMusic — video 2": {
-    "es": "NeuroMusic — vídeo 2",
-    "pt": "NeuroMusic — vídeo 2",
-    "fr": "NeuroMusic — vidéo 2"
+  "NeuroMusic – video 2": {
+    "es": "NeuroMusic – vídeo 2",
+    "pt": "NeuroMusic – vídeo 2",
+    "fr": "NeuroMusic – vidéo 2"
   },
   "Yury Revich with violin": {
     "es": "Yury Revich con su violín",

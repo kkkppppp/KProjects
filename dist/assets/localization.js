@@ -72,7 +72,7 @@
       root.querySelectorAll('[alt],[title],[aria-label]').forEach(applyAttributes);
     }
     document.documentElement.lang = language;
-    document.title = translate('KProjects — Music Projects Catalogue');
+    document.title = translate('KProjects – Music Projects Catalogue');
     const description = document.querySelector('meta[name="description"]');
     if (description) description.content = translate('International artists, music projects and collaborations. Explore the KProjects catalogue and contact producer Kate Podakin.');
     document.querySelectorAll('kp-language').forEach(control => control.refresh());

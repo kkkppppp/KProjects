@@ -9,7 +9,7 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="KProjects">
 <meta property="og:url" content="https://kprojects.art/">
-<meta property="og:title" content="KProjects — Music Projects Catalogue">
+<meta property="og:title" content="KProjects – Music Projects Catalogue">
 <meta property="og:description" content="International artists, music projects and collaborations. Explore the KProjects catalogue and contact producer Kate Podakin.">
 <meta property="og:image" content="https://kprojects.art/assets/kprojects-wordmark-share.jpg">
 <meta property="og:image:width" content="1200">
@@ -277,8 +277,6 @@ a,button{-webkit-tap-highlight-color:transparent;touch-action:manipulation;}
 
 /* Type */
 .nm-eyebrow{display:flex;align-items:center;gap:12px;margin:0;font:500 12px/1.4 'Instrument Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--nm-label);}
-.nm-num{display:inline-flex;align-items:center;gap:12px;color:var(--nm-ink);font-variant-numeric:tabular-nums;}
-.nm-num::after{content:'';width:28px;height:1px;background:var(--nm-label);opacity:.6;}
 .nm-title{margin:0;font-family:'Newsreader',serif;font-weight:400;font-size:clamp(34px,4.2vw,56px);line-height:1.08;letter-spacing:-.02em;color:var(--nm-ink);text-wrap:balance;}
 .nm-title em{font-style:italic;}
 .nm-lead{margin:0;max-width:34em;font-size:clamp(18px,1.6vw,20px);line-height:1.6;color:var(--nm-ink);text-wrap:pretty;}
@@ -325,11 +323,17 @@ a,button{-webkit-tap-highlight-color:transparent;touch-action:manipulation;}
 /* Desktop and tablet landscape: two equal columns */
 @media(min-width:860px){
  .nm-split{grid-template-columns:repeat(2,minmax(0,1fr));column-gap:var(--nm-gap);row-gap:48px;}
- .nm-concept .nm-split,.nm-method .nm-block-head,.nm-states .nm-split{align-items:end;}
+ .nm-concept .nm-split,.nm-states .nm-split{align-items:end;}
+ .nm-method .nm-block-head{align-items:start;}
  .nm-founders .nm-split,.nm-bio .nm-split,.nm-performance .nm-split{align-items:center;}
  .nm-artist .nm-split{align-items:start;}
  .nm-founders-photo{order:-1;}
  .nm-bio-yury .nm-bio-photo{order:2;}
+ /* Founders chapter: a narrower two-column frame, so each text column is exactly
+    as wide as the portrait above or below it and shares its left and right edges. */
+ .nm-founders .nm-split,.nm-bio .nm-split{max-width:800px;margin-inline:auto;column-gap:64px;}
+ .nm-founders-photo{width:100%;}
+ .nm-bio-photo{max-width:none;justify-self:stretch;}
  .nm-steps .nm-split{row-gap:12px;}
  .nm-videos .nm-split{column-gap:24px;}
 }
@@ -538,7 +542,7 @@ main blockquote{text-wrap:wrap!important;}
 <x-dc>
 <helmet>
 
-<title>KProjects — Music Projects Catalogue</title>
+<title>KProjects – Music Projects Catalogue</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <style>/* latin-ext */
 @font-face {
@@ -761,7 +765,6 @@ a:hover{color:#5E5A52;}
   <section id="neuro-concept" class="nm-section nm-concept" ref="{{ neuroConceptRef }}">
     <div class="nm-wrap nm-split">
       <div class="nm-head">
-        <p class="nm-eyebrow" data-reveal=""><span class="nm-num">01</span><span>The project</span></p>
         <h2 class="nm-title" data-reveal="" data-reveal-delay="100">Concert programmes shaped by neuroscience</h2>
       </div>
       <p class="nm-lead" data-reveal="" data-reveal-delay="200">Created by violinists Yury and Elena Revich, NeuroMusic brings classical repertoire and original compositions into a carefully sequenced live performance.</p>
@@ -771,7 +774,7 @@ a:hover{color:#5E5A52;}
   <section class="nm-section nm-founders">
     <div class="nm-wrap nm-rule nm-split">
       <div class="nm-head">
-        <p class="nm-eyebrow" data-reveal=""><span class="nm-num">02</span><span>The founders</span></p>
+        <p class="nm-eyebrow" data-reveal="">The founders</p>
         <h2 class="nm-title" data-reveal="" data-reveal-delay="100">Yury &amp; Elena Revich</h2>
         <p class="nm-lead nm-serif" data-reveal="" data-reveal-delay="200">Brother and sister. Violinists. Heirs to a musical tradition spanning for more than four generations.</p>
       </div>
@@ -800,7 +803,6 @@ a:hover{color:#5E5A52;}
   <section class="nm-section nm-performance">
     <div class="nm-wrap nm-rule nm-split">
       <div class="nm-head">
-        <p class="nm-eyebrow" data-reveal=""><span class="nm-num">03</span><span>The performance</span></p>
         <h2 class="nm-title" data-reveal="" data-reveal-delay="100">Live music, visual art<br>and neuroscience<br><em>in one performance</em></h2>
         <p class="nm-body" data-reveal="" data-reveal-delay="200">Research on music perception, attention and emotion informs the selection and sequence of works. Tempo, rhythm, repetition, melody, harmony, dynamics and timbre provide the musical framework.</p>
       </div>
@@ -810,13 +812,13 @@ a:hover{color:#5E5A52;}
 
   <section class="nm-section nm-formats" aria-labelledby="neuro-formats">
     <div class="nm-wrap nm-rule">
-      <header class="nm-head nm-block-head"><p class="nm-eyebrow" data-reveal=""><span class="nm-num">04</span><span>Line-up</span></p><h2 id="neuro-formats" class="nm-title">Concert formats</h2></header>
+      <header class="nm-block-head"><h2 id="neuro-formats" class="nm-title">Concert formats</h2></header>
       <div class="nm-split"><article class="nm-format" data-reveal=""><h3>Violin duo and electronics</h3><p class="nm-format-lineup">Two violins with curated electronics</p><p class="nm-body">The violin duo is joined by carefully selected electronic textures, opening up a wider sound world while keeping live performance at its heart.</p></article><article class="nm-format" data-reveal=""><h3>Expanded ensemble</h3><p class="nm-format-lineup">Additional musicians &amp; distinctive instruments</p><p class="nm-body">The programme can be extended for a larger ensemble, with piano, cello or distinctive instrumental colours such as alphorn, flugelhorn, corno da caccia, didgeridoo and duduk.</p></article></div>
     </div>
   </section>
   <section class="nm-section nm-method" aria-labelledby="neuro-repertoire">
     <div class="nm-wrap nm-rule">
-      <header class="nm-split nm-block-head"><div class="nm-head"><p class="nm-eyebrow" data-reveal=""><span class="nm-num">05</span><span>Method</span></p><h2 id="neuro-repertoire" class="nm-title">How the programme takes shape</h2></div><p class="nm-body">Each NeuroMusic programme brings together original compositions, selected classical works and curated electronics. Research on how music relates to attention, perception and emotional response informs the choice of repertoire.</p></header>
+      <header class="nm-split nm-block-head"><div class="nm-head"><h2 id="neuro-repertoire" class="nm-title">How the programme takes shape</h2></div><p class="nm-body">Each NeuroMusic programme brings together original compositions, selected classical works and curated electronics. Research on how music relates to attention, perception and emotional response informs the choice of repertoire.</p></header>
       <dl class="nm-steps"><div class="nm-split"><dt>Rhythm &amp; pace</dt><dd class="nm-body">Tempo and rhythm determine how the programme moves. More energetic pieces are balanced with quieter, slower ones, so the listener's attention can rise and rest.</dd></div><div class="nm-split"><dt>Melody &amp; harmony</dt><dd class="nm-body">Melody and harmony create tension and resolve it. They shape the emotional arc of the programme, from familiar, recognisable moments to more unexpected ones.</dd></div><div class="nm-split"><dt>Timbre &amp; texture</dt><dd class="nm-body">The sound of acoustic instruments is combined with electronic textures. This contrast brings out details in the music and encourages more attentive listening.</dd></div></dl>
     </div>
   </section>
@@ -831,7 +833,7 @@ a:hover{color:#5E5A52;}
   <section class="nm-section nm-artist">
     <div class="nm-wrap nm-split">
       <div class="nm-head">
-        <p class="nm-eyebrow" data-reveal=""><span class="nm-num">06</span><span>Visual artist</span></p>
+        <p class="nm-eyebrow" data-reveal="">Visual artist</p>
         <h2 class="nm-title" data-reveal="" data-reveal-delay="100">Tatiana Plakhova</h2>
         <a data-reveal="" data-reveal-delay="200" href="https://tatianaplakhova.com/" target="_blank" rel="noopener" style="align-self:flex-start;font-size:14px;color:#ECE8DF;border-bottom:1px solid rgba(236,232,223,0.4);padding-bottom:4px;" style-hover="color:#FFFFFF;border-bottom-color:#ECE8DF;">tatianaplakhova.com </a>
       </div>
@@ -843,8 +845,8 @@ a:hover{color:#5E5A52;}
   </section>
   <section class="nm-section nm-videos">
     <div class="nm-wrap nm-split">
-      <div class="nm-video"><iframe src="https://www.youtube-nocookie.com/embed/1btyGnzXk5E?rel=0&amp;hl=en&amp;playsinline=1" title="NeuroMusic — video 1" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" style="position:absolute;inset:0;width:100%;height:100%;border:0;"></iframe></div>
-      <div class="nm-video"><iframe src="https://www.youtube-nocookie.com/embed/io6M2XDulTM?rel=0&amp;hl=en&amp;playsinline=1" title="NeuroMusic — video 2" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" style="position:absolute;inset:0;width:100%;height:100%;border:0;"></iframe></div>
+      <div class="nm-video"><iframe src="https://www.youtube-nocookie.com/embed/1btyGnzXk5E?rel=0&amp;hl=en&amp;playsinline=1" title="NeuroMusic – video 1" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" style="position:absolute;inset:0;width:100%;height:100%;border:0;"></iframe></div>
+      <div class="nm-video"><iframe src="https://www.youtube-nocookie.com/embed/io6M2XDulTM?rel=0&amp;hl=en&amp;playsinline=1" title="NeuroMusic – video 2" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" style="position:absolute;inset:0;width:100%;height:100%;border:0;"></iframe></div>
     </div>
   </section>
 
@@ -1067,11 +1069,11 @@ a:hover{color:#5E5A52;}
         </div>
         <div style="margin-top:8px;display:flex;flex-direction:column;">
             <span style="font-size:13px;font-weight:500;color:#A8A397;padding-bottom:10px;border-bottom:1px solid rgba(244,240,232,0.3);">Selected repertoire</span>
-            <div style="display:grid;grid-template-columns:28px minmax(0,1fr);gap:8px;align-items:baseline;padding:10px 0;border-bottom:1px solid rgba(244,240,232,0.1);"><span style="font-size:12px;color:#8C877C;font-variant-numeric:tabular-nums;">01</span><span style="font-size:15px;line-height:1.45;color:#E2DDD2;">Charlie Chaplin — Smile</span></div>
-            <div style="display:grid;grid-template-columns:28px minmax(0,1fr);gap:8px;align-items:baseline;padding:10px 0;border-bottom:1px solid rgba(244,240,232,0.1);"><span style="font-size:12px;color:#8C877C;font-variant-numeric:tabular-nums;">02</span><span style="font-size:15px;line-height:1.45;color:#E2DDD2;">George Gershwin — Porgy and Bess</span></div>
-            <div style="display:grid;grid-template-columns:28px minmax(0,1fr);gap:8px;align-items:baseline;padding:10px 0;border-bottom:1px solid rgba(244,240,232,0.1);"><span style="font-size:12px;color:#8C877C;font-variant-numeric:tabular-nums;">03</span><span style="font-size:15px;line-height:1.45;color:#E2DDD2;">Nino Rota — Casanova</span></div>
-            <div style="display:grid;grid-template-columns:28px minmax(0,1fr);gap:8px;align-items:baseline;padding:10px 0;border-bottom:1px solid rgba(244,240,232,0.1);"><span style="font-size:12px;color:#8C877C;font-variant-numeric:tabular-nums;">04</span><span style="font-size:15px;line-height:1.45;color:#E2DDD2;">Sergei Drezhnin — Fantasy on themes from The Godfather</span></div>
-            <div style="display:grid;grid-template-columns:28px minmax(0,1fr);gap:8px;align-items:baseline;padding:10px 0;"><span style="font-size:12px;color:#8C877C;font-variant-numeric:tabular-nums;">05</span><span style="font-size:15px;line-height:1.45;color:#E2DDD2;">Carlos Gardel — Por una cabeza</span></div>
+            <div style="display:grid;grid-template-columns:28px minmax(0,1fr);gap:8px;align-items:baseline;padding:10px 0;border-bottom:1px solid rgba(244,240,232,0.1);"><span style="font-size:12px;color:#8C877C;font-variant-numeric:tabular-nums;">01</span><span style="font-size:15px;line-height:1.45;color:#E2DDD2;">Charlie Chaplin – Smile</span></div>
+            <div style="display:grid;grid-template-columns:28px minmax(0,1fr);gap:8px;align-items:baseline;padding:10px 0;border-bottom:1px solid rgba(244,240,232,0.1);"><span style="font-size:12px;color:#8C877C;font-variant-numeric:tabular-nums;">02</span><span style="font-size:15px;line-height:1.45;color:#E2DDD2;">George Gershwin – Porgy and Bess</span></div>
+            <div style="display:grid;grid-template-columns:28px minmax(0,1fr);gap:8px;align-items:baseline;padding:10px 0;border-bottom:1px solid rgba(244,240,232,0.1);"><span style="font-size:12px;color:#8C877C;font-variant-numeric:tabular-nums;">03</span><span style="font-size:15px;line-height:1.45;color:#E2DDD2;">Nino Rota – Casanova</span></div>
+            <div style="display:grid;grid-template-columns:28px minmax(0,1fr);gap:8px;align-items:baseline;padding:10px 0;border-bottom:1px solid rgba(244,240,232,0.1);"><span style="font-size:12px;color:#8C877C;font-variant-numeric:tabular-nums;">04</span><span style="font-size:15px;line-height:1.45;color:#E2DDD2;">Sergei Drezhnin – Fantasy on themes from The Godfather</span></div>
+            <div style="display:grid;grid-template-columns:28px minmax(0,1fr);gap:8px;align-items:baseline;padding:10px 0;"><span style="font-size:12px;color:#8C877C;font-variant-numeric:tabular-nums;">05</span><span style="font-size:15px;line-height:1.45;color:#E2DDD2;">Carlos Gardel – Por una cabeza</span></div>
           </div>
       </article>
       <article style="display:flex;flex-direction:column;gap:20px;">
@@ -1085,11 +1087,11 @@ a:hover{color:#5E5A52;}
         </div>
         <div style="margin-top:8px;display:flex;flex-direction:column;">
             <span style="font-size:13px;font-weight:500;color:#A8A397;padding-bottom:10px;border-bottom:1px solid rgba(244,240,232,0.3);">Selected repertoire</span>
-            <div style="display:grid;grid-template-columns:28px minmax(0,1fr);gap:8px;align-items:baseline;padding:10px 0;border-bottom:1px solid rgba(244,240,232,0.1);"><span style="font-size:12px;color:#8C877C;font-variant-numeric:tabular-nums;">01</span><span style="font-size:15px;line-height:1.45;color:#E2DDD2;">Rachmaninoff — Lilacs and Daisies</span></div>
-            <div style="display:grid;grid-template-columns:28px minmax(0,1fr);gap:8px;align-items:baseline;padding:10px 0;border-bottom:1px solid rgba(244,240,232,0.1);"><span style="font-size:12px;color:#8C877C;font-variant-numeric:tabular-nums;">02</span><span style="font-size:15px;line-height:1.45;color:#E2DDD2;">Arensky — Forget-Me-Not</span></div>
-            <div style="display:grid;grid-template-columns:28px minmax(0,1fr);gap:8px;align-items:baseline;padding:10px 0;border-bottom:1px solid rgba(244,240,232,0.1);"><span style="font-size:12px;color:#8C877C;font-variant-numeric:tabular-nums;">03</span><span style="font-size:15px;line-height:1.45;color:#E2DDD2;">Taneyev — Fairy Tale</span></div>
-            <div style="display:grid;grid-template-columns:28px minmax(0,1fr);gap:8px;align-items:baseline;padding:10px 0;border-bottom:1px solid rgba(244,240,232,0.1);"><span style="font-size:12px;color:#8C877C;font-variant-numeric:tabular-nums;">04</span><span style="font-size:15px;line-height:1.45;color:#E2DDD2;">Medtner — Violin Sonata No. 1</span></div>
-            <div style="display:grid;grid-template-columns:28px minmax(0,1fr);gap:8px;align-items:baseline;padding:10px 0;"><span style="font-size:12px;color:#8C877C;font-variant-numeric:tabular-nums;">05</span><span style="font-size:15px;line-height:1.45;color:#E2DDD2;">Stravinsky — Russian Dance from Petrushka</span></div>
+            <div style="display:grid;grid-template-columns:28px minmax(0,1fr);gap:8px;align-items:baseline;padding:10px 0;border-bottom:1px solid rgba(244,240,232,0.1);"><span style="font-size:12px;color:#8C877C;font-variant-numeric:tabular-nums;">01</span><span style="font-size:15px;line-height:1.45;color:#E2DDD2;">Rachmaninoff – Lilacs and Daisies</span></div>
+            <div style="display:grid;grid-template-columns:28px minmax(0,1fr);gap:8px;align-items:baseline;padding:10px 0;border-bottom:1px solid rgba(244,240,232,0.1);"><span style="font-size:12px;color:#8C877C;font-variant-numeric:tabular-nums;">02</span><span style="font-size:15px;line-height:1.45;color:#E2DDD2;">Arensky – Forget-Me-Not</span></div>
+            <div style="display:grid;grid-template-columns:28px minmax(0,1fr);gap:8px;align-items:baseline;padding:10px 0;border-bottom:1px solid rgba(244,240,232,0.1);"><span style="font-size:12px;color:#8C877C;font-variant-numeric:tabular-nums;">03</span><span style="font-size:15px;line-height:1.45;color:#E2DDD2;">Taneyev – Fairy Tale</span></div>
+            <div style="display:grid;grid-template-columns:28px minmax(0,1fr);gap:8px;align-items:baseline;padding:10px 0;border-bottom:1px solid rgba(244,240,232,0.1);"><span style="font-size:12px;color:#8C877C;font-variant-numeric:tabular-nums;">04</span><span style="font-size:15px;line-height:1.45;color:#E2DDD2;">Medtner – Violin Sonata No. 1</span></div>
+            <div style="display:grid;grid-template-columns:28px minmax(0,1fr);gap:8px;align-items:baseline;padding:10px 0;"><span style="font-size:12px;color:#8C877C;font-variant-numeric:tabular-nums;">05</span><span style="font-size:15px;line-height:1.45;color:#E2DDD2;">Stravinsky – Russian Dance from Petrushka</span></div>
           </div>
       </article>
     </div>
