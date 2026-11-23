@@ -95,6 +95,18 @@ a,button{-webkit-tap-highlight-color:transparent;touch-action:manipulation;}
   .amstel-members>div>span{font-size:16px!important;}
 }
 @media(prefers-reduced-motion:reduce){.project-art{transform:none!important;}}
+
+/* Concert offer: responsive editorial sections, matching the NeuroMusic palette. */
+.neuro-offer{max-width:1200px;margin:0 auto;padding:clamp(40px,6vw,80px) 24px;color:#ECE8DF}
+.neuro-offer header{max-width:780px;margin-bottom:32px}
+.neuro-offer h2{font-family:'Newsreader',serif;font-weight:400;font-size:clamp(32px,3.6vw,48px);line-height:1.12;letter-spacing:-.02em;margin:0 0 20px;text-wrap:balance}
+.neuro-offer h3,.neuro-repertoire dt{font-family:'Newsreader',serif;font-weight:400;font-size:clamp(24px,2.3vw,30px);line-height:1.2;margin:0 0 16px;text-wrap:balance}
+.neuro-offer p,.neuro-repertoire dd{font-size:17px;line-height:1.65;color:#C9C4B9;margin:0;text-wrap:pretty}
+.neuro-format-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:48px}
+.neuro-format-grid article{padding:0;min-width:0}
+.neuro-format-grid .neuro-format-lineup{font-size:14px;color:#B8D6E4;line-height:1.5;margin-bottom:20px}
+.neuro-repertoire dl{margin:0}.neuro-repertoire dl>div{display:grid;grid-template-columns:1fr 1.35fr;gap:20px 48px;padding:25px 0;border-top:1px solid #303035}.neuro-repertoire dt{margin:0}.neuro-repertoire dd{margin:0}
+@media(max-width:760px){.neuro-format-grid{grid-template-columns:1fr;gap:32px}.neuro-repertoire dl>div{grid-template-columns:1fr;gap:10px}.neuro-offer{padding-top:40px;padding-bottom:40px}}
 </style>
 <style>
 /* Editorial programmes, touring destinations and readable mobile type. */
@@ -745,11 +757,11 @@ a:hover{color:#5E5A52;}
     </div>
   </section>
 
-  <section id="neuro-concept" ref="{{ neuroConceptRef }}" style="max-width:1200px;margin:0 auto;padding:clamp(80px,11vw,160px) 24px clamp(64px,8vw,112px);scroll-margin-top:68px;">
+  <section id="neuro-concept" ref="{{ neuroConceptRef }}" style="max-width:1200px;margin:0 auto;padding:clamp(48px,6vw,80px) 24px;scroll-margin-top:68px;">
     
-    <p data-reveal="" data-reveal-delay="100" style="font-family:'Newsreader',serif;font-weight:400;font-size:clamp(32px,4.4vw,60px);line-height:1.1;letter-spacing:-0.02em;margin:0;max-width:960px;text-wrap:balance;">Live performances informed by neuroscience research</p>
+    <p data-reveal="" data-reveal-delay="100" style="font-family:'Newsreader',serif;font-weight:400;font-size:clamp(32px,4.4vw,60px);line-height:1.1;letter-spacing:-0.02em;margin:0;max-width:960px;text-wrap:balance;">Concert programmes shaped neuroscience</p>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:24px 64px;margin-top:clamp(40px,5vw,64px);">
-      <p data-reveal="" data-reveal-delay="200" style="font-size:20px;line-height:1.55;color:#ECE8DF;margin:0;text-wrap:pretty;">NeuroMusic explores the connection between music, the mind and the way we listen. Bringing live performance into dialogue with neuroscience, the project invites a deeper awareness of mental wellbeing, hearing and our everyday sound environment.</p>
+      <p data-reveal="" data-reveal-delay="200" style="font-size:20px;line-height:1.55;color:#ECE8DF;margin:0;text-wrap:pretty;">Created by violinists Yury and Elena Revich, NeuroMusic brings classical repertoire and original compositions into a carefully sequenced live performance.</p>
       
     </div>
   </section>
@@ -780,7 +792,7 @@ a:hover{color:#5E5A52;}
   <section class="neuro-bio neuro-bio-elena">
     <div class="neuro-bio-layout">
       <figure class="neuro-bio-photo"><img decoding="async" src="assets/d51f61a4-ab75-464d-a2e3-479f8cc6c2cd.webp" alt="Elena Revich with violin" width="320" height="400" loading="lazy"></figure>
-      <div class="neuro-bio-copy"><div class="neuro-bio-heading"><span class="neuro-bio-role">Co-founder</span><h2>Elena Revich</h2><p class="neuro-bio-lead">Violinist, diploma winner of the International Tchaikovsky Competition</p></div><p>Elena is an internationally acclaimed violinist and the author of interdisciplinary projects that have received prestigious awards, including the Golden Mask. Elena developed the NeuroMusic approach in dialogue with neuroscientists, exploring how music shapes perception, emotion and attention.</p></div>
+      <div class="neuro-bio-copy"><div class="neuro-bio-heading"><span class="neuro-bio-role">Co-founder &amp; Programme Director</span><h2>Elena Revich</h2><p class="neuro-bio-lead">Violinist, diploma winner of the International Tchaikovsky Competition</p></div><p>Elena is an internationally acclaimed violinist and the author of interdisciplinary projects that have received prestigious awards, including the Golden Mask. Elena developed the NeuroMusic approach in dialogue with neuroscientists, exploring how music shapes perception, emotion and attention.</p></div>
     </div>
   </section>
 
@@ -790,6 +802,7 @@ a:hover{color:#5E5A52;}
         <div style="display:flex;flex-direction:column;gap:28px;">
           <div data-reveal="" style="display:flex;align-items:center;gap:14px;font-family:'Instrument Sans',sans-serif;font-style:normal;font-weight:500;font-size:15px;line-height:1;letter-spacing:0.01em;color:#D6D1C6;"></div>
           <h2 data-reveal="" data-reveal-delay="100" style="font-family:'Newsreader',serif;font-weight:400;font-size:clamp(32px,3.6vw,52px);line-height:1.05;letter-spacing:-0.03em;margin:0;max-width:880px;text-wrap:balance;">Live music, visual art<br>and neuroscience<br><em style="font-style:italic;white-space:nowrap;">in one performance</em></h2>
+          <p data-reveal="" style="font-size:17px;line-height:1.65;color:#C9C4B9;margin:0;text-wrap:pretty;">Research on music perception, attention and emotion informs the selection and sequence of works. Tempo, rhythm, repetition, melody, harmony, dynamics and timbre provide the musical framework.</p>
         </div>
         <div class="neuro-synthesis-orb" style="position:relative;aspect-ratio:1/1;max-width:420px;width:100%;justify-self:center;">
           <div data-speed="-0.08" style="position:absolute;inset:0;">
@@ -799,6 +812,9 @@ a:hover{color:#5E5A52;}
       </div>
     </div>
   </section>
+
+<section class="neuro-offer" aria-labelledby="neuro-formats"><header><h2 id="neuro-formats">Concert formats</h2></header><div class="neuro-format-grid"><article><h3>Violin duo and electronics</h3><p class="neuro-format-lineup">Two violins with curated electronics</p><p>The violin duo is joined by carefully selected electronic textures, opening up a wider sound world while keeping live performance at its heart.</p></article><article><h3>Expanded ensemble</h3><p class="neuro-format-lineup">Additional musicians &amp; distinctive instruments</p><p>The programme can be extended for a larger ensemble, with piano, cello or distinctive instrumental colours such as alphorn, flugelhorn, corno da caccia, didgeridoo and duduk.</p></article></div></section><section class="neuro-offer neuro-repertoire" aria-labelledby="neuro-repertoire"><header><h2 id="neuro-repertoire">How the programme takes shape</h2><p>Each NeuroMusic programme brings together original compositions, selected classical works and curated electronics. Research on how music relates to attention, perception and emotional response informs the choice of repertoire.</p></header><dl><div><dt>Rhythm &amp; pace</dt><dd>Tempo and rhythm determine how the programme moves. More energetic pieces are balanced with quieter, slower ones, so the listener's attention can rise and rest.</dd></div><div><dt>Melody &amp; harmony</dt><dd>Melody and harmony create tension and resolve it. They shape the emotional arc of the programme, from familiar, recognisable moments to more unexpected ones.</dd></div><div><dt>Timbre &amp; texture</dt><dd>The sound of acoustic instruments is combined with electronic textures. This contrast brings out details in the music and encourages more attentive listening.</dd></div></dl></section>
+
 
 
 
@@ -831,24 +847,6 @@ a:hover{color:#5E5A52;}
         </div>
       </div>
     </div>
-<div class="neuro-music-details">    <div style="display:flex;flex-direction:column;gap:24px;">
-      <h2 data-reveal="" style="font-family:'Newsreader',serif;font-weight:400;font-size:32px;letter-spacing:-0.01em;margin:0;">Music</h2>
-      <sc-for list="{{ neuro.facts }}" as="f" hint-placeholder-count="2">
-        <div data-reveal="" style="display:flex;flex-direction:column;gap:6px;padding-bottom:20px;">
-          <div style="font-size:13px;font-weight:600;letter-spacing:0.04em;color:#A8A397;">{{ f.label }}</div>
-          <div style="font-size:17px;line-height:1.55;">{{ f.text }}</div>
-        </div>
-      </sc-for>
-      <div data-reveal="" style="display:flex;flex-direction:column;gap:12px;">
-        <div style="font-size:13px;font-weight:600;letter-spacing:0.04em;color:#A8A397;">Formats</div>
-        <div style="display:flex;flex-wrap:wrap;gap:8px;">
-          <sc-for list="{{ neuro.formatList }}" as="f" hint-placeholder-count="3">
-            <span style="font-size:13px;padding:5px 12px;border:1px solid rgba(236,232,223,0.3);border-radius:999px;">{{ f }}</span>
-          </sc-for>
-        </div>
-      </div>
-    </div>
-</div>
 
   </section>
 
@@ -886,6 +884,7 @@ a:hover{color:#5E5A52;}
   </section>
 
   
+
 </main>
 </sc-if>
 
