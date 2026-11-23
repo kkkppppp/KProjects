@@ -644,5 +644,225 @@ window.KP_TRANSLATIONS = {
     "es": "estudios revisados por pares",
     "pt": "estudos com revisão por pares",
     "fr": "études évaluées par les pairs"
+  },
+  "Concert programmes shaped by music and neuroscience": {
+    "es": "Programas de concierto que unen música y neurociencia",
+    "pt": "Programas de concerto que unem música e neurociência",
+    "fr": "Des programmes de concert à la rencontre de la musique et des neurosciences"
+  },
+  "Created by violinists Yury and Elena Revich, NeuroMusic brings classical repertoire and original compositions into a carefully sequenced live performance. From one or two violins to an expanded ensemble, each programme explores how rhythm, melody and sound shape the way we listen.": {
+    "es": "Creado por los violinistas Yury y Elena Revich, NeuroMusic reúne repertorio clásico y composiciones originales en un concierto con una secuencia musical cuidadosamente concebida. Desde uno o dos violines hasta un conjunto ampliado, cada programa explora cómo el ritmo, la melodía y el sonido influyen en nuestra forma de escuchar.",
+    "pt": "Criado pelos violinistas Yury e Elena Revich, o NeuroMusic reúne repertório clássico e composições originais num concerto com uma sequência musical cuidadosamente concebida. De um ou dois violinos a um agrupamento alargado, cada programa explora como o ritmo, a melodia e o som moldam a nossa forma de ouvir.",
+    "fr": "Créé par les violonistes Yury et Elena Revich, NeuroMusic associe répertoire classique et compositions originales dans un concert dont le déroulement est soigneusement conçu. D’un ou deux violons à un ensemble élargi, chaque programme explore la manière dont le rythme, la mélodie et le son façonnent notre écoute."
+  },
+  "Concert formats": {
+    "es": "Formatos de concierto",
+    "pt": "Formatos de concerto",
+    "fr": "Formats de concert"
+  },
+  "A flexible musical concept, from an intimate acoustic performance to a larger concert with electronics and visual art.": {
+    "es": "Un concepto musical flexible, desde una actuación acústica íntima hasta un concierto de mayor formato con electrónica y arte visual.",
+    "pt": "Um conceito musical flexível, de uma apresentação acústica intimista a um concerto de maior dimensão com eletrónica e arte visual.",
+    "fr": "Un concept musical souple, d’une prestation acoustique intimiste à un concert de plus grande envergure avec électronique et art visuel."
+  },
+  "Acoustic performance": {
+    "es": "Actuación acústica",
+    "pt": "Apresentação acústica",
+    "fr": "Concert acoustique"
+  },
+  "One or two violins": {
+    "es": "Uno o dos violines",
+    "pt": "Um ou dois violinos",
+    "fr": "Un ou deux violons"
+  },
+  "A live acoustic programme centred on the violin, bringing classical works and original compositions into a focused listening experience.": {
+    "es": "Un programa acústico en directo centrado en el violín, que combina obras clásicas y composiciones originales en una experiencia de escucha atenta.",
+    "pt": "Um programa acústico ao vivo centrado no violino, que reúne obras clássicas e composições originais numa experiência de escuta atenta.",
+    "fr": "Un programme acoustique en direct centré sur le violon, qui réunit œuvres classiques et compositions originales dans une expérience d’écoute attentive."
+  },
+  "Violin duo & electronics": {
+    "es": "Dúo de violines y electrónica",
+    "pt": "Duo de violinos e eletrónica",
+    "fr": "Duo de violons et électronique"
+  },
+  "Two violins with curated electronics": {
+    "es": "Dos violines con una selección de elementos electrónicos",
+    "pt": "Dois violinos com elementos eletrónicos selecionados",
+    "fr": "Deux violons et une création électronique choisie"
+  },
+  "The violin duo is joined by carefully selected electronic textures, opening up a wider sound world while keeping live performance at its heart.": {
+    "es": "El dúo de violines se acompaña de texturas electrónicas cuidadosamente seleccionadas, ampliando su universo sonoro sin perder el protagonismo de la interpretación en directo.",
+    "pt": "O duo de violinos é acompanhado por texturas eletrónicas cuidadosamente selecionadas, ampliando o universo sonoro e mantendo a interpretação ao vivo no centro da experiência.",
+    "fr": "Des textures électroniques soigneusement choisies accompagnent le duo de violons, ouvrant un univers sonore plus vaste tout en gardant l’interprétation en direct au cœur du concert."
+  },
+  "Expanded ensemble": {
+    "es": "Conjunto ampliado",
+    "pt": "Agrupamento alargado",
+    "fr": "Ensemble élargi"
+  },
+  "Additional musicians & distinctive instruments": {
+    "es": "Más músicos e instrumentos singulares",
+    "pt": "Mais músicos e instrumentos singulares",
+    "fr": "Musiciens supplémentaires et instruments singuliers"
+  },
+  "The programme can be extended for a larger ensemble, with piano, cello or distinctive instrumental colours such as alphorn, flugelhorn, corno da caccia, didgeridoo and duduk.": {
+    "es": "El programa puede ampliarse para un conjunto de mayor tamaño, con piano, violonchelo o timbres singulares como la trompa alpina, el fliscorno, el corno da caccia, el didgeridoo y el duduk.",
+    "pt": "O programa pode ser adaptado a um agrupamento maior, com piano, violoncelo ou timbres singulares como a trompa alpina, o fliscorne, o corno da caccia, o didgeridoo e o duduk.",
+    "fr": "Le programme peut être adapté à un ensemble plus important, avec piano, violoncelle ou des timbres singuliers tels que le cor des Alpes, le bugle, le corno da caccia, le didgeridoo et le duduk."
+  },
+  "Programme examples": {
+    "es": "Ejemplos de repertorio",
+    "pt": "Exemplos de repertório",
+    "fr": "Exemples de répertoire"
+  },
+  "Classical repertoire meets original music by Yury Revich. These examples show how musical ideas become the thread of a concert.": {
+    "es": "El repertorio clásico dialoga con la música original de Yury Revich. Estos ejemplos muestran cómo las ideas musicales se convierten en el hilo conductor de un concierto.",
+    "pt": "O repertório clássico dialoga com a música original de Yury Revich. Estes exemplos mostram como as ideias musicais se tornam o fio condutor de um concerto.",
+    "fr": "Le répertoire classique dialogue avec la musique originale de Yury Revich. Ces exemples montrent comment les idées musicales deviennent le fil conducteur d’un concert."
+  },
+  "Pachelbel · Canon in D": {
+    "es": "Pachelbel · Canon en re mayor",
+    "pt": "Pachelbel · Cânone em Ré maior",
+    "fr": "Pachelbel · Canon en ré majeur"
+  },
+  "Melodic variation over a repeating bass line.": {
+    "es": "Variaciones melódicas sobre una línea de bajo repetida.",
+    "pt": "Variações melódicas sobre uma linha de baixo repetida.",
+    "fr": "Des variations mélodiques sur une ligne de basse répétée."
+  },
+  "Vivaldi · Spring, I. Allegro": {
+    "es": "Vivaldi · La primavera, I. Allegro",
+    "pt": "Vivaldi · A primavera, I. Allegro",
+    "fr": "Vivaldi · Le Printemps, I. Allegro"
+  },
+  "Rhythmic drive and the interplay of recurring themes and contrasting passages.": {
+    "es": "Impulso rítmico y diálogo entre temas recurrentes y pasajes contrastantes.",
+    "pt": "Impulso rítmico e diálogo entre temas recorrentes e passagens contrastantes.",
+    "fr": "Élan rythmique et jeu entre thèmes récurrents et passages contrastés."
+  },
+  "Yury Revich · Clocks": {
+    "es": "Yury Revich · Clocks",
+    "pt": "Yury Revich · Clocks",
+    "fr": "Yury Revich · Clocks"
+  },
+  "Repetition and a gradual build in intensity.": {
+    "es": "Repetición y aumento gradual de la intensidad.",
+    "pt": "Repetição e aumento gradual da intensidade.",
+    "fr": "Répétition et montée progressive en intensité."
+  },
+  "Shaping the concert experience": {
+    "es": "Cómo se construye la experiencia del concierto",
+    "pt": "Como se constrói a experiência do concerto",
+    "fr": "Construire l’expérience du concert"
+  },
+  "The musical journey": {
+    "es": "El recorrido musical",
+    "pt": "O percurso musical",
+    "fr": "Le parcours musical"
+  },
+  "Research on music perception, attention and emotion informs the selection and sequence of works. Tempo, rhythm, repetition, melody, harmony, dynamics and timbre provide the musical framework.": {
+    "es": "La investigación sobre percepción musical, atención y emoción orienta la selección y el orden de las obras. El tempo, el ritmo, la repetición, la melodía, la armonía, la dinámica y el timbre conforman la estructura musical.",
+    "pt": "A investigação sobre perceção musical, atenção e emoção orienta a seleção e a sequência das obras. O tempo, o ritmo, a repetição, a melodia, a harmonia, a dinâmica e o timbre constituem a estrutura musical.",
+    "fr": "Les recherches sur la perception musicale, l’attention et les émotions guident le choix et l’enchaînement des œuvres. Tempo, rythme, répétition, mélodie, harmonie, nuances et timbre constituent la trame musicale."
+  },
+  "Visual art & space": {
+    "es": "Arte visual y espacio",
+    "pt": "Arte visual e espaço",
+    "fr": "Art visuel et espace"
+  },
+  "Original visual compositions by Tatiana Plakhova, created specifically for NeuroMusic, can accompany the performance. Visual and spatial elements become part of the listening experience.": {
+    "es": "Las composiciones visuales originales de Tatiana Plakhova, creadas específicamente para NeuroMusic, pueden acompañar la actuación. Los elementos visuales y espaciales pasan a formar parte de la experiencia de escucha.",
+    "pt": "As composições visuais originais de Tatiana Plakhova, criadas especificamente para o NeuroMusic, podem acompanhar a apresentação. Os elementos visuais e espaciais tornam-se parte da experiência de escuta.",
+    "fr": "Des compositions visuelles originales de Tatiana Plakhova, créées spécialement pour NeuroMusic, peuvent accompagner le concert. Les éléments visuels et spatiaux participent à l’expérience d’écoute."
+  },
+  "Optional spoken introductions": {
+    "es": "Breves introducciones opcionales",
+    "pt": "Breves introduções opcionais",
+    "fr": "Présentations orales en option"
+  },
+  "Brief introductions can illuminate the neuroscience behind the programme, offering audiences another way into the music.": {
+    "es": "Unas breves introducciones pueden acercar al público la neurociencia que inspira el programa y ofrecer otra forma de adentrarse en la música.",
+    "pt": "Breves introduções podem dar a conhecer a neurociência que inspira o programa, oferecendo ao público outra forma de entrar na música.",
+    "fr": "De brèves présentations peuvent éclairer les neurosciences qui inspirent le programme et offrir au public une autre porte d’entrée dans la musique."
+  },
+  "Bring NeuroMusic to your stage": {
+    "es": "Lleva NeuroMusic a tu escenario",
+    "pt": "Leve o NeuroMusic ao seu palco",
+    "fr": "Accueillez NeuroMusic sur votre scène"
+  },
+  "Contact Kate Podakin to discuss the programme, ensemble and visual elements for your venue or event.": {
+    "es": "Contacta con Kate Podakin para definir el programa, la formación y los elementos visuales para tu sala o evento.",
+    "pt": "Contacte Kate Podakin para definir o programa, a formação e os elementos visuais para a sua sala ou evento.",
+    "fr": "Contactez Kate Podakin pour définir le programme, la formation et les éléments visuels adaptés à votre lieu ou à votre événement."
+  },
+  "Discuss a concert": {
+    "es": "Consultar sobre un concierto",
+    "pt": "Falar sobre um concerto",
+    "fr": "Parlons de votre concert"
+  },
+  "Co-founder & Programme Director": {
+    "es": "Cofundadora y directora de programación",
+    "pt": "Cofundadora e diretora de programação",
+    "fr": "Cofondatrice et directrice de la programmation"
+  },
+  "Concert programmes shaped neuroscience": {
+    "es": "Programas de concierto inspirados en la neurociencia",
+    "pt": "Programas de concerto inspirados na neurociência",
+    "fr": "Des programmes de concert inspirés des neurosciences"
+  },
+  "Violin duo and electronics": {
+    "es": "Dúo de violines y electrónica",
+    "pt": "Duo de violinos e eletrónica",
+    "fr": "Duo de violons et électronique"
+  },
+  "How the programme takes shape": {
+    "es": "Cómo toma forma el programa",
+    "pt": "Como o programa ganha forma",
+    "fr": "Comment le programme prend forme"
+},
+  "Each NeuroMusic programme brings together original compositions, selected classical works and curated electronics. Research on how music relates to attention, perception and emotional response informs the choice of repertoire.": {
+    "es": "Cada programa de NeuroMusic reúne composiciones originales, obras clásicas seleccionadas y una cuidada selección de música electrónica. La elección del repertorio se nutre de investigaciones sobre la relación de la música con la atención, la percepción y la respuesta emocional.",
+    "pt": "Cada programa do NeuroMusic reúne composições originais, obras clássicas selecionadas e uma seleção cuidada de música eletrónica. A escolha do repertório é informada pela investigação sobre a relação da música com a atenção, a perceção e a resposta emocional.",
+    "fr": "Chaque programme de NeuroMusic réunit des compositions originales, des œuvres classiques choisies et une sélection soignée de musique électronique. Le choix du répertoire s’appuie sur les recherches consacrées aux liens entre musique, attention, perception et réponse émotionnelle."
+},
+  "Rhythm & pace": {
+    "es": "Ritmo y tempo",
+    "pt": "Ritmo e andamento",
+    "fr": "Rythme et tempo"
+},
+  "Tempo and rhythm determine how the programme moves. More energetic pieces are balanced with quieter, slower ones, so the listener's attention can rise and rest.": {
+    "es": "El tempo y el ritmo determinan el desarrollo del programa. Las piezas más enérgicas se equilibran con otras más tranquilas y lentas, permitiendo que la atención del oyente alterne entre intensidad y reposo.",
+    "pt": "O tempo e o ritmo determinam o desenvolvimento do programa. As peças mais enérgicas equilibram-se com outras mais tranquilas e lentas, permitindo que a atenção do ouvinte alterne entre intensidade e repouso.",
+    "fr": "Le tempo et le rythme déterminent la progression du programme. Les pièces les plus énergiques alternent avec des œuvres plus calmes et plus lentes, permettant à l’attention de l’auditeur de s’intensifier puis de se reposer."
+},
+  "Melody & harmony": {
+    "es": "Melodía y armonía",
+    "pt": "Melodia e harmonia",
+    "fr": "Mélodie et harmonie"
+},
+  "Melody and harmony create tension and resolve it. They shape the emotional arc of the programme, from familiar, recognisable moments to more unexpected ones.": {
+    "es": "La melodía y la armonía crean tensiones y las resuelven. Dan forma al recorrido emocional del programa, desde momentos familiares y reconocibles hasta otros más inesperados.",
+    "pt": "A melodia e a harmonia criam tensão e resolvem-na. Moldam o percurso emocional do programa, desde momentos familiares e reconhecíveis até outros mais inesperados.",
+    "fr": "La mélodie et l’harmonie créent des tensions et les résolvent. Elles dessinent le parcours émotionnel du programme, de moments familiers et reconnaissables à d’autres plus inattendus."
+},
+  "Timbre & texture": {
+    "es": "Timbre y textura",
+    "pt": "Timbre e textura",
+    "fr": "Timbre et texture"
+},
+  "The sound of acoustic instruments is combined with electronic textures. This contrast brings out details in the music and encourages more attentive listening.": {
+    "es": "El sonido de los instrumentos acústicos se combina con texturas electrónicas. Este contraste realza los detalles de la música e invita a una escucha más atenta.",
+    "pt": "O som dos instrumentos acústicos combina-se com texturas eletrónicas. Este contraste realça os detalhes da música e convida a uma escuta mais atenta.",
+    "fr": "Le son des instruments acoustiques se mêle aux textures électroniques. Ce contraste fait ressortir les détails de la musique et invite à une écoute plus attentive."
+},
+  "Created by violinists Yury and Elena Revich, NeuroMusic brings classical repertoire and original compositions into a carefully sequenced live performance. From a violin duo with electronics to an expanded ensemble, each programme explores how rhythm, melody and sound shape the way we listen.": {
+    "es": "Creado por los violinistas Yury y Elena Revich, NeuroMusic reúne repertorio clásico y composiciones originales en un concierto con una secuencia musical cuidadosamente concebida. Desde un dúo de violines con electrónica hasta un conjunto ampliado, cada programa explora cómo el ritmo, la melodía y el sonido influyen en nuestra forma de escuchar.",
+    "pt": "Criado pelos violinistas Yury e Elena Revich, o NeuroMusic reúne repertório clássico e composições originais num concerto com uma sequência musical cuidadosamente concebida. De um duo de violinos com eletrónica a um agrupamento alargado, cada programa explora como o ritmo, a melodia e o som moldam a nossa forma de ouvir.",
+    "fr": "Créé par les violonistes Yury et Elena Revich, NeuroMusic associe répertoire classique et compositions originales dans un concert dont le déroulement est soigneusement conçu. D’un duo de violons avec électronique à un ensemble élargi, chaque programme explore la manière dont le rythme, la mélodie et le son façonnent notre écoute."
+  },
+  "Created by violinists Yury and Elena Revich, NeuroMusic brings classical repertoire and original compositions into a carefully sequenced live performance.": {
+    "es": "Creado por los violinistas Yury y Elena Revich, NeuroMusic reúne repertorio clásico y composiciones originales en un concierto con una secuencia musical cuidadosamente concebida.",
+    "pt": "Criado pelos violinistas Yury e Elena Revich, o NeuroMusic reúne repertório clássico e composições originais num concerto com uma sequência musical cuidadosamente concebida.",
+    "fr": "Créé par les violonistes Yury et Elena Revich, NeuroMusic associe répertoire classique et compositions originales dans un concert dont le déroulement est soigneusement conçu."
   }
 };
